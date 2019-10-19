@@ -1,11 +1,14 @@
 .card .card-header {
 	padding: 0;
+
 }
+
 
 
 .card .card-header .btn {
 	font-size: 20px;
 	font-weight: 600;
+	color: black;
 }
 
 .card .card-header h2 {
@@ -29,3 +32,4 @@ h1,h2,h3,h4 {
 p.larger {
 	font-size: 140%;
 }
+
