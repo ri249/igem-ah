@@ -1,304 +1,675 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Font Awesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!--css-->
-    <link href="styletest.css" rel="stylesheet">
-    <!--fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
-    <!--jquery-->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <!-- css -->
+    <link href="styletest.css" rel="stylesheet" />
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Oswald"
+      rel="stylesheet"
+    />
+    <!-- jquery -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    
+
     <title>Project Description</title>
-
-
-
-</head>
-<body>
-
-<!--------------------------------------------------------TOP LOGO----------------------------------------------------------------->
+  </head>
+  <body>
+    <!--
+      ------------------------------------------------------TOP LOGO---------------------------------------------------------------
+    -->
     <div class="header">
-        <img src="logos/vibx/vibx_tp1.png" style="width: 100%; margin-top: 0%; background-position: center; left: 0; right: 0;">
+      <img
+        src="logos/vibx/vibx_tp1.png"
+        style="width: 100%; margin-top: 0%; background-position: center; left: 0; right: 0;"
+      />
     </div>
-            
-<!--------------------------------------------------------SCROLL UP BUTTON----------------------------------------------------------------->
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button> 
+
+    <!--
+      ------------------------------------------------------SCROLL UP BUTTON---------------------------------------------------------------
+    -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fas fa-arrow-circle-up"></i>
+    </button>
 
     <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
-        
-        function scrollFunction() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            document.getElementById("myBtn").style.display = "block";
-            } else {
-            document.getElementById("myBtn").style.display = "none";
-            }
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
         }
-        
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
     </script>
 
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
 
-<div class="progress-container">
-    <div class="progress-bar" id="myBar"></div>
-</div>
+    <script>
+      // When the user scrolls the page, execute myFunction
+      document.onscroll = function() {
+        myProgress();
+      };
 
-<script>
-    // When the user scrolls the page, execute myFunction 
-    document.onscroll = function() {myProgress()};
-    
-    function myProgress() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      function myProgress() {
+        var winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        var height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
         var scrolled = (winScroll / height) * 100;
         document.getElementById("myBar").style.width = scrolled + "%";
-    }
-</script>
+      }
+    </script>
 
-
-<!--------------------------------------------------------TOP MENU----------------------------------------------------------------->
+    <!--
+      ------------------------------------------------------TOP MENU---------------------------------------------------------------
+    -->
 
     <div id="topnav">
-        <nav>
-                <ul id="menu">
-                    <li><a href="#">Home</a></li>
-            
-                    <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">Project</a>
-            
-                        <ul class="submenu" style="margin: 0 0 0 0;">
-                            <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">Description</a></li>
-                            <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Design</a></li>
-                            <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate">Demonstrate</a></li>
-                            <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook">Notebook</a></li>
-                            <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution">Contribution</a></li>
-                        </ul>
-                        </li>
-            
-                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">Lab</a>
-                            <ul class="submenu" style="margin: 0 0 0 0;">
-                                <li style="font-size: 20px; padding: 5px 10px 0px 10px; margin-bottom: 0;">Wet Lab
-                                    <ul class="submenu" style="margin: 0 0 0 0;">
-                                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety">Safety</a></li>
-                                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments">Experiments</a></li>
-                                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Results">Results</a></li>
-                                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab_Book">Lab book</a></li>
-                                    </ul>
-                                </li>
-                                <li style="font-size: 20px; padding: 5px 10px 0px 10px; margin-bottom: 0;">Dry Lab
-                                    <ul class="submenu" style="margin: 0 0 0 0;">
-                                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model">Model overview</a></li>
-                                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Growth_rate">Growth rate</a></li>
-                                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Simulations">Simulations</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-            
-                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Parts</a>
-                            <ul class="submenu" style="margin: 0 0 0 0;">
-                                <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part">Basic Parts</a></li>
-                                <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Composite_Part">Composite Parts</a></li>
-                                <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve">Improved parts</a></li>
-                                <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection">Collection</a></li>
-                            </ul>
-                        </li>
-            
-                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">Human Practices</a>
-                            <ul class="submenu" style="margin: 0 0 0 0;">
-                                <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement">Education & Public Engagement</a>
-                                    <ul class="submenu" style="margin: 0 0 0 0;">
-                                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Events">Events</a></li>
-                                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Podcast">Podcast</a></li>
-                                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations">Collaborations</a></li>
-                                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Conferences">Conferences</a></li>
-                                    </ul>
-                                </li>
-                                <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">Integrated Human Practices</a>
-                                    <ul class="submenu" style="margin: 0 0 0 0;">
-                                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/Design_Thinking">Design Thinking</a></li>
-                                        <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Entrepreneurship">Entrepreneurship</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-            
-                    <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Team</a>
-                            <ul class="submenu" style="margin: 0 0 0 0;">
-                                <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution">Contribution</a></li>
-                                <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions">Attributions</a></li>
-                                <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Sponsors">Sponsors</a></li>
-                            </ul>
-                        </li>
-            
-                    <li id="mainmenu"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Awards">Awards</a></li>
-            
+      <nav>
+        <ul id="menu">
+          <li><a href="#">Home</a></li>
+
+          <li style="margin-bottom: 0;">
+            <a href="https://2019.igem.org/Team:Aalto-Helsinki/Description"
+              >Project</a
+            >
+
+            <ul class="submenu" style="margin: 0 0 0 0;">
+              <li style="margin-bottom: 0;">
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Description"
+                  >Description</a
+                >
+              </li>
+              <li style="margin-bottom: 0;">
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Design"
+                  >Design</a
+                >
+              </li>
+              <li style="margin-bottom: 0;">
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate"
+                  >Demonstrate</a
+                >
+              </li>
+              <li style="margin-bottom: 0;">
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook"
+                  >Notebook</a
+                >
+              </li>
+              <li style="margin-bottom: 0;">
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution"
+                  >Contribution</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li style="margin-bottom: 0;">
+            <a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">Lab</a>
+            <ul class="submenu" style="margin: 0 0 0 0;">
+              <li
+                style="font-size: 20px; padding: 5px 10px 0px 10px; margin-bottom: 0;"
+              >
+                Wet Lab
+                <ul class="submenu" style="margin: 0 0 0 0;">
+                  <li style="margin-bottom: 0;">
+                    <a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety"
+                      >Safety</a
+                    >
+                  </li>
+                  <li style="margin-bottom: 0;">
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments"
+                      >Experiments</a
+                    >
+                  </li>
+                  <li style="margin-bottom: 0;">
+                    <a href="https://2019.igem.org/Team:Aalto-Helsinki/Results"
+                      >Results</a
+                    >
+                  </li>
+                  <li style="margin-bottom: 0;">
+                    <a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab_Book"
+                      >Lab book</a
+                    >
+                  </li>
                 </ul>
-                </nav>
+              </li>
+              <li
+                style="font-size: 20px; padding: 5px 10px 0px 10px; margin-bottom: 0;"
+              >
+                Dry Lab
+                <ul class="submenu" style="margin: 0 0 0 0;">
+                  <li style="margin-bottom: 0;">
+                    <a href="https://2019.igem.org/Team:Aalto-Helsinki/Model"
+                      >Model overview</a
+                    >
+                  </li>
+                  <li style="margin-bottom: 0;">
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Growth_rate"
+                      >Growth rate</a
+                    >
+                  </li>
+                  <li style="margin-bottom: 0;">
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Simulations"
+                      >Simulations</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li style="margin-bottom: 0;">
+            <a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Parts</a>
+            <ul class="submenu" style="margin: 0 0 0 0;">
+              <li style="margin-bottom: 0;">
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part"
+                  >Basic Parts</a
+                >
+              </li>
+              <li style="margin-bottom: 0;">
+                <a
+                  href="https://2019.igem.org/Team:Aalto-Helsinki/Composite_Part"
+                  >Composite Parts</a
+                >
+              </li>
+              <li style="margin-bottom: 0;">
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve"
+                  >Improved parts</a
+                >
+              </li>
+              <li style="margin-bottom: 0;">
+                <a
+                  href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection"
+                  >Collection</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li style="margin-bottom: 0;">
+            <a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices"
+              >Human Practices</a
+            >
+            <ul class="submenu" style="margin: 0 0 0 0;">
+              <li style="margin-bottom: 0;">
+                <a
+                  href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement"
+                  >Education & Public Engagement</a
+                >
+                <ul class="submenu" style="margin: 0 0 0 0;">
+                  <li style="margin-bottom: 0;">
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Events"
+                      >Events</a
+                    >
+                  </li>
+                  <li style="margin-bottom: 0;">
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Podcast"
+                      >Podcast</a
+                    >
+                  </li>
+                  <li style="margin-bottom: 0;">
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations"
+                      >Collaborations</a
+                    >
+                  </li>
+                  <li style="margin-bottom: 0;">
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Conferences"
+                      >Conferences</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li style="margin-bottom: 0;">
+                <a
+                  href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices"
+                  >Integrated Human Practices</a
+                >
+                <ul class="submenu" style="margin: 0 0 0 0;">
+                  <li style="margin-bottom: 0;">
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/Design_Thinking"
+                      >Design Thinking</a
+                    >
+                  </li>
+                  <li style="margin-bottom: 0;">
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Entrepreneurship"
+                      >Entrepreneurship</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li style="margin-bottom: 0;">
+            <a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Team</a>
+            <ul class="submenu" style="margin: 0 0 0 0;">
+              <li style="margin-bottom: 0;">
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution"
+                  >Contribution</a
+                >
+              </li>
+              <li style="margin-bottom: 0;">
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions"
+                  >Attributions</a
+                >
+              </li>
+              <li style="margin-bottom: 0;">
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Sponsors"
+                  >Sponsors</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li id="mainmenu">
+            <a href="https://2019.igem.org/Team:Aalto-Helsinki/Awards"
+              >Awards</a
+            >
+          </li>
+        </ul>
+      </nav>
     </div>
 
-
-<!--------------------------------------------------------CONTENT----------------------------------------------------------------->
-
-<div class="hometext">
-    <div class="pdsection0">
-        <h1 style="text-align: left; padding-top: 3%; padding-bottom: 2%; padding-left: 5%;">PROJECT DESCRIPTION</h1>
-    </div>
-    <div class="pdsection1">
-        <h1 style="text-align: right; padding-right: 10%; color: white; padding-left: 5%">INTRODUCTION</h1>
+    <!-- CONTENT STYLES -->
+    <style>
+      .flex {
+        display: flex;
+      }
+      .dir-column {
+        flex-direction: column;
+      }
+      .tright {
+        text-align: right;
+      }
+      .tcenter {
+        text-align: center;
+      }
+      .bg-cover {
+        background-size: cover;
+      }
+      .white {
+        color: white;
+      }
+      .p25 {
+        padding: 25px;
+      }
+    </style>
+    <!-- CONTENT -->
+    <div class="hometext flex dir-column">
+        <h1 >
+          PROJECT DESCRIPTION
+        </h1>
+      <div class="bg-cover p25" style="background-image: url('https://2019.igem.org/wiki/images/f/ff/T--Aalto-Helsinki--desc_med.jpg');">
+        <h1 class="tright white">
+          INTRODUCTION
+        </h1>
+        <p class="maintext white tright" >
+          Recombinant proteins are widely used in biomedical research and as
+          biopharmaceutical compounds. Several methods for protein production
+          have been established during the past decades providing aid for
+          millions of people. However, even with today’s technologies, improved
+          efficacy is urgent as the demand for recombinant proteins is only
+          increasing. It has been estimated that within the next 10 years half
+          of all new developed medicines will be biopharmaceuticals, including
+          recombinant proteins (Jozala et al., 2016).
+        </p>
+      </div>
+      <div class="p25">
+        <p
+          class="maintext"
+          id="pd-introduction"
+          style="text-align: center; padding-top: 4%;"
+        >
+          Biotechnology solutions have strongly focused on using production
+          platforms based on the bacterium Escherichia coli, which is used in
+          the production of as many as half of approved recombinant protein
+          therapeutics. Other platforms include many species of yeast, as well
+          as some mammalian cell lines. However, no platform is optimal in all
+          therapeutic protein production, which is why introducing new platforms
+          has the potential to diversify and increase the performance of
+          recombinant protein production (Merlin et al., 2014).
+        </p>
+      </div>
+      <div class="p25 bg-cover" style="background-image: linear-gradient(to bottom right, rgba(45, 45, 45, 0.73), rgba(78, 77, 79, 0.25) ), url('https://2019.igem.org/wiki/images/6/69/T--Aalto-Helsinki--desc_waves.jpg');">
+        <p class="maintext white" id="pd-introduction">
+          Vibrio natriegens is challenging Escherichia coli as the organism of
+          choice for research and biotechnology applications. With a generation
+          time of under 10 minutes, this Gram-negative marine bacterium is the
+          fastest growing organism known to date (Weinstock et al., 2016).
+          Combined with the ability to effectively produce large amounts of
+          soluble protein and secrete them into the growth medium, these traits
+          make Vibrio natriegens an ideal chassis organism.
+        </p>
+      </div>
+      <div class="p25">
+        <h1 class="tcenter">
+          Aalto-Helsinki would like to introduce you to
+        </h1>
+        <img
+          src="finalpics/home/blueblack.png"
+          style="width: 25%; padding-left: 38%;"
+        />
+        <h1 class="tcenter" >
+          Vibrio natriegens with Xtreme Protein Expression and Secretion System
+          Optimization
+        </h1>
+      </div>
+      <div class="p25 tcenter">
         <p class="maintext" id="pd-introduction">
-            Recombinant proteins are widely used in biomedical research and as biopharmaceutical compounds. Several methods for protein production have been established during the past decades providing aid for millions of people. However, even with today’s technologies, improved efficacy is urgent as the demand for recombinant proteins is only increasing - it has been estimated that within the next 10 years half of all new developed medicines will be biopharmaceuticals, including recombinant proteins (1). <br><br>
+          Our iGEM project introduces VibXPresso - Vibrio natriegens with Xtreme
+          PRotein Expression and Secretion Optimization. We harness the
+          Gram-negative bacterium's generation time of under 10 minutes (Lee et
+          al., 2016) to rapidly produce large amounts of protein for efficient
+          downstream processing. This can be achieved via the twin-arginine
+          translocation (Tat) pathway, which transports proteins into the
+          bacterium's periplasm (Browning et al., 2017). We researched the
+          possibility of utilizing environmental modifications to further
+          secrete proteins from the periplasm into the medium to further ease
+          the protein purification.
         </p>
-    </div>
-    <div class="pdsection2">
-        <p class="maintext" id="pd-introduction" style="text-align: center; padding-top: 4%;">
-            Biotechnology solutions have strongly focused on using production platforms based on the bacterium  Escherichia coli, which is used in the production of as many as half of approved recombinant protein therapeutics. Other platforms include many species of yeast, as well as some mammalian cell lines. However, no platform is optimal in all therapeutic protein production (2), which is why introducing new platforms has the potential to diversify and increase the performance of recombinant protein production. (2)<br><br>
-        </p>
-    </div>
-    <div class="pdsection3">
-        <p class="maintext" id="pd-introduction">
-            Vibrio natriegens is challenging Escherichia coli as the organism of choice for research and biotechnology applications – and we’re betting on V. natriegens! With a generation time of under 10 minutes, this Gram-negative marine bacterium is the fastest growing organism known to date (3). Combined with the ability to effectively produce large amounts of soluble protein and secrete them into the periplasm, these traits make Vibrio natriegens an ideal chassis organism.<br><br>
-        </p>
-    </div>
-    <div class="pdsection4">
-        <h1 style="text-align: center; padding-top: 3%; padding-bottom: 2%;">Aalto-Helsinki would like to introduce you to </h1>
-        <img src="finalpics/home/blueblack.png" style="width: 25%; padding-left: 38%;">
-        <h1 style="font-size: 20px; text-align: center; padding-top: 3%; padding-bottom: 2%;">Vibrio natriegens with Xtreme Protein Expression and Secretion System Optimization</h1>
-    </div>
-    <div class="pdsection5">
-        <p class="maintext" id="pd-introduction">
-            Our iGEM project introduces VibXPRESSO - Vibrio natriegens with Xtreme PRotein Expression and Secretion Optimization. We harness the Gram-negative bacterium's generation time of under 10 minutes (4) to rapidly produce large amounts of protein for efficient downstream processing. This is achieved via the twin-arginine translocation (Tat) pathway, which transports proteins into the bacterium's periplasm (5). Environmental modifications are used to increase the leakiness of the outer membrane of Vibrio natriegens in order to direct proteins from the periplasm to the growth medium for easier protein harvest. As a proof of concept, the yield of human growth hormone is compared between wild type V. natriegens (ATCC 14048) and our modified strain VibXPRESSO.<br><br>
-        </p>
-    </div>
+      </div>
 
-    <div class="pdgrid">
+      <div class="pdgrid">
         <div class="pditem1">
-            <h1 style="padding-top: 3%; padding-bottom: 2%; font-size: 22px; padding-left: 5%;">XTREME PROTEIN EXPRESSION </h1>
-            <p class="maintext" id="pd-introduction" style="text-align: justify; padding-right: 15%;">
-                Vibrio natriegens has many of the desirable characteristics to serve as an ideal bacterial chassis for metabolic engineering and recombinant protein production, including features such as fast growth rate, ability to grow on minimal medium, translocation pathways for protein secretion, and a variety of tools for engineering the genome and gene expression (4,6,11). Shared characteristics with E. coli also enable the application of several already developed E. coli techniques and protocols on V. natriegens. <br>
-
-                Our project attempts to improve the protein expression of V. natriegens by deleting gene clusters in a minimal genome type of fashion. This opens resources for inducible protein production, and provides a challenge to test the necessity of different genes for the organism in laboratory use. Other planned modifications include the knockout or deletion of dns nuclease gene to improve transformation efficiency, and the introduction of a new expression system, in addition to testing the already used E. coli T7 expression system. <br>
-            </p>
+          <h1
+            style="padding-top: 3%; padding-bottom: 2%; font-size: 22px; padding-left: 5%;"
+          >
+            XTREME PROTEIN EXPRESSION
+          </h1>
+          <p
+            class="maintext"
+            id="pd-introduction"
+            style="text-align: justify; padding-right: 15%;"
+          >
+            Vibrio natriegens has many desirable characteristics to serve as an
+            ideal bacterial chassis for metabolic engineering and recombinant
+            protein production, including features such as fast growth rate, the
+            ability to grow on minimal medium, translocation pathways for
+            protein secretion, and a variety of tools for engineering the genome
+            and gene expression (Lee et al., 2016; Team Marburg iGEM, 2018;
+            Calero & Nikel, 2019). Shared characteristics with E. coli also
+            enable the application of several already developed E. coli
+            techniques and protocols on V. natriegens.
+          </p>
+        </div>
+        <div class="pditem1">
+          <p class="maintext">
+            In order to increase the protein production and engineering
+            capabilities of V. natriegens, we planned several chromosomal
+            modifications including ones already performed, like the deletion of
+            extracellular nuclease gene dns to improve plasmid transformation
+            efficiency (Weinstock et al., 2014; Dalia et al., 2017; Team Marburg
+            iGEM, 2018), and some that haven’t been done before to our
+            knowledge, like the knockout of protease genes to decrease
+            intracellular and periplasmic protein degradation rate. In theory,
+            introducing chromosomal modifications in V. natriegens is
+            straightforward due to the presence of natural competence inducing
+            tfoX gene (Dalia et al., 2017). Before running out of time, we
+            attempted to produce the first planned mutation, dns deletion (see
+            Results).
+          </p>
         </div>
         <div class="pditem2">
-            <img src="finalpics/description/expression.png" style="width: 100%;">
+          <img
+            src="finalpics/description/expression.png"
+            style="width: 100%;"
+          />
         </div>
         <div class="pditem3">
-            <img src="finalpics/description/secretion.png" style="width: 100%; padding-left: 10%;">
+          <img
+            src="finalpics/description/secretion.png"
+            style="width: 100%; padding-left: 10%;"
+          />
         </div>
         <div class="pditem4">
-            <h1 style="padding-top: 3%; padding-bottom: 2%; font-size: 22px; text-align: right; padding-right: 5%;">XTREME PROTEIN SECRETION </h1>
-            <p class="maintext" id="pd-introduction" style="text-align: justify;  padding-left: 20%; padding-bottom: 2%;">
-                    V. natriegens’ ability to secrete proteins into periplasm offers several advantages. First, many biopharmaceuticals contain disulfide bridges, which can only form in gram-negative bacterium’s periplasm (5). Second, proteins in periplasmic space are easier to purify without contaminant cell debris or DNA, in comparison to cytoplasmic proteins. Periplasmic space also offers the possibility to secrete proteins into the medium through leaky outer membrane, which enables even easier access to purify the protein product, and lowers the costs of downstream processing. <br>
+          <h1
+            style="padding-top: 3%; padding-bottom: 2%; font-size: 22px; text-align: right; padding-right: 5%;"
+          >
+            XTREME PROTEIN SECRETION
+          </h1>
+          <p class="maintext">
+            V. natriegens’ ability to secrete proteins into periplasm offers
+            several advantages. First, many biopharmaceuticals contain disulfide
+            bridges, which can only form in gram-negative bacterium’s periplasm
+            (5). Second, proteins in periplasmic space are easier to purify
+            without contaminant cell debris or DNA, in comparison to cytoplasmic
+            proteins. Periplasmic space also offers the possibility to secrete
+            proteins into the medium through leaky outer membrane, which enables
+            even easier access to purify the protein product, and lowers the
+            costs of downstream processing.
+          </p>
 
-                    To achieve this, we are taking advantage of the twin-arginine translocation pathway (Tat) that transports fully folded proteins from gram-negative bacterium’s cytoplasm to the periplasmic space. Proteins transported in vivo via the Tat pathway include membrane proteins, redox enzymes, and multimeric proteins. In V. natriegens the Tat pathway consists of three subunit proteins (TatA, TatB, and TatC – homologous to E. coli (7)), and can transport substrates up to 150 kDa in size (9). <br>
-                    
-                    In order to utilise the Tat system in our project, we identified several secretion peptides for V. natriegens. Next, to demonstrate the potential of V. natriegens as a secretive cell factory, we expressed the human growth hormone (hGH) with a Tat pathway signal peptide attached to it. hGH is used to treat growth deficiencies and genetic disorders, and it has already been proven to be secreted through the Tat pathway in E. coli with appropriate signal peptide (5). Our system over-expresses the tatAB and tatC operon of V. natriegens together with plasmid based hGH in a similar fashion to E. coli “TatExpress” strain described by Browning et al (5). This setup allows us to demonstrate the versatility and potential of V. natriegens in recombinant protein production.<br>
-                    
-                    We also want to Increase the outer membrane leakiness of V. natriegens to improve the protein secretion from periplasm to medium by environmental modifications (8). Our plan is to compare the expression and secretion of human growth hormone (hGH) between WT ATCC 14048 and our modified VibXPresso strain. <br>
-            </p>
+          <p class="maintext">
+            To achieve this, we are taking advantage of the twin-arginine
+            translocation pathway (Tat) that transports fully folded proteins
+            from gram-negative bacterium’s cytoplasm to the periplasmic space.
+            Proteins transported in vivo via the Tat pathway include membrane
+            proteins, redox enzymes, and multimeric proteins. In V. natriegens
+            the Tat pathway consists of three subunit proteins (TatA, TatB, and
+            TatC – homologous to E. coli (7)), and can transport substrates up
+            to 150 kDa in size (9).
+          </p>
+
+          <p class="maintext">
+            In order to utilise the Tat system in our project, we identified
+            several secretion peptides for V. natriegens. Next, to demonstrate
+            the potential of V. natriegens as a secretive cell factory, we
+            expressed the human growth hormone (hGH) with a Tat pathway signal
+            peptide attached to it. hGH is used to treat growth deficiencies and
+            genetic disorders, and it has already been proven to be secreted
+            through the Tat pathway in E. coli with appropriate signal peptide
+            (5). Our system over-expresses the tatAB and tatC operon of V.
+            natriegens together with plasmid based hGH in a similar fashion to
+            E. coli “TatExpress” strain described by Browning et al (5). This
+            setup allows us to demonstrate the versatility and potential of V.
+            natriegens in recombinant protein production.
+          </p>
         </div>
-    </div>
+      </div>
 
-    <div class="pdsection6">
-        <h1 style="padding-left: 10%; padding-right: 5%; color: white;">INVESTIGATION OF IMPLEMENTING OUR PROJECT IN THE REAL WORLD</h1>
-        <p class="maintext" id="pd-introduction" style="text-align: justify;">
-            As many as one out of four diabetic patients can’t afford their medication (10). The high prices remain an issue for also patients depending on other biopharmaceuticals. As part of our project design, we wanted to explore how VibXPresso could eventually be integrated into the pharmaceutical manufacturing processes while assuring affordable medication. To achieve this, we utilized design thinking methods and interviewed different stakeholders to draw insights to guarantee an integration between our project’s scientific as well as human practices designs. To address the inequality in accessing therapeutic protein treatment, we created a business model for how VibXPresso could be utilized to solve the identified pain points: unaffordability of therapeutic protein products and the growing demand for biopharmaceutical development and production tools.
+      <div class="bg-cover p25"
+        style="background-image: linear-gradient(to bottom right, rgba(0,0,0,0.5), rgba(0,0,0,0.25)),url('https://2019.igem.org/wiki/images/2/25/T--Aalto-Helsinki--desc_city.jpg');">
+        <h1 style="padding-left: 10%; padding-right: 5%; color: white;">
+          INVESTIGATION OF IMPLEMENTING OUR SOLUTION
+        </h1>
+        <p class="maintext white" id="pd-introduction" style="text-align: justify;">
+          As many as one out of four diabetic patients cannot afford their
+          medication (Herkert et al., 2019). The high prices remain an issue for
+          also patients depending on other biopharmaceuticals. As part of our
+          project design, we wanted to explore how VibXPresso could eventually
+          be integrated into the pharmaceutical manufacturing processes while
+          assuring affordable medication. We utilized design thinking methods
+          and interviewed different stakeholders to guarantee an integration
+          between our project’s scientific as well as human practices designs.
+          To address the inequality in accessing therapeutic protein treatment,
+          we created a business model for how VibXPresso could be utilized to
+          solve the identified pain points: unaffordability of therapeutic
+          protein products and the growing demand for biopharmaceutical
+          development and production tools. The final outcome of our project was
+          strongly influenced by the input from stakeholders. Thus ensuring that
+          there is a real need for our solution
         </p>
-    </div>
+      </div>
 
-    <div class="pdsection7">
-        <h1 style="padding-left: 5%; padding-right: 5%; color: rgb(0, 0, 0); font-size: 15px;">REFERENCES</h1>
-        <p class="maintext" id="pd-introduction" style="font-size: 12px; padding-bottom: 2%;">
-                1. Jozala, A. F., Geraldes, D. C., Tundisi, L. L., Feitosa, V. D. A., Breyer, C. A., Cardoso, S. L., ... & Oliveira, M. A. D. (2016). Biopharmaceuticals from microorganisms: from production to purification. brazilian journal of microbiology, 47, 51-63.<br>
-                2. Merlin, M., Gecchele, E., Capaldi, S., Pezzotti, M., & Avesani, L. (2014). Comparative evaluation of recombinant protein production in different biofactories: the green perspective. BioMed research international, 2014, 136419. doi:10.1155/2014/136419<br>
-                3. Weinstock, M. T., Hesek, E. D., Wilson, C. M., & Gibson, D. G. (2016). Vibrio natriegens as a fast-growing host for molecular biology. Nature Methods, 13(10), 849. <br>
-                4. Lee, H. H., Ostrov, N., Wong, B. G., Gold, M. A., Khalil, A. S., & Church, G. M. (2016). Vibrio natriegens, a new genomic powerhouse. bioRxiv, 058487. <br>
-                5. Browning, D. F., Richards, K. L., Peswani, A. R., Roobol, J., Busby, S. J. W., & Robinson, C. (2017). Escherichia coli "TatExpress" strains super-secrete human growth hormone into the bacterial periplasm by the Tat pathway. Biotechnol Bioeng, 114(12), 2828-2836. <br>
-                6. Team Marburg iGEM 2018. (2018). Description. Retrieved from http://2018.igem.org/Team:Marburg/Description <br>
-                7. Kanehisa, M., & Goto, S. (2000). KEGG: Kyoto Encyclopedia of Genes and Genomes. Nucleic Acids Research, 28(1), 27-30.<br>
-                8. Sharma, S. S., Blattner, F. R., & Harcum, S. W. (2006). Recombinant protein production in an Escherichia coli reduced genome strain. Metabolic engineering, 9(2), 133–141. <br>
-                9. Burdette, L. A., Leach, S. A., Wong, H. T., & Tullman-Ercek, D. (2018). Developing Gram-negative bacteria for the secretion of heterologous proteins. Microbial cell factories, 17(1), 196. <br>
-                10. Study finds 1 in 4 patients can’t afford insulin. (2019). Retrieved 18 July 2019, from https://www.pharmacist.com/article/study-finds-1-4-patients-cant-afford-insulin<br>
-                11. Calero, P., & Nikel, P. I. (2019). Chasing bacterial chassis for metabolic engineering: a perspective review from classical to non-traditional microorganisms. Microb Biotechnol, 12(1), 98-124. <br>
-                
+      <div class="pdsection7">
+        <h1
+          style="padding-left: 5%; padding-right: 5%; color: rgb(0, 0, 0); font-size: 15px;"
+        >
+          REFERENCES
+        </h1>
+        <p
+          class="maintext"
+          id="pd-introduction"
+          style="font-size: 12px; padding-bottom: 2%;"
+        >
+          1. Jozala, A. F., Geraldes, D. C., Tundisi, L. L., Feitosa, V. D. A.,
+          Breyer, C. A., Cardoso, S. L., ... & Oliveira, M. A. D. (2016).
+          Biopharmaceuticals from microorganisms: from production to
+          purification. brazilian journal of microbiology, 47, 51-63.<br />
+          2. Merlin, M., Gecchele, E., Capaldi, S., Pezzotti, M., & Avesani, L.
+          (2014). Comparative evaluation of recombinant protein production in
+          different biofactories: the green perspective. BioMed research
+          international, 2014, 136419. doi:10.1155/2014/136419<br />
+          3. Weinstock, M. T., Hesek, E. D., Wilson, C. M., & Gibson, D. G.
+          (2016). Vibrio natriegens as a fast-growing host for molecular
+          biology. Nature Methods, 13(10), 849. <br />
+          4. Lee, H. H., Ostrov, N., Wong, B. G., Gold, M. A., Khalil, A. S., &
+          Church, G. M. (2016). Vibrio natriegens, a new genomic powerhouse.
+          bioRxiv, 058487. <br />
+          5. Browning, D. F., Richards, K. L., Peswani, A. R., Roobol, J.,
+          Busby, S. J. W., & Robinson, C. (2017). Escherichia coli "TatExpress"
+          strains super-secrete human growth hormone into the bacterial
+          periplasm by the Tat pathway. Biotechnol Bioeng, 114(12), 2828-2836.
+          <br />
+          6. Team Marburg iGEM 2018. (2018). Description. Retrieved from
+          http://2018.igem.org/Team:Marburg/Description <br />
+          7. Kanehisa, M., & Goto, S. (2000). KEGG: Kyoto Encyclopedia of Genes
+          and Genomes. Nucleic Acids Research, 28(1), 27-30.<br />
+          8. Sharma, S. S., Blattner, F. R., & Harcum, S. W. (2006). Recombinant
+          protein production in an Escherichia coli reduced genome strain.
+          Metabolic engineering, 9(2), 133–141. <br />
+          9. Burdette, L. A., Leach, S. A., Wong, H. T., & Tullman-Ercek, D.
+          (2018). Developing Gram-negative bacteria for the secretion of
+          heterologous proteins. Microbial cell factories, 17(1), 196. <br />
+          10. Study finds 1 in 4 patients can’t afford insulin. (2019).
+          Retrieved 18 July 2019, from
+          https://www.pharmacist.com/article/study-finds-1-4-patients-cant-afford-insulin<br />
+          11. Calero, P., & Nikel, P. I. (2019). Chasing bacterial chassis for
+          metabolic engineering: a perspective review from classical to
+          non-traditional microorganisms. Microb Biotechnol, 12(1), 98-124.
+          <br />
         </p>
+      </div>
     </div>
 
-</div>
+    <!--
+      -------------------------------button grid----------------------------------------
+    -->
 
+    <div class="homegrid">
+      <div
+        class="homegrid-item"
+        id="homegrid-text"
+        style="background-image: url(bgpics/022.jpg); background-size: cover;"
+      >
+        <a href="https://2019.igem.org/Team:Aalto-Helsinki/Description"
+          >PROJECT</a
+        >
+      </div>
+      <div
+        class="homegrid-item"
+        id="homegrid-text"
+        style="background-image: url(bgpics/011.jpg); background-size: cover;"
+      >
+        <a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">LAB</a>
+      </div>
+      <div
+        class="homegrid-item"
+        id="homegrid-text"
+        style="background-image: url(bgpics/033.jpg); background-size: cover;"
+      >
+        <a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices"
+          >HUMAN<br />OUTREACH</a
+        >
+      </div>
+    </div>
 
-<!---------------------------------button grid------------------------------------------>
-
-
-<div class="homegrid">
-    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/022.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">PROJECT</a></div>
-    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/011.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">LAB</a></div>
-    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/033.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">HUMAN<br>OUTREACH</a></div>
-</div>
-
-
-
-<!--------------------------------------------------------PARTNERS----------------------------------------------------------------->
+    <!--
+      ------------------------------------------------------PARTNERS---------------------------------------------------------------
+    -->
 
     <div id="partners">
-        <div class="row">
-            <div class="column1">
-                <img class="photo" src="logos/dark/Aalto_BIZ_black.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/Aalto_CHE_EN_black.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/Aalto_ELEC_EN_black.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/Aalto_ENG_EN_black.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/Aalto_SCI_EN_black.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/df_black.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/Helsinki.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/supported-by-hilife.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/Kemianteollisuus_black.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/LOIMU.jpg">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/ThermoFisher_black.jpg">
-            </div>
-
-    
+      <div class="row">
+        <div class="column1">
+          <img class="photo" src="logos/dark/Aalto_BIZ_black.png" />
         </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Aalto_CHE_EN_black.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Aalto_ELEC_EN_black.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Aalto_ENG_EN_black.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Aalto_SCI_EN_black.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/df_black.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Helsinki.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/supported-by-hilife.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Kemianteollisuus_black.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/LOIMU.jpg" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/ThermoFisher_black.jpg" />
+        </div>
+      </div>
     </div>
 
-<!--------------------------------------------------------FOOTER----------------------------------------------------------------->
+    <!--
+      ------------------------------------------------------FOOTER---------------------------------------------------------------
+    -->
     <div class="footer">
-        <a class="icon" id="fb" href="https://www.facebook.com/AaltoHelsinki"><i class="fab fa-facebook-square"></i></a>
-        <a class="icon" id="twi" href="https://twitter.com/AaltoHelsinki"><i class="fab fa-twitter"></i></a>
-        <a class="icon" id="ig" href="https://instagram.com/aaltohelsinki_igem"><i class="fab fa-instagram"></i></a>
-        <a class="icon" id="blog" href="http://blog.aaltohelsinki.com"><i class="fab fa-tumblr-square"></i></a><br>
-        Kemistintie 1, Espoo, Finland<br>
-        team@aaltohelsinki.com
+      <a class="icon" id="fb" href="https://www.facebook.com/AaltoHelsinki"
+        ><i class="fab fa-facebook-square"></i
+      ></a>
+      <a class="icon" id="twi" href="https://twitter.com/AaltoHelsinki"
+        ><i class="fab fa-twitter"></i
+      ></a>
+      <a class="icon" id="ig" href="https://instagram.com/aaltohelsinki_igem"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a class="icon" id="blog" href="http://blog.aaltohelsinki.com"
+        ><i class="fab fa-tumblr-square"></i></a
+      ><br />
+      Kemistintie 1, Espoo, Finland<br />
+      team@aaltohelsinki.com
     </div>
-
-</body>
+  </body>
 </html>
