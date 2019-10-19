@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--css-->
+    <link href="styletest.css" rel="stylesheet">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <title>Collaborations</title>
+
+
+
+</head>
+<body>
+
+<!--------------------------------------------------------TOP LOGO----------------------------------------------------------------->
+    <div class="header">
+        <img src="logos/vibx/vibx_tp1.png" style="width: 100%; margin-top: 0%; background-position: center; left: 0; right: 0;">
+    </div>
+            
+<!--------------------------------------------------------SCROLL UP BUTTON----------------------------------------------------------------->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button> 
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            document.getElementById("myBtn").style.display = "block";
+            } else {
+            document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<script>
+    // When the user scrolls the page, execute myFunction 
+    document.onscroll = function() {myProgress()};
+    
+    function myProgress() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+
+
+<!--------------------------------------------------------TOP MENU----------------------------------------------------------------->
+
+    <div id="topnav">
+    <nav>
+       <ul id="menu">
+           <li><a href="#">Home</a></li>
+
+           <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Project</a>
+
+            <ul class="submenu">
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Description</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Design</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate">Demonstrate</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook">Notebook</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution">Contribution</a></li>
+            </ul>
+            </li>
+
+            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">Lab</a>
+                <ul class="submenu">
+                    <li style="font-size: 20px; padding: 5px 10px 0px 10px;">Wet Lab
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety">Safety</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments">Experiments</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Results">Results</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/LabBook">Lab book</a></li>
+                        </ul>
+                    </li>
+                    <li style="font-size: 20px; padding: 5px 10px 0px 10px;">Dry Lab
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model">Model overview</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Growth_rate">Growth rate</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Simulations">Simulations</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Parts</a>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part">Basic Parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve">Improved parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection">Collection</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">Human Practices</a>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement">Education & Public Engagement</a>
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Events">Events</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Podcast">Podcast</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations">Collaborations</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Conferences">Conferences</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/">Integrated Human Practices</a>
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/Design_Thinking">Design Thinking</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Entrepreneurship">Entrepreneurship</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+           <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Team</a>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution">Contribution</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions">Attributions</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Sponsors">Sponsors</a></li>
+                </ul>
+            </li>
+
+           <li id="mainmenu"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Awards">Awards</a></li>
+
+       </ul>
+    </nav>
+    </div>
+
+
+<!--------------------------------------------------------CONTENT----------------------------------------------------------------->
+
+<div class="hometext">
+
+        <div class="collabsection1">
+            <h1 style="text-align: left; padding-top: 4%; padding-bottom: 2%; color: rgb(0, 0, 0);">COLLABORATIONS</h1>
+        </div>
+        
+        <div class="collabsection2">
+            <button class="collabbtn" id="collabbtn1" onclick="toggle_visibility('conferences');">CONFERENCES <i class="fas fa-angle-down"></i></button>
+
+                <p class="maintext" id="conferences" style="display: none; padding-top: 5%; padding-bottom: 5%;">
+                    <span style="font-size: 20px; font-weight: bold;">BioBrick Tutorial 12th - 14th of April</span><br><br>
+
+                    In the early stages of our project, two of our team members got the chance to attend the Nordic BioBrick Tutorial organized by DTU Biobuilders in Copenhagen. We were the first Aalto-Helsinki team to attend this annually arranged event, and we will recommend all the future teams to attend it as this event gave us lots of good information about iGEM and many beneficial tools to get us started with our project, which will be very beneficial for all future teams also. <br><br>
+
+                    On Friday morning we arrived to the DTU campus in Copenhagen, where we were warmly greeted. The event started with a lecture about iGEM in general, after which we got to hear the schedule for the weekend, meet our lab group members, and attend a lecture about Human Practices in iGEM. In the evening we got the chance to discuss with the other teams about their cool projects over a pizza dinner. <br><br>
+                    
+                    The second day of the Nordic BioBrick Tutorial was all about the BioBrick Tutorial, which we did in mixed groups formed of students from different Universities from the Nordic countries. In the lab, we made a basic assembly with BioBricks, and completed a transformation into E. coli
+                    DH5α cells. This was a very useful experience as we got a good introduction to BioBricks while doing it. Between the lab sessions at DTU, we had lunch, took a group photo, and attended a workshop about pitching. Before plating the transformants in the evening, we attended lectures about different cloning strategies, and iGEM Wiki page. After a successful day of lab work, we went to have dinner in the DTU building 101 cafeteria. Here we again got the chance to socialize with the other teams and ask them about their work and plans for the summer. <br><br>
+                    
+                    On the final day of the Nordic BioBrick Tutorial we got to listen to an iGEM alumni panel at DTU, and see the results of our hard lab work, which turned out great! After the final wrap-up session, we then headed to the city center to have dinner with the iGEM team from Oslo, after which we returned home to Finland to tell about our great trip to the rest of the team.<br><br>
+                    
+                    <img src="photos/nic/001.jpg" style="width: 30%;">
+                    <img src="photos/nic/002.jpg" style="width: 30%;"><br><br>
+
+                    <span style="font-size: 20px; font-weight: bold;">Nordic iGEM Conference 17th - 19th of May</span><br><br>
+
+                    In mid-May, before we even had started working full-time with our project, we attended our second iGEM collaboration event. Only a month after the Nordic BioBrick Tutorial it was time to return to Copenhagen, but this time for The Nordic iGEM Conference (NiC). This time the size of the Aalto-Helsinki Copenhagen delegation grew to seven people attending the occasion, so almost all of the team members were able to participate.<br><br>
+
+                    The whole team was excited about attending the conference as we would see with what exciting ideas the other teams had started to work with and how their projects were proceeding.<br>
+                    The conference started with a warm welcome by our hosts, the stellar iGEM team Copenhagen. The first workshop was held after a welcoming ceremony and the subject was science communication. The interesting workshop was followed by dinner and the first night culminated into a delightful scavenger hunt with mixed teams of all the attending iGEM teams. The scavenger hunt was an excellent opportunity to get to know the other teams!<br><br>
+
+                    The main events of the weekend were the Mini-Jamboree and the poster sessions on Saturday. The pressure was on: Our team had to present our project by pitching in front of the audience and the judges and present our poster at the poster session. Being the second to last team to present, we were nervous after hearing all the impressive and well-developed presentations and project plans one after the other. Despite all this, our team delivered our pitch and the poster presentation well and we got some good feedback from other teams!<br><br>
+
+                    The Saturday continued with a poster session, workshops and even a Hackathon. Afterward, we enjoyed dinner and continued the night together with the other iGEM teams in Copenhagen.<br><br>
+
+                    On Sunday, after the official program (which included a very useful modeling workshop) our team ended the weekend with a team meeting in which we reflected back on what we had learned during the conference (and we did learn a lot) and what could be improved to the next conference we’re attending. The NiC was very beneficial experience for the team also regarding the possible future collaborations with other iGEM teams.<br><br>
+
+                    <img src="photos/nic/001.jpg" style="width: 30%;">
+                    <img src="photos/nic/002.jpg" style="width: 30%;"><br><br>
+
+                    <span style="font-size: 20px; font-weight: bold;">European iGEM meetup in Paris on the 26th - 27th of July</span><br><br>
+
+                    One of the highlights of the summer was the European iGEM meetup in Paris on the 26th - 27th of July. The two-day long conference was organized by four parisian teams: Pasteur Paris, Ionis Paris, GO Paris Saclay and Evry Paris Saclay at the Institut Pasteur. Almost 20 teams all around Europe attended the meetup to present their projects in forms of posters and presentations to get feedback and insights from the experienced jury. <br><br>
+                    This time we came to the conference with more confidence compared to the last time we attended a conference in Copenhagen – knowing that we had put in a lot of effort to redo both the presentation and our poster. We were happy to see how much we had gone forward since the last international conference. At the same time, we returned home with motivation and know-how about how to do even better in our next conference in Boston!<br><br>
+                    In addition to getting some very valued feedback from judges on our presentation and poster and learn from other teams great presentations and posters, we also had the chance to enjoy beautiful Paris for a bit before and after the conference.<br><br>
+
+                    <span style="font-size: 20px; font-weight: bold;">European iGEM meetup in Paris on the 26th - 27th of July</span><br><br>
+
+                    Thanks to our sponsor HiLIFE, our team had the chance to participate in one last international iGEM Meetup to practice our presentation before the conference in Boston. This time, three of our team members travelled to Leuven, Belgium for the Synbio Gone Viral Meetup. This conference was organized by iGEM KU Leuven, Go Paris Saclay iGEM, iGEM Aachen.<br><br>
+
+                    We really enjoyed the two-day meetup filled with interesting keynote speeches, workshops and of course networking with the other iGEM teams. The feedback for our presentation was motivating and we are more hyped than ever to give our best in the Giant Jamboree in Boston coming up already at the end of this month!<br><br>
+
+
+                </p>
+        </div>
+        <script type="text/javascript">
+            function toggle_visibility(conferences) {
+               var e = document.getElementById(conferences);
+               if(e.style.display == 'none')
+                  e.style.display = 'block';
+               else
+                  e.style.display = 'none';
+            }
+        </script>
+
+        <div class="collabsection3">
+            <button class="collabbtn" id="collabbtn2" onclick="toggle_visibility('otherteams');">COLLABORATIONS WITH OTHER TEAMS <i class="fas fa-angle-down"></i></button>
+
+                <p class="maintext" id="otherteams" style="display: none; padding-top: 5%; padding-bottom: 5%;">
+                    <span style="font-size: 20px; font-weight: bold;">Dusseldorf</span><br><br>
+
+                    We participated in the Team Düsselfdorf’s Postcard project, where we designed our own postcard about synthetic biology and our project.<br><br>
+
+                    <span style="font-size: 20px; font-weight: bold;">Lund</span><br><br>
+
+                    During the Nordic iGEM Conference in Copenhagen, Denmark, we talked with the iGEM team from Lund University, and became immediately interested in each other’s projects and thus decided to collaborate. iGEM Lund interviewed us over skype and included the interview for their podcast.  In return, we interviewed Team Lund about their project and used the insights we got from them for developing our own project.<br><br>
+
+                    <img src="photos/nic/002.jpg" style="width: 30%;"><br><br>
+
+                    <span style="font-size: 20px; font-weight: bold;">UNSW_Australia</span><br><br>
+
+                    We took part in the major business model collaboration organized by the UNSW iGEM Team. The collaboration included a business plan scaffold deliverable and application of our iGEM team ideas to the business plan according to the business plan scaffold they had provided us. This collaboration was conducted as a proof of concept that a global business plan scaffold is possible.<br><br>
+                    
+                    <img src="photos/nic/002.jpg" style="width: 30%;"><br><br>
+
+                    <span style="font-size: 20px; font-weight: bold;">Tartu_TUIT</span><br><br>
+
+                    We collaborated with the iGEM team from Tartu to organize workshops in our synthetic biology related “Protein pop - from genes to action”- workshop day in the Finnish Science Centre Heureka.<br><br>
+
+                    <img src="photos/nic/002.jpg" style="width: 30%;"><br><br>
+
+                    <span style="font-size: 20px; font-weight: bold;">Aboa</span><br><br>
+
+                    Since the very beginning of our team’s iGEM journey, we have been in collaborating with the second Finnish team Aboa from Turku. When we got to know that Finland finally has another iGEM team, we immediately contacted them and met Aboa for the first time already in March. We hosted a meeting in Helsinki where we invited Aboa and our Aalto-Helsinki alumni members to give us and Aboa the best tips on how to succeed in iGEM. After the very informative meeting with the alumni and some discussion of our and Aboa’s projects, we headed for dinner with Aboa, where we got to know each other better.<br><br> 
+
+                    During the summer, Aboa hosted a meeting in Turku for us, where we got to share ideas, tips, and thoughts our projects and have some fun together. During the summer and autumn we also collaborated with Aboa by creating a video for the European Biotech week, and attended the BioGarage Opening event. During the event, we got the chance to present our projects, host a synthetic biology related Kahoot quiz, and host a DNA extraction workshop.  <br><br>
+
+                    In addition to collaborating with Aboa in human practices, we also collaborated with them in wet lab. Aboa had built a construct to secrete scFv with a linked non-conventional amino acid (ncaa). We agreed to test their plasmid in VibXpresso to see what kind yields we would obtain in our secretion platform.<br><br>
+
+                    <img src="photos/nic/002.jpg" style="width: 30%;">
+                    <img src="photos/nic/002.jpg" style="width: 30%;">
+                    <img src="photos/nic/002.jpg" style="width: 30%;"><br><br>
+
+                    <span style="font-size: 20px; font-weight: bold;">Linkoping_Sweden</span><br><br>
+
+                    Our collaboration with the iGEM team from Linköping originated from a more science-based background, making the collaboration mutually beneficial partnership. We had a platform that we wanted to test to secretion, and the team from Linköping had products that they wanted to secrete effectively. It was natural to collaborate with specifically LiU as we have a common interest and both our projects are based upon Vibrio natriegens. From LiU our team received plasmids CBD-Pln1 and CBD-sfGFP, which were transformed into Vmax. The proteins produced by Vmax were analyzed.<br><br>
+
+                    <span style="font-size: 20px; font-weight: bold;">TAS_Taipei, Costa_Rica, Tuebingen, SDU-Denmark</span><br><br>
+
+                    We were challenged by IGEM SDU Denmark to participate in the #iGEMxSDGs challenge started byTAS_Taipei (Taiwan), Team Costa Rica and Team Tuebingen (Germany), and as we also wanted to address the United Nations’ 17 Sustainable Development Goals in our project, we were thrilled to participate!<br><br>
+                    Our aim with our project - VibXPresso - was to enhance protein production of high-demand recombinant proteins produced by the pharmaceutical industry. In addition to the science of our project, we invested in outreach activities to promote the opportunities in synthetic biology. Here are the four main SDGs we addressed in our project:<br><br>
+                    #3 Good Health & Well-Being<br><br>
+                    By providing improved tools for protein production we wanted to lower the cost of therapeutic proteins to meet the UN’s goals of ensuring “safe, effective, quality and affordable essential medicines for all”.<br><br>
+                    #4 Quality Education<br><br>
+                    We also wanted to spread the knowledge of synthetic biology to the general public by engaging in workshops in schools, Heureka Science Park, and Synthetic Biology theme week. We wanted to invite people to learn about the opportunities that synthetic biology has to offer to achieve the Sustainable Development Goals!<br><br>
+                    #8 Decent Work and Economic Growth<br><br>
+                    With VibXPresso our goal was to ensure fast, affordable, and high quality therapeutic protein production, we also strived to meet the UN’s goals of achieving “higher levels of economic productivity through diversification, technological upgrading and innovation, including through a focus on high-value added and labour-intensive sectors”.<br><br>
+                    #17 Partnerships for the Goals<br><br>
+                    We would not have been able to meet these goals on our own, which is why we wanted to build strong partnerships and collaborations to ensure the fulfilment of these Sustainable Development Goals. Thanks to our partners, we were able to contribute to scientific research and take actions towards the Sustainable Development Goals by enhancing “the global partnership for sustainable development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources”.<br><br>
+                    Inspired by this collaboration we also decided to include SDGs into our own project’s integrated human practices (link).<br><br>
+
+                    <img src="photos/nic/002.jpg" style="width: 30%;"><br><br>
+
+
+
+                </p>
+        </div>
+        <script type="text/javascript">
+            function toggle_visibility(otherteams) {
+            var e = document.getElementById(otherteams);
+            if(e.style.display == 'none')
+                e.style.display = 'block';
+            else
+                e.style.display = 'none';
+            }
+        </script>
+
+</div>
+
+
+<!---------------------------------button grid------------------------------------------->
+
+<!--
+
+<div class="homegrid">
+    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/022.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">PROJECT</a></div>
+    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/011.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">LAB</a></div>
+    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/033.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">HUMAN<br>OUTREACH</a></div>
+</div>
+
+-->
+
+<!--------------------------------------------------------PARTNERS----------------------------------------------------------------->
+
+    <div id="partners">
+        <div class="row">
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_BIZ_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_CHE_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ELEC_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ENG_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_SCI_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/df_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Helsinki.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/supported-by-hilife.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Kemianteollisuus_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/LOIMU.jpg">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/ThermoFisher_black.jpg">
+            </div>
+
+    
+        </div>
+    </div>
+
+<!--------------------------------------------------------FOOTER----------------------------------------------------------------->
+    <div class="footer">
+        <a class="icon" id="fb" href="https://www.facebook.com/AaltoHelsinki"><i class="fab fa-facebook-square"></i></a>
+        <a class="icon" id="twi" href="https://twitter.com/AaltoHelsinki"><i class="fab fa-twitter"></i></a>
+        <a class="icon" id="ig" href="https://instagram.com/aaltohelsinki_igem"><i class="fab fa-instagram"></i></a>
+        <a class="icon" id="blog" href="http://blog.aaltohelsinki.com"><i class="fab fa-tumblr-square"></i></a><br>
+        Kemistintie 1, Espoo, Finland<br>
+        team@aaltohelsinki.com
+    </div>
+
+</body>
+</html>

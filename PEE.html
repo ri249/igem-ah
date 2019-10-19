@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--css-->
+    <link href="styletest.css" rel="stylesheet">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <title>Public Engagement & Education</title>
+
+
+
+</head>
+<body>
+
+<!--------------------------------------------------------TOP LOGO----------------------------------------------------------------->
+    <div class="header">
+        <img src="logos/vibx/vibx_tp1.png" style="width: 100%; margin-top: 0%; background-position: center; left: 0; right: 0;">
+    </div>
+            
+<!--------------------------------------------------------SCROLL UP BUTTON----------------------------------------------------------------->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button> 
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            document.getElementById("myBtn").style.display = "block";
+            } else {
+            document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<script>
+    // When the user scrolls the page, execute myFunction 
+    document.onscroll = function() {myProgress()};
+    
+    function myProgress() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+
+
+<!--------------------------------------------------------TOP MENU----------------------------------------------------------------->
+
+    <div id="topnav">
+    <nav>
+       <ul id="menu">
+           <li><a href="#">Home</a></li>
+
+           <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Project</a>
+
+            <ul class="submenu">
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Description</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Design</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate">Demonstrate</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook">Notebook</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution">Contribution</a></li>
+            </ul>
+            </li>
+
+            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">Lab</a>
+                <ul class="submenu">
+                    <li style="font-size: 20px; padding: 5px 10px 0px 10px;">Wet Lab
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety">Safety</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments">Experiments</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Results">Results</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/LabBook">Lab book</a></li>
+                        </ul>
+                    </li>
+                    <li style="font-size: 20px; padding: 5px 10px 0px 10px;">Dry Lab
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model">Model overview</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Growth_rate">Growth rate</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Simulations">Simulations</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Parts</a>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part">Basic Parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve">Improved parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection">Collection</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">Human Practices</a>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement">Education & Public Engagement</a>
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Events">Events</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Podcast">Podcast</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations">Collaborations</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Conferences">Conferences</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/">Integrated Human Practices</a>
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/Design_Thinking">Design Thinking</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Entrepreneurship">Entrepreneurship</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+           <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Team</a>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution">Contribution</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions">Attributions</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Sponsors">Sponsors</a></li>
+                </ul>
+            </li>
+
+           <li id="mainmenu"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Awards">Awards</a></li>
+
+       </ul>
+    </nav>
+    </div>
+
+
+<!--------------------------------------------------------CONTENT----------------------------------------------------------------->
+
+<div class="hometext">
+
+    <div class="edusection1">
+        <h1 style="text-align: left; padding-top: 4%; padding-bottom: 2%; color: rgb(255, 255, 255);">PUBLIC ENGAGEMENT & EDUCATION</h1>
+    </div>
+
+    <div class="edusection2">
+        <p class="maintext" style="padding-top: 5%; padding-bottom: 5%;">
+            <span style="font-size: 20px; font-weight: bold;">Finnish high school level Biology Olympiad training</span><br><br>
+
+            On 8th of August we met the Finnish high school students who had been chosen to the training of the Finnish International Biology Olympiad team 2020. As part of their training, that included both theoretical studies and hands on lab work, they came to meet us to hear about how students can develop independent projects in synthetic biology. We told them about iGEM, our project, and then hosted an educative quiz game.  Apart from that we also discussed our studies with them in order to give them ideas of what they possibly could go on studying after high school. <br><br>
+
+            <img src="photos/nic/001.jpg" style="width: 30%;">
+            <img src="photos/nic/002.jpg" style="width: 30%;"><br><br>
+
+            <span style="font-size: 20px; font-weight: bold;">High school visits</span><br><br>
+
+            We wanted to share the knowledge about synthetic biology and iGEM also to the younger students who may not have a real knowledge about synthetic biology as a field of study. Therefore we visited the Finnish high schools Mäkelänrinteen lukio and Viikin normaalikoulu to talk about synthetic biology, what one can do with it, iGEM and our project. We were interested in knowing how much the students actually learned from our visits, which is why we made the students pay a game called Flinga. The game is like a mind map, which all the students can fill in anonymously with their phone, and we started off the visit with it to see what they knew from before and then repeated it after the educational presentation. And we were amazed by the result! It was very obvious that the students learned a lot during our presentation, and it seemed like we succeeding in sparking an interest towards synthetic biology and iGEM in many of them. We also used the visits as a chance to promote the idea of a high school iGEM team among the students, as the classes we visited for sure would become very good iGEM teams!<br><br>
+
+            <img src="photos/nic/001.jpg" style="width: 30%;">
+            <img src="photos/nic/001.jpg" style="width: 30%;">
+            <img src="photos/nic/002.jpg" style="width: 30%;"><br><br>
+
+            <span style="font-size: 20px; font-weight: bold;">Presentation for French biopharma/business students</span><br><br>
+
+            In the beginning of June we did a presentation about iGEM and our project for students from the Grenoble Ecole de Management’s Advanced Master in Biotechnology and Pharmaceutical Management program in Paris, France. They visited Finland for a week to learn more about biotechnology. After giving the presentation, we discussed together about the possibilities of synthetic biology and encouraged them to apply to iGEM in the future.<br><br>
+
+            <img src="photos/nic/001.jpg" style="width: 30%;">
+            <img src="photos/nic/002.jpg" style="width: 30%;"><br><br>
+
+            <span style="font-size: 20px; font-weight: bold;">Presentation for BioBusiness Builder</span><br><br>
+
+            On 13th of June we attended the first ever BioBusiness Builder event by SynBio Powerhouse. BioBusiness Builder helps teams with business ideas related to synthetic biology transform their ideas to business cases and further on to startup companies. We presented our project to the attending experts and startups, and got valuable feedback and advice on how to proceed with our project.<br><br>
+
+            <img src="photos/nic/001.jpg" style="width: 30%;">
+            <img src="photos/nic/002.jpg" style="width: 30%;"><br><br>
+
+            <span style="font-size: 20px; font-weight: bold;">Universities</span><br><br>
+
+            We collaborated with our universities, Aalto University and University of Helsinki, and agreed to attend the universities courses to tell university students about iGEM, our project and synthetic biology in general, and the possibilities it offers.<br><br>
+
+            <span style="font-size: 20px; font-weight: bold;">Alumni and Alumna</span><br><br>
+
+            As the sixth consecutive Aalto-Helsinki iGEM team we wanted to do something for our Alumna and Alumni, thus we created an Alumn(i/a) shirt for all the previous teams members to use.<br><br>
+
+            <span style="font-size: 20px; font-weight: bold;">Aboa</span><br><br>
+
+            We had several more relaxed meetings, were we discussed our own projects and gave insights to each other. More official project was our attending to the Biotech theme week and the Biogarage opening, were we held a stand telling about iGEM, demonstrating DNA extractions on a Kiwi and doing and educational timelapse video of immunoassays for the event.<br><br>
+
+            <span style="font-size: 20px; font-weight: bold;">Biotech theme week</span><br><br>
+
+            We took part in celebrating the European Biotech Week 23-29 September 2019. Numerous biotech events were organized all around Europe during this week. Our team had the privilege of collaborating with Suomen Bioteollisuus ry - FIB and Synbio Biogarage to attend two of these events during the week.<br><br>
+
+            We took part in a BioFinland pitching competition, an event full of creative ideas and enthusiastic young minds! The event was organized by FIB in collaboration with Helsinki Think Company and Nasdaq. We got incredibly positive feedback and we are honored to be selected as one of the finalists!<br><br>
+
+            Later during the week, we joined our powers with a fellow Finnish iGEM team from Turku, Aboa. We participated in the opening of BioGarage, an open GMO lab available to students and researchers at Aalto Design Factory. We presented our projects and iGEM at the opening ceremony, after which we hosted a quiz about synthetic biology and a DNA extraction workshop. Additionally, we published an educational video about Immunoassays created together with iGEM Aboa team for Biotech Week. The video can be found from our Youtube channel here: <a href="https://www.youtube.com/watch?v=sf2D-5SpfrY&t=21s">https://www.youtube.com/watch?v=sf2D-5SpfrY&t=21s.</a><br><br>
+
+            <img src="photos/nic/001.jpg" style="width: 30%;">
+            <img src="photos/nic/002.jpg" style="width: 30%;"><br><br>
+
+        </p>
+    </div>
+</div>
+
+
+<!---------------------------------button grid------------------------------------------->
+
+<!--
+
+<div class="homegrid">
+    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/022.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">PROJECT</a></div>
+    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/011.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">LAB</a></div>
+    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/033.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">HUMAN<br>OUTREACH</a></div>
+</div>
+
+-->
+
+<!--------------------------------------------------------PARTNERS----------------------------------------------------------------->
+
+    <div id="partners">
+        <div class="row">
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_BIZ_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_CHE_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ELEC_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ENG_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_SCI_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/df_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Helsinki.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/supported-by-hilife.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Kemianteollisuus_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/LOIMU.jpg">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/ThermoFisher_black.jpg">
+            </div>
+
+    
+        </div>
+    </div>
+
+<!--------------------------------------------------------FOOTER----------------------------------------------------------------->
+    <div class="footer">
+        <a class="icon" id="fb" href="https://www.facebook.com/AaltoHelsinki"><i class="fab fa-facebook-square"></i></a>
+        <a class="icon" id="twi" href="https://twitter.com/AaltoHelsinki"><i class="fab fa-twitter"></i></a>
+        <a class="icon" id="ig" href="https://instagram.com/aaltohelsinki_igem"><i class="fab fa-instagram"></i></a>
+        <a class="icon" id="blog" href="http://blog.aaltohelsinki.com"><i class="fab fa-tumblr-square"></i></a><br>
+        Kemistintie 1, Espoo, Finland<br>
+        team@aaltohelsinki.com
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--css-->
+    <link href="styletest.css" rel="stylesheet">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <title>Attributions</title>
+
+
+
+</head>
+<body>
+
+<!--------------------------------------------------------TOP LOGO----------------------------------------------------------------->
+    <div class="header">
+        <img src="logos/vibx/vibx_tp1.png" style="width: 100%; margin-top: 0%; background-position: center; left: 0; right: 0;">
+    </div>
+            
+<!--------------------------------------------------------SCROLL UP BUTTON----------------------------------------------------------------->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button> 
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            document.getElementById("myBtn").style.display = "block";
+            } else {
+            document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<script>
+    // When the user scrolls the page, execute myFunction 
+    document.onscroll = function() {myProgress()};
+    
+    function myProgress() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+
+
+<!--------------------------------------------------------TOP MENU----------------------------------------------------------------->
+
+    <div id="topnav">
+    <nav>
+       <ul id="menu">
+           <li><a href="#">Home</a></li>
+
+           <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Project</a>
+
+            <ul class="submenu">
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Description</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Design</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate">Demonstrate</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook">Notebook</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution">Contribution</a></li>
+            </ul>
+            </li>
+
+            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">Lab</a>
+                <ul class="submenu">
+                    <li style="font-size: 20px; padding: 5px 10px 0px 10px;">Wet Lab
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety">Safety</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments">Experiments</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Results">Results</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/LabBook">Lab book</a></li>
+                        </ul>
+                    </li>
+                    <li style="font-size: 20px; padding: 5px 10px 0px 10px;">Dry Lab
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model">Model overview</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Growth_rate">Growth rate</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Simulations">Simulations</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Parts</a>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part">Basic Parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve">Improved parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection">Collection</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">Human Practices</a>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement">Education & Public Engagement</a>
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Events">Events</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Podcast">Podcast</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations">Collaborations</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Conferences">Conferences</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/IHP">Integrated Human Practices</a>
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/Design_Thinking">Design Thinking</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Entrepreneurship">Entrepreneurship</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+           <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Team</a>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution">Contribution</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions">Attributions</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Sponsors">Sponsors</a></li>
+                </ul>
+            </li>
+
+           <li id="mainmenu"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Awards">Awards</a></li>
+
+       </ul>
+    </nav>
+    </div>
+
+
+
+<!--------------------------------------------------------CONTENT----------------------------------------------------------------->
+
+
+<div class="hometext">
+
+    <div class="attribsection1">
+        <h1 style="text-align: left; padding-top: 4%; padding-bottom: 2%; color: rgb(0, 0, 0);">ATTRIBUTIONS</h1>
+    </div>
+    
+    <div class="attribsection2">
+        <button class="attribbtn" id="attribbtn1" onclick="toggle_visibility('team');">TEAM <i class="fas fa-angle-down"></i></button>
+
+        <div class="hometext" id="team" style="color: black; display: none;">
+            <div class="att-grid1">
+
+                <div class="att-grid-item" style="border-bottom: 1px solid black; border-right: 1px solid black; border-left: 1px solid black; border-top: 1px solid black;">Name</div>
+                <div class="att-grid-item" style="border-bottom: 1px solid black; border-top: 1px solid black;">Responsibility</div>
+                <div class="att-grid-item" style="border-bottom: 1px solid black; border-right: 1px solid black; border-top: 1px solid black; border-left: 1px solid black;">Help</div>
+                
+                <div class="att-grid-item">Ilse Kaaja</div>
+                <div class="att-grid-item">Project coordination</div>
+                <div class="att-grid-item">Podcast, Laboratory work, Integrated human practices, Wiki </div>
+                
+                <div class="att-grid-item">Amanda Raitosalo</div>
+                <div class="att-grid-item">Research, Laboratory work</div>
+                <div class="att-grid-item">Podcast</div>
+                
+                <div class="att-grid-item">Antti Pennanen</div>
+                <div class="att-grid-item">Research, Laboratory work, BioBricks</div>
+                <div class="att-grid-item">Podcast, Communications, Outreach, Wiki</div>
+
+                <div class="att-grid-item">Antti Toivanen</div>
+                <div class="att-grid-item">Research, Laboratory work, BioBricks</div>
+                <div class="att-grid-item">Integrated human practices, Communications</div>
+                
+                <div class="att-grid-item">Arina Vara</div>
+                <div class="att-grid-item">Modelling, Wiki</div>
+                <div class="att-grid-item">Laboratory work, Outreach, Presentations</div>
+                
+                <div class="att-grid-item">Camilla Selenius</div>
+                <div class="att-grid-item">Funding, Outreach, Collaborations and Conferences</div>
+                <div class="att-grid-item">Integrated human practices, Presentations, and a little bit with lab</div>
+                    
+                <div class="att-grid-item">Miika Korpioja</div>
+                <div class="att-grid-item">Modelling</div>
+                <div class="att-grid-item">Podcast & Laboratory work</div>
+
+                <div class="att-grid-item">Neja Sirc</div>
+                <div class="att-grid-item">Laboratory work, Sequencing, Presenting</div>
+                <div class="att-grid-item">Outreach, Integrated human practices, Communications, Wiki, Outreach</div>
+
+                <div class="att-grid-item">Noora Haapala</div>
+                <div class="att-grid-item">Integrated human practices, Communications, Podcast</div>
+                <div class="att-grid-item">Funding, Outreach, Laboratory workt</div>
+
+                <div class="att-grid-item">Tuomas Burakowski</div>
+                <div class="att-grid-item">Design</div>
+                <div class="att-grid-item">Podcast, Presenation, Poster</div>
+
+                <div class="att-grid-item">Ursula Mikkola</div>
+                <div class="att-grid-item">Funding, Communications</div>
+                <div class="att-grid-item">Outreach, Lab work</div>
+            </div>
+    </div>
+    <script type="text/javascript">
+        function toggle_visibility(team) {
+           var e = document.getElementById(team);
+           if(e.style.display == 'none')
+              e.style.display = 'block';
+           else
+              e.style.display = 'none';
+        }
+    </script>
+
+    <div class="attribection3">
+        <button class="attribbtn" id="attribbtn2" onclick="toggle_visibility('alumni');">ALUMNI <i class="fas fa-angle-down"></i></button>
+
+        <div class="hometext" id="alumni" style="color: black; display: none;">
+            <div class="att-grid2">
+                <div class="att-grid-item">Leevi Lehtonen</div>
+                <div class="att-grid-item">Aalto-Helsinki 2018 alumni</div>
+
+                <div class="att-grid-item">Kaarle Rasi</div>
+                <div class="att-grid-item">Kaarle helped with any organizational matters related to financials that we faced.</div>
+
+                <div class="att-grid-item">Samu Kivistö</div>
+                <div class="att-grid-item"></div>
+
+                <div class="att-grid-item">Maisa Vuorte</div>
+                <div class="att-grid-item">Maisa helped us tremendously to get a smooth start with modeling and helped us to further develop our mathematical model</div>
+
+                <div class="att-grid-item">Eveliina Karjalainen</div>
+                <div class="att-grid-item">Eveliina was always available for help, whether it was a small or big question related to teamwork, or how to get started with the whole project</div>
+
+                <div class="att-grid-item">Minttu Salmela</div>
+                <div class="att-grid-item">Minttu was especially helpful in giving insights into the life as an iGEMer and how to build team spirit</div>
+
+                <div class="att-grid-item">Oskari Vinko</div>
+                <div class="att-grid-item">Oskari gave us great tips for our poster and presentation outlook</div>
+
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function toggle_visibility(alumni) {
+        var e = document.getElementById(alumni);
+        if(e.style.display == 'none')
+            e.style.display = 'block';
+        else
+            e.style.display = 'none';
+        }
+    </script>
+
+    <div class="attribection4">
+        <button class="attribbtn" id="attribbtn3" onclick="toggle_visibility('advisors');">PROJECT SUPPORT AND ADVICE <i class="fas fa-angle-down"></i></button>
+
+        <div class="maintext" id="advisors" style="color: black; display: none;">
+            <div class="att-grid2">
+                <div class="att-grid-item">Heli Viskari</div>
+                <div class="att-grid-item">Heli, University teacher from the Department of Bioproducts and Biosystems at the Aalto University of Chemical Engineering, is our principal advisor. She arranged some of our initial funding and has been guiding us in the ideation and helping with any practical issues in the lab.</div>
+
+                <div class="att-grid-item">Minna Poranen</div>
+                <div class="att-grid-item">Minna is an University Lecturer, Docent in Molecular virology and the first ever advisor that the Aalto-Helsinki team has had from the University of Helsinki. Minna has been a guiding us in the ideation.</div>
+
+                <div class="att-grid-item">Markus Linder</div>
+                <div class="att-grid-item">Markus is a Professor of Biomolecular materials from Department of Bioproducts and Biosystems at the Aalto University School of Chemical Engineering and one of our advisors. He has guided and helped us finding experts who would be able to help with our project</div>
+
+                <div class="att-grid-item">Merja Penttilä</div>
+                <div class="att-grid-item">Merja is an adjunct professor from the Department of Bioproducts and Biosystems at the Aalto University of Chemical Engineering and Research Professor in Industrial Biotechnology and Synthetic biology at VTT, and the Principal scientist of Synbio Powerhouse. Merja is perhaps the most adept scientist in synthetic biology in Finland and has helped us a lot with guidance, contacts and opportunities such as attending the Biotech theme week.</div>
+
+                <div class="att-grid-item">Christopher Jonkergouw</div>
+                <div class="att-grid-item">Chris is a doctoral candidate in Biomolecular materials research group in the Department of Bioproducts and Biosystems. Chris has helped our project starting from lab planning, execution, creation of plasmids constructs – and providing us with some of his plasmids to DNA orders and many practical things on how to navigate through the university’s bureaucracy.</div>
+
+                <div class="att-grid-item">Bartosz Gabryelczyk</div>
+                <div class="att-grid-item">Bartosz is an academy postdoctoral researcher working in Biomolecular materials research group, in the Department of Bioproducts and Biosystems at Aalto University. Bartosz has helped us with his expertise and experiences throughout the scope of our project, e.g. with DNA orders, sequencing, protein expression and cell fractioning.</div>
+
+                <div class="att-grid-item">Pekka Heino</div>
+                <div class="att-grid-item">Docent, University Lecturer in Molecular and Integrative Biosciences Research Programme at the University of Helsinki, Pekka has helped us in the ideation and planning phase of the project.</div>
+
+                <div class="att-grid-item">Ritva Virkola</div>
+                <div class="att-grid-item"></div>
+
+                <div class="att-grid-item">Benita Westerlund-Wikström</div>
+                <div class="att-grid-item"></div>
+
+                <div class="att-grid-item">Eeva Vakkari</div>
+                <div class="att-grid-item">MA, MPhil student from the University of Helsinki, Eeva has provided our team assistance in the ideation and planning phase, in addition to giving psychological support to tackle the project.</div>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function toggle_visibility(advisors) {
+        var e = document.getElementById(advisors);
+        if(e.style.display == 'none')
+            e.style.display = 'block';
+        else
+            e.style.display = 'none';
+        }
+    </script>
+
+<div class="attribection5">
+    <button class="attribbtn" id="attribbtn3" onclick="toggle_visibility('labsupport');">LAB SUPPORT <i class="fas fa-angle-down"></i></button>
+
+    <div class="maintext" id="labsupport" style="color: black; display: none;">
+        <div class="att-grid2">
+            <div class="att-grid-item">Ulla Åhman & Kaisa Hytti</div>
+            <div class="att-grid-item">University lab technicians</div>
+
+        </div>
+</div>
+<script type="text/javascript">
+    function toggle_visibility(labsupport) {
+    var e = document.getElementById(labsupport);
+    if(e.style.display == 'none')
+        e.style.display = 'block';
+    else
+        e.style.display = 'none';
+    }
+</script>
+
+<div class="attribection6">
+    <button class="attribbtn" id="attribbtn3" onclick="toggle_visibility('fundraising');">FUNDRAISING HELP AND SUPPORT <i class="fas fa-angle-down"></i></button>
+
+    <div class="maintext" id="fundraising" style="color: black; display: none;">
+        <div class="att-grid2">
+            <div class="att-grid-item">Tuula Palmén (SynBio)</div>
+            <div class="att-grid-item">Tuula Palmén from Synbio Powerhouse invited us to Bio Businessangel and Investor -event where we met potential sponsors.</div>
+
+            <div class="att-grid-item">Carmela Kantor-Aaltonen and Anni Siltanen (Kemianteollisuus ry)</div>
+            <div class="att-grid-item"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function toggle_visibility(fundraising) {
+    var e = document.getElementById(fundraising);
+    if(e.style.display == 'none')
+        e.style.display = 'block';
+    else
+        e.style.display = 'none';
+    }
+</script>
+
+<div class="attribection7">
+    <button class="attribbtn" id="attribbtn3" onclick="toggle_visibility('coaching');">COACHING <i class="fas fa-angle-down"></i></button>
+
+    <div class="maintext" id="coaching" style="color: black; display: none;">
+        <div class="att-grid2">
+            <div class="att-grid-item">Päivi Äijälä and Anjariitta Savolainen</div>
+            <div class="att-grid-item">Päivi and Anjariitta from Caleidocons Oy organized a team coaching session for us and gave tips for smooth teamwork during the project.</div>
+
+            <div class="att-grid-item">Christa Uusi-Rauva</div>
+            <div class="att-grid-item">Christa gave several presentation coaching sessions for us and helped us with pitching, taking our presentation skills to the next level.</div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function toggle_visibility(coaching) {
+    var e = document.getElementById(coaching);
+    if(e.style.display == 'none')
+        e.style.display = 'block';
+    else
+        e.style.display = 'none';
+    }
+</script>
+
+<div class="attribectio8">
+    <button class="attribbtn" id="attribbtn3" onclick="toggle_visibility('hp');">HUMAN PRACTICES SUPPORT <i class="fas fa-angle-down"></i></button>
+
+    <div class="maintext" id="hp" style="color: black; display: none;">
+        <div class="att-grid2">
+            <div class="att-grid-item">Martti Jerkku</div>
+            <div class="att-grid-item">Martti introduced Aalto Design Factory to us. We got to use their facilities for the poster printing, for example.</div>
+
+            <div class="att-grid-item">Saija Väisänen</div>
+            <div class="att-grid-item">We hosted a coaching session for International Biology Olympiad team from Finland and Saija helped us with booking the location and other arrangements related to the event.</div>
+
+            <div class="att-grid-item">Siina Vasama, Jutta Kujasalo, Rauno Bergman and<br>Rosaliina Munnukka from Heureka Science Center</div>
+            <div class="att-grid-item">We got the opportunity to host workshops in Heureka Science Center for an entire day. Siina, Jutta, Rauno, and Rosaliina kindly helped us planning the workshops at an early stage. Siina and Rauno further helped us developing our plans and obtaining the materials for our workshops, as well as setting up and organizing everything on the event day.</div>
+
+            <div class="att-grid-item">Merja Penttilä, Pauli Kallio, Lauri Reuter and Mikko Myllykoski</div>
+            <div class="att-grid-item">These professionals from different fields helped us with creating our podcast series about synthetic biology. Each of them took part in our podcast as guest speaker.</div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function toggle_visibility(hp) {
+    var e = document.getElementById(hp);
+    if(e.style.display == 'none')
+        e.style.display = 'block';
+    else
+        e.style.display = 'none';
+    }
+</script>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="text">
+    <div class="semicont">
+
+        <div class="teamgrid-container">
+            <div>
+                <button id="teambtn" onclick="toggle_visibility('teamtext1');">Team <i class="fas fa-angle-right"></i></button><br><br>
+                <button id="teambtn" onclick="toggle_visibility('teamtext2');">Aalto-Helsinki Alumni <i class="fas fa-angle-right"></i></button><br><br>
+                <button id="teambtn" onclick="toggle_visibility('teamtext3');">Project Support and Advice <i class="fas fa-angle-right"></i></button><br><br>
+                <button id="teambtn" onclick="toggle_visibility('teamtext4');">Lab Support <i class="fas fa-angle-right"></i></button><br><br>
+                <button id="teambtn" onclick="toggle_visibility('teamtext5');">Fundraising help and advice <i class="fas fa-angle-right"></i></button><br><br>
+                <button id="teambtn" onclick="toggle_visibility('teamtext6');">Coaching <i class="fas fa-angle-right"></i></button><br><br>
+                <button id="teambtn" onclick="toggle_visibility('teamtext7');">Human Practices support <i class="fas fa-angle-right"></i></button><br><br>
+            </div>
+            <div>
+                <div class="maintext" id="teamtext1" style="color: black; display: none;">
+                    <div class="att-grid1">
+
+                        <div class="att-grid-item" style="border-bottom: 1px solid black; border-right: 1px solid black; border-left: 1px solid black; border-top: 1px solid black;">Name</div>
+                        <div class="att-grid-item" style="border-bottom: 1px solid black; border-top: 1px solid black;">Responsibility</div>
+                        <div class="att-grid-item" style="border-bottom: 1px solid black; border-right: 1px solid black; border-top: 1px solid black; border-left: 1px solid black;">Help</div>
+                        
+                        <div class="att-grid-item">Ilse Kaaja</div>
+                        <div class="att-grid-item">Project coordination</div>
+                        <div class="att-grid-item">Podcast, Laboratory work, Integrated human practices, Wiki </div>
+                        
+                        <div class="att-grid-item">Amanda Raitosalo</div>
+                        <div class="att-grid-item">Research, Laboratory work</div>
+                        <div class="att-grid-item">Podcast</div>
+                        
+                        <div class="att-grid-item">Antti Pennanen</div>
+                        <div class="att-grid-item">Research, Laboratory work, BioBricks</div>
+                        <div class="att-grid-item">Podcast, Communications, Outreach, Wiki</div>
+
+                        <div class="att-grid-item">Antti Toivanen</div>
+                        <div class="att-grid-item">Research, Laboratory work, BioBricks</div>
+                        <div class="att-grid-item">Integrated human practices, Communications</div>
+                        
+                        <div class="att-grid-item">Arina Vara</div>
+                        <div class="att-grid-item">Modelling, Wiki</div>
+                        <div class="att-grid-item">Laboratory work, Outreach, Presentations</div>
+                        
+                        <div class="att-grid-item">Camilla Selenius</div>
+                        <div class="att-grid-item">Funding, Outreach, Collaborations and Conferences</div>
+                        <div class="att-grid-item">Integrated human practices, Presentations, and a little bit with lab</div>
+                            
+                        <div class="att-grid-item">Miika Korpioja</div>
+                        <div class="att-grid-item">Modelling</div>
+                        <div class="att-grid-item">Podcast & Laboratory work</div>
+
+                        <div class="att-grid-item">Neja Sirc</div>
+                        <div class="att-grid-item">Laboratory work, Sequencing, Presenting</div>
+                        <div class="att-grid-item">Outreach, Integrated human practices, Communications, Wiki, Outreach</div>
+
+                        <div class="att-grid-item">Noora Haapala</div>
+                        <div class="att-grid-item">Integrated human practices, Communications, Podcast</div>
+                        <div class="att-grid-item">Funding, Outreach, Laboratory workt</div>
+
+                        <div class="att-grid-item">Tuomas Burakowski</div>
+                        <div class="att-grid-item">Design</div>
+                        <div class="att-grid-item">Podcast, Presenation, Poster</div>
+
+                        <div class="att-grid-item">Ursula Mikkola</div>
+                        <div class="att-grid-item">Funding, Communications</div>
+                        <div class="att-grid-item">Outreach, Lab work</div>
+                    </div>
+
+                </div>
+                <div class="maintext" id="teamtext2" style="color: black; display: none;">
+                    <div class="att-grid2">
+                        <div class="att-grid-item">Leevi Lehtonen</div>
+                        <div class="att-grid-item">Aalto-Helsinki 2018 alumni</div>
+
+                        <div class="att-grid-item">Kaarle Rasi</div>
+                        <div class="att-grid-item">Kaarle helped with any organizational matters related to financials that we faced.</div>
+
+                        <div class="att-grid-item">Samu Kivistö</div>
+                        <div class="att-grid-item"></div>
+
+                        <div class="att-grid-item">Maisa Vuorte</div>
+                        <div class="att-grid-item">Maisa helped us tremendously to get a smooth start with modeling and helped us to further develop our mathematical model</div>
+
+                        <div class="att-grid-item">Eveliina Karjalainen</div>
+                        <div class="att-grid-item">Eveliina was always available for help, whether it was a small or big question related to teamwork, or how to get started with the whole project</div>
+
+                        <div class="att-grid-item">Minttu Salmela</div>
+                        <div class="att-grid-item">Minttu was especially helpful in giving insights into the life as an iGEMer and how to build team spirit</div>
+
+                        <div class="att-grid-item">Oskari Vinko</div>
+                        <div class="att-grid-item">Oskari gave us great tips for our poster and presentation outlook</div>
+
+
+                    </div>
+                </div>
+                <div class="maintext" id="teamtext3" style="color: black; display: none;">
+                    <div class="att-grid2">
+                        <div class="att-grid-item">Heli Viskari</div>
+                        <div class="att-grid-item">Heli, University teacher from the Department of Bioproducts and Biosystems at the Aalto University of Chemical Engineering, is our principal advisor. She arranged some of our initial funding and has been guiding us in the ideation and helping with any practical issues in the lab.</div>
+
+                        <div class="att-grid-item">Minna Poranen</div>
+                        <div class="att-grid-item">Minna is an University Lecturer, Docent in Molecular virology and the first ever advisor that the Aalto-Helsinki team has had from the University of Helsinki. Minna has been a guiding us in the ideation.</div>
+
+                        <div class="att-grid-item">Markus Linder</div>
+                        <div class="att-grid-item">Markus is a Professor of Biomolecular materials from Department of Bioproducts and Biosystems at the Aalto University School of Chemical Engineering and one of our advisors. He has guided and helped us finding experts who would be able to help with our project</div>
+
+                        <div class="att-grid-item">Merja Penttilä</div>
+                        <div class="att-grid-item">Merja is an adjunct professor from the Department of Bioproducts and Biosystems at the Aalto University of Chemical Engineering and Research Professor in Industrial Biotechnology and Synthetic biology at VTT, and the Principal scientist of Synbio Powerhouse. Merja is perhaps the most adept scientist in synthetic biology in Finland and has helped us a lot with guidance, contacts and opportunities such as attending the Biotech theme week.</div>
+
+                        <div class="att-grid-item">Christopher Jonkergouw</div>
+                        <div class="att-grid-item">Chris is a doctoral candidate in Biomolecular materials research group in the Department of Bioproducts and Biosystems. Chris has helped our project starting from lab planning, execution, creation of plasmids constructs – and providing us with some of his plasmids to DNA orders and many practical things on how to navigate through the university’s bureaucracy.</div>
+
+                        <div class="att-grid-item">Bartosz Gabryelczyk</div>
+                        <div class="att-grid-item">Bartosz is an academy postdoctoral researcher working in Biomolecular materials research group, in the Department of Bioproducts and Biosystems at Aalto University. Bartosz has helped us with his expertise and experiences throughout the scope of our project, e.g. with DNA orders, sequencing, protein expression and cell fractioning.</div>
+
+                        <div class="att-grid-item">Pekka Heino</div>
+                        <div class="att-grid-item">Docent, University Lecturer in Molecular and Integrative Biosciences Research Programme at the University of Helsinki, Pekka has helped us in the ideation and planning phase of the project.</div>
+
+                        <div class="att-grid-item">Ritva Virkola</div>
+                        <div class="att-grid-item"></div>
+
+                        <div class="att-grid-item">Benita Westerlund-Wikström</div>
+                        <div class="att-grid-item"></div>
+
+                        <div class="att-grid-item">Eeva Vakkari</div>
+                        <div class="att-grid-item">MA, MPhil student from the University of Helsinki, Eeva has provided our team assistance in the ideation and planning phase, in addition to giving psychological support to tackle the project.</div>
+
+                    </div>
+                </div>
+
+                <div class="maintext" id="teamtext4" style="color: black; display: none;">
+                    <div class="att-grid2">
+                        <div class="att-grid-item">Ulla Åhman & Kaisa Hytti</div>
+                        <div class="att-grid-item">University lab technicians</div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="maintext" id="teamtext5" style="color: black; display: none;">
+                    <div class="att-grid2">
+                        <div class="att-grid-item">Tuula Palmén (SynBio)</div>
+                        <div class="att-grid-item">Tuula Palmén from Synbio Powerhouse invited us to Bio Businessangel and Investor -event where we met potential sponsors.</div>
+
+                        <div class="att-grid-item">Carmela Kantor-Aaltonen and Anni Siltanen (Kemianteollisuus ry)</div>
+                        <div class="att-grid-item"></div>
+                    </div>
+                </div>
+
+                <div class="maintext" id="teamtext6" style="color: black; display: none;">
+                    <div class="att-grid2">
+                        <div class="att-grid-item">Päivi Äijälä and Anjariitta Savolainen</div>
+                        <div class="att-grid-item">Päivi and Anjariitta from Caleidocons Oy organized a team coaching session for us and gave tips for smooth teamwork during the project.</div>
+
+                        <div class="att-grid-item">Christa Uusi-Rauva</div>
+                        <div class="att-grid-item">Christa gave several presentation coaching sessions for us and helped us with pitching, taking our presentation skills to the next level.</div>
+
+                    </div>
+                </div>
+
+                <div class="maintext" id="teamtext7" style="color: black; display: none;">
+                    <div class="att-grid2">
+                        <div class="att-grid-item">Martti Jerkku</div>
+                        <div class="att-grid-item">Martti introduced Aalto Design Factory to us. We got to use their facilities for the poster printing, for example.</div>
+
+                        <div class="att-grid-item">Saija Väisänen</div>
+                        <div class="att-grid-item">We hosted a coaching session for International Biology Olympiad team from Finland and Saija helped us with booking the location and other arrangements related to the event.</div>
+
+                        <div class="att-grid-item">Siina Vasama, Jutta Kujasalo, Rauno Bergman and<br>Rosaliina Munnukka from Heureka Science Center</div>
+                        <div class="att-grid-item">We got the opportunity to host workshops in Heureka Science Center for an entire day. Siina, Jutta, Rauno, and Rosaliina kindly helped us planning the workshops at an early stage. Siina and Rauno further helped us developing our plans and obtaining the materials for our workshops, as well as setting up and organizing everything on the event day.</div>
+
+                        <div class="att-grid-item">Merja Penttilä, Pauli Kallio, Lauri Reuter and Mikko Myllykoski</div>
+                        <div class="att-grid-item">These professionals from different fields helped us with creating our podcast series about synthetic biology. Each of them took part in our podcast as guest speaker.</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--<h1 style="color: black;">Lorem ipsum</h1>
+        <p class="maintext" style="color: black;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br> 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br><br>
+        </p>-->
+    </div>
+</div>
+
+<script type="text/javascript">
+    function toggle_visibility(teamtext1) {
+       var e = document.getElementById(teamtext1);
+       if(e.style.display == 'none')
+          e.style.display = 'block';
+       else
+          e.style.display = 'none';
+    }
+    function toggle_visibility(teamtext2) {
+       var e = document.getElementById(teamtext2);
+       if(e.style.display == 'none')
+          e.style.display = 'block';
+       else
+          e.style.display = 'none';
+    }
+    function toggle_visibility(teamtext3) {
+       var e = document.getElementById(teamtext3);
+       if(e.style.display == 'none')
+          e.style.display = 'block';
+       else
+          e.style.display = 'none';
+    }
+    function toggle_visibility(teamtext4) {
+       var e = document.getElementById(teamtext4);
+       if(e.style.display == 'none')
+          e.style.display = 'block';
+       else
+          e.style.display = 'none';
+    }
+</script>
+
+
+<!--------------------------------------------------------PARTNERS----------------------------------------------------------------->
+
+    <div id="partners">
+        <div class="row">
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_BIZ_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_CHE_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ELEC_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ENG_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_SCI_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/df_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Helsinki.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/supported-by-hilife.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Kemianteollisuus_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/LOIMU.jpg">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/ThermoFisher_black.jpg">
+            </div>
+
+    
+        </div>
+    </div>
+
+<!--------------------------------------------------------FOOTER----------------------------------------------------------------->
+    <div class="footer">
+        <a class="icon" id="fb" href="https://www.facebook.com/AaltoHelsinki"><i class="fab fa-facebook-square"></i></a>
+        <a class="icon" id="twi" href="https://twitter.com/AaltoHelsinki"><i class="fab fa-twitter"></i></a>
+        <a class="icon" id="ig" href="https://instagram.com/aaltohelsinki_igem"><i class="fab fa-instagram"></i></a>
+        <a class="icon" id="blog" href="http://blog.aaltohelsinki.com"><i class="fab fa-tumblr-square"></i></a><br>
+        Kemistintie 1, Espoo, Finland<br>
+        team@aaltohelsinki.com
+    </div>
+
+</body>
+</html>

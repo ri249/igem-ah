@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--css-->
+    <link href="styletest.css" rel="stylesheet">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <title>Team Members</title>
+    
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+<!--------------------------------------------------------TOP LOGO----------------------------------------------------------------->
+    <div class="header">
+        <img src="logos/team-members.jpg" style="width: 100%; background-attachment: fixed; background-position: center; left: 0; right: 0;">
+    </div>
+
+<!--------------------------------------------------------SCROLL UP BUTTON----------------------------------------------------------------->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button> 
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            document.getElementById("myBtn").style.display = "block";
+            } else {
+            document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<script>
+    // When the user scrolls the page, execute myFunction 
+    document.onscroll = function() {myProgress()};
+    
+    function myProgress() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+
+<!--------------------------------------------------------TOP MENU----------------------------------------------------------------->
+
+    <div class="topnav">
+       <ul id="menu">
+           <li id="mainmenu"><a href="#">Home</a></li>
+           <li><input id="check1" type="checkbox" name="menu"/><label for="check1">Team <i id="fabicon" class="fas fa-angle-down"></i></label>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Members</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions">Attributions</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations">Collaborations</a></li>
+                    <li><a href="">Sponsors</a></li>
+                </ul>
+            </li>
+           <li><input id="check2" type="checkbox" name="menu"/><label for="check2">Project <i id="fabicon" class="fas fa-angle-down"></i></label>
+            <ul class="submenu">
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">Description</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook">Notebook</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Design</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments">Protocols</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution">Contribution</a></li>
+                <li><a href="">Model</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Results">Results</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate">Demonstrate</a></li>
+            </ul>
+            </li>
+           <li><input id="check3" type="checkbox" name="menu"/><label for="check3">Parts <i id="fabicon" class="fas fa-angle-down"></i></label>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Overview</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part">Basic Parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve">Improved parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Composite_Part">Composite parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection">Parts collection</a></li>
+                </ul>
+            </li>
+           <li id="mainmenu"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety">Safety</a></li>
+           <li><input id="check4" type="checkbox" name="menu"/><label for="check4">Human Practices <i id="fabicon" class="fas fa-angle-down"></i></label>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">Human Practices</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement">Education & Engagement</a></li>
+                </ul>
+            </li>
+           <li id="mainmenu"><a href="#">Awards</a></li>
+       </ul>
+    </div>
+
+
+<!--------------------------------------------------------CONTENT----------------------------------------------------------------->
+
+
+<h1 style="padding-top: 10px; padding-left: 55px;">Team members</h1>
+
+<div class="row1">
+
+    <div class="column">
+        <img src="img/team/ilse.jpg" alt="Ilse" style="width:100%">
+        <div class="container">
+            <h4><b>Ilse Kaaja</b></h4>
+            <h5>University of Helsinki</h5>
+            <p class="desc">Ilse is currently studying in the Translational Medicine MSc program at the University of Helsinki. She is enthusiastic about health innovations. On free time enjoys all things outdoors and coaches track & field.</p>
+        </div>
+    </div>        
+    <div class="column">
+        <img src="img/team/amanda.jpg" alt="Amanda" style="width:100%">
+        <div class="container">
+            <h4><b>Amanda Raitosalo</b></h4>
+            <h5>University of Helsinki</h5>
+            <p class="desc">Amanda is currently wrapping up her Master’s studies in Microbiology at the University of Helsinki. She has a Bachelor’s degree in the same subject. Currently she's working on a project related to oil spill response, with the help of microbes! Amanda also has some experience in medical microbiology. </p>
+        </div>
+    </div>
+
+    <div class="column">
+        <img src="img/team/antti.jpg" alt="Antti" style="width:100%">
+        <div class="container">
+            <h4><b>Antti Pennanen</b></h4>
+            <h5>University of Helsinki</h5>
+            <p class="desc">Antti is studying Molecular Biosciences (BSc) at the University of Helsinki. He applied to the team because iGEM seemed like a great opportunity to gain experience in applying scholarly knowledge in practice, while learning lots of other useful skills.</p>
+        </div>
+    </div>
+        
+    <div class="column">
+        <img src="img/team/arina.jpg" alt="Arina" style="width:100%">
+        <div class="container">
+            <h4><b>Arina Vara</b></h4>
+            <h5>Aalto University</h5>
+            <p class="desc">Arina is currently majoring in Energy and Environmental Technology and minoring in Bioinformation Technology at Aalto University. On her free time she loves doing art, such as painting and drawing.</p>
+        </div>
+
+    </div>
+
+    <div class="column">
+        <img src="img/team/camilla.jpg" alt="Camilla" style="width:100%">
+        <div class="container">
+            <h4><b>Camilla Selenius</b></h4>
+            <h5>Aalto University</h5>
+            <p class="desc">Camilla is finishing her Bachelor’s Degree in Biotechnology and Chemical Technology at Aalto University. In the fall, she will start studying towards her Master’s Degree in Biosystems and Biomaterials Engineering. </p>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row1">
+
+    <div class="column">
+        <img src="img/team/miika.jpg" alt="Miika" style="width:100%">
+        <div class="container">
+            <h4><b>Miika Korpioja</b></h4>
+            <h5>Aalto University</h5>
+            <p class="desc">Miika has a Bachelor’s Degree in Biotechnology and Chemical Technology and is currently studying a Master’s programme in Biosystems and Biomaterials Engineering at Aalto University. On his free time, Miika can be found at the gym or playing his beloved guitars.</p>
+        </div>
+    </div>
+
+    <div class="column">
+        <img src="img/team/neja.jpg" alt="Neja" style="width:100%">
+        <div class="container">
+            <h4><b>Neja Sirc</b></h4>
+            <h5>University of Helsinki</h5>
+            <p class="desc">Neja is currently finishing her Bachelor's degree in Chemistry at University of Helsinki. In the fall, she will start Master’s programme in Translational Medicine. She has some experiences in biomedical research and is looking forward to use those in the project. In her free time she enjoys taking long hikes, preferably in the mountains. She is an active member of 2 student organizations and when she is not trying to figure out a solution to a scientific problem she is a social butterfly. </p>
+        </div>
+    </div>        
+    <div class="column">
+        <img src="img/team/noora.jpg" alt="Noora" style="width:100%">
+        <div class="container">
+            <h4><b>Noora Haapala</b></h4>
+            <h5>University of Helsinki</h5>
+            <p class="desc">Noora Haapala has a Bachelor’s degree in Biomedicine and is currently studying a Master’s programme in Translational Medicine. She has some experience in biomedical research and bioentrepreneurship. She goes bouldering or works out at the gym at times when she is not busy figuring out how to solve all the problems in the world with science.</p>
+        </div>
+    </div>
+            
+    <div class="column">
+        <img src="img/team/tuomas.jpg" alt="Tuomas" style="width:100%">
+        <div class="container">
+            <h4><b>Tuomas Burakowski</b></h4>
+            <h5>Aalto University</h5>
+            <p class="desc">Tuomas studies design at Aalto ARTS. He worked as an art conservator for a number of years before deciding to switch fields. Did some sports way back then. He likes tinkering with stuff such as 3D-printers etc. and he enjoys watching certain sports as well.</p>
+        </div>
+    </div>
+
+    <div class="column">
+        <img src="img/team/ursula.jpg" alt="Ursula" style="width:100%">
+        <div class="container">
+            <h4><b>Ursula Mikkola</b></h4>
+            <h5>UH & Aalto University</h5>
+            <p class="desc">Ursula is studying Entrepreneurship and Innovation Management at Aalto University and minoring in Molecular Biosciences at the University of Helsinki. On her free time, she enjoys doing sports and spending time with her friends. </p>
+        </div>
+    </div>
+
+</div>
+
+
+<h1 style="padding-top: 10px; padding-left: 55px;">Advisors and instructors</h1>
+
+<div class="row1">
+
+    <div class="column">
+        <img src="img/team/heli.jpeg" alt="Ilse" style="width:100%">
+        <div class="container">
+            <h4><b>Heli Viskari</b></h4>
+            <h5>Main advisor</h5>
+            <p class="desc">Aalto University lecturer, Department of Bioproducts and Biosystems.</p>
+        </div>
+    </div>        
+    <div class="column">
+        <img src="img/team/minna.jpg" alt="Amanda" style="width:100%">
+        <div class="container">
+            <h4><b>Minna Poranen</b></h4>
+            <h5>Principal Investigator</h5>
+            <p class="desc">University of Helsinki, faculty of Biological and Environmental Sciences.</p>
+        </div>
+    </div>
+
+    <div class="column">
+        <img src="img/team/markus.jpg" alt="Antti" style="width:100%">
+        <div class="container">
+            <h4><b>Markus Linder</b></h4>
+            <h5>Advisor</h5>
+            <p class="desc">Aalto University professor of Biomolecular Sciences.</p>
+        </div>
+    </div>
+        
+
+
+</div>
+
+
+<!--------------------------------------------------------PARTNERS----------------------------------------------------------------->
+
+    <div id="partners">
+        <div class="row">
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_BIZ_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_CHE_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ELEC_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ENG_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_SCI_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/df_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Helsinki.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/supported-by-hilife.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Kemianteollisuus_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/LOIMU.jpg">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/ThermoFisher_black.jpg">
+            </div>
+
+    
+        </div>
+    </div>
+
+<!--------------------------------------------------------FOOTER----------------------------------------------------------------->
+    <div class="footer">
+        <a class="icon" id="fb" href="https://www.facebook.com/AaltoHelsinki"><i class="fab fa-facebook-square"></i></a>
+        <a class="icon" id="twi" href="https://twitter.com/AaltoHelsinki"><i class="fab fa-twitter"></i></a>
+        <a class="icon" id="ig" href="https://instagram.com/aaltohelsinki_igem"><i class="fab fa-instagram"></i></a>
+        <a class="icon" id="blog" href="http://blog.aaltohelsinki.com"><i class="fab fa-tumblr-square"></i></a><br>
+        Kemistintie 1, Espoo, Finland<br>
+        team@aaltohelsinki.com
+    </div>
+
+</body>
+</html>

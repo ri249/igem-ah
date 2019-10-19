@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--css-->
+    <link href="styletest.css" rel="stylesheet">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <title>Aalto-Helsinki</title>
+
+
+
+</head>
+<body>
+
+<!--------------------------------------------------------TOP LOGO----------------------------------------------------------------->
+    <div class="header">
+        <img src="logos/vibx/vibx_tp1.png" style="width: 100%; margin-top: 0%; background-position: center; left: 0; right: 0;">
+    </div>
+            
+<!--------------------------------------------------------SCROLL UP BUTTON----------------------------------------------------------------->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button> 
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            document.getElementById("myBtn").style.display = "block";
+            } else {
+            document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<script>
+    // When the user scrolls the page, execute myFunction 
+    document.onscroll = function() {myProgress()};
+    
+    function myProgress() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+
+
+<!--------------------------------------------------------TOP MENU----------------------------------------------------------------->
+
+    <div id="topnav">
+    <nav>
+       <ul id="menu">
+           <li><a href="#">Home</a></li>
+
+           <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">Project</a>
+
+            <ul class="submenu">
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">Description</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Design</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate">Demonstrate</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook">Notebook</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution">Contribution</a></li>
+            </ul>
+            </li>
+
+            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">Lab</a>
+                <ul class="submenu">
+                    <li style="font-size: 20px; padding: 5px 10px 0px 10px;">Wet Lab
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety">Safety</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments">Experiments</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Results">Results</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab_Book">Lab book</a></li>
+                        </ul>
+                    </li>
+                    <li style="font-size: 20px; padding: 5px 10px 0px 10px;">Dry Lab
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model">Model overview</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Growth_rate">Growth rate</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Simulations">Simulations</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Parts</a>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part">Basic Parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Composite_Part">Composite Parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve">Improved parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection">Collection</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">Human Practices</a>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement">Education & Public Engagement</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations">Collaborations</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">Integrated Human Practices</a>
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/Design_Thinking">Design Thinking</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Entrepreneurship">Entrepreneurship</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+           <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Team</a>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions">Attributions</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Sponsors">Sponsors</a></li>
+                </ul>
+            </li>
+
+           <li id="mainmenu"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Awards">Awards</a></li>
+
+       </ul>
+    </nav>
+    </div>
+
+
+<!--------------------------------------------------------CONTENT----------------------------------------------------------------->
+
+<div class="hometext">
+
+    <div class="hometext-grid">
+        <div class="item1"><img id="hometextimg" src="finalpics/general.jpg"></div>
+        <div class="item2">
+            <h2 style="margin-right: 5%; text-align: right;">HUNDREDS OF MILLIONS OF PEOPLE RELY ON THERAPEUTIC PROTEINS DAILY</h2>
+            <p class="maintext" id="hometext" style="text-align: right; margin-right: 5%;">
+                Hundreds of millions of people who rely on therapeutic proteins daily to manage their diseases (Herkert <i>et al.</i>, 2019). The demand for therapeutic proteins is only increasing as it has been estimated that within the next 10 years over 50% of medicines developed will be biopharmaceuticals, including therapeutic proteins (Jozala <i>et al.</i>, 2016).
+            </p>
+        </div>
+        <div class="item3">
+            <h2>1 OUT OF 4 OF THESE PEOPLE CANNOT AFFORD THEIR MEDICATION</h2>
+            <p class="maintext" id="hometext">
+                As the population is aging, the prevalence of many diseases is increasing. At the same time, the price of medication is also increasing, leaving people into insufferable situations.
+            </p>
+        </div>
+        <div class="item4"><img id="hometextimg" src="finalpics/general.jpg"></div>
+        <div class="item5"><img id="hometextimg" src="finalpics/general.jpg"></div>
+        <div class="item6">
+            <h2 style="margin-right: 5%; text-align: right;">WE FOUND A SOLUTION IN <i>VIBRIO NATRIEGENS</i></h2>
+            <p class="maintext" id="hometext" style="text-align: right; margin-right: 5%;">
+                Inspired by the possibilities that the fastest growing organism known, <i>Vibrio natriegens</i> offers (Weinstock <i>et al.</i>, 2016), our team Aalto-Helsinki is determined to take on the challenge of improving the bacterium’s protein expression and secretion.
+            </p>
+        </div>
+    </div>
+    <div class="item7">
+        <img id="hometextimg" src="finalpics/home/blueblack.png" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+        <p class="maintext" id="hometext" style="padding-top: 0;">
+            Our iGEM project aims to tackle the challenges of recombinant protein production by improving the next-generation synthetic biology chassis organism <i>Vibrio natriegens</i>. Hence the name of our project VibXPresso - <i>Vibrio natriegens</i> with Xtreme PRotein Expression and Secretion Optimization. Read more about our project in <a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">Project Description</a> page!
+        </p>
+        <p class="maintext" id="hometext" style="font-size: 12px; width: 50%; padding-top: 0;">
+            <span style="font-weight: bold;">References:</span><br><br>
+            
+            Herkert, D., Vijayakumar, P., Luo, J., Schwartz, J. I., Rabin, T. L., DeFilippo, E., & Lipska, K. J. (2019). Cost-related insulin underuse among patients with diabetes. <i>JAMA internal medicine, 179</i>(1), 112-114.<br><br>
+            Jozala, A. F., Geraldes, D. C., Tundisi, L. L., Feitosa, V. D. A., Breyer, C. A., Cardoso, S. L., ... & Oliveira, M. A. D. (2016). Biopharmaceuticals from microorganisms: from production to purification. <i>Brazilian journal of microbiology, 47</i>, 51-63.<br><br>
+            Weinstock, M. T., Hesek, E. D., Wilson, C. M., & Gibson, D. G. (2016). <i>Vibrio natriegens</i> as a fast-growing host for molecular biology. <i>Nature methods, 13</i>(10), 849.
+        </p>
+    </div>
+
+</div>
+
+
+<!---------------------------------button grid------------------------------------------->
+
+
+<div class="homegrid">
+    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/022.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">PROJECT</a></div>
+    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/011.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">LAB</a></div>
+    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/033.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">HUMAN<br>OUTREACH</a></div>
+</div>
+
+
+
+<!--------------------------------------------------------PARTNERS----------------------------------------------------------------->
+
+    <div id="partners">
+        <div class="row">
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_BIZ_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_CHE_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ELEC_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ENG_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_SCI_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/df_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Helsinki.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/supported-by-hilife.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Kemianteollisuus_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/LOIMU.jpg">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/ThermoFisher_black.jpg">
+            </div>
+
+    
+        </div>
+    </div>
+
+<!--------------------------------------------------------FOOTER----------------------------------------------------------------->
+    <div class="footer">
+        <a class="icon" id="fb" href="https://www.facebook.com/AaltoHelsinki"><i class="fab fa-facebook-square"></i></a>
+        <a class="icon" id="twi" href="https://twitter.com/AaltoHelsinki"><i class="fab fa-twitter"></i></a>
+        <a class="icon" id="ig" href="https://instagram.com/aaltohelsinki_igem"><i class="fab fa-instagram"></i></a>
+        <a class="icon" id="blog" href="http://blog.aaltohelsinki.com"><i class="fab fa-tumblr-square"></i></a><br>
+        Kemistintie 1, Espoo, Finland<br>
+        team@aaltohelsinki.com
+    </div>
+
+</body>
+</html>

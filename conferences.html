@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--erase this-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--css, erase this-->
+    <link href="styletest.css" rel="stylesheet">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <title>Conferences</title>
+
+
+
+</head>
+<body>
+
+<!--------------------------------------------------------TOP LOGO----------------------------------------------------------------->
+    <div class="header">
+        
+        <img src="underconstruction.jpg" style="width: 100%; margin-top: 0%; background-position: center; left: 0; right: 0;">
+    </div>
+<!--------------------------------------------------------SCROLL UP BUTTON----------------------------------------------------------------->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button> 
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            document.getElementById("myBtn").style.display = "block";
+            } else {
+            document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<script>
+    // When the user scrolls the page, execute myFunction 
+    document.onscroll = function() {myProgress()};
+    
+    function myProgress() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+
+<!--------------------------------------------------------TOP MENU----------------------------------------------------------------->
+
+    <div class="topnav">
+       <ul id="menu">
+           <!--home-->
+           <li id="mainmenu"><a href="https://2019.igem.org/Team:Aalto-Helsinki">Home</a></li>
+           <!--project-->
+           <li><input id="check1" type="checkbox" name="menu"/><label for="check1">Project <i id="fabicon" class="fas fa-angle-down"></i></label>
+            <ul class="submenu">
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">Description</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Design</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook">Notebook</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety">Safety</a></li>
+            </ul>
+            </li>
+            <!--lab-->
+            <li><input id="check2" type="checkbox" name="menu"/><label for="check2">Lab <i id="fabicon" class="fas fa-angle-down"></i></label>
+            <ul class="submenu">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments">Experiments</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Results">Results</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate">Demonstrate</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Labbook">Lab book</a></li>
+            </ul>
+            </li>
+            <!--parts-->
+            <li><input id="check3" type="checkbox" name="menu"/><label for="check3">Parts <i id="fabicon" class="fas fa-angle-down"></i></label>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Overview</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part">Basic Parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve">Improved parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Composite_Part">Composite parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection">Parts collection</a></li>
+                </ul>
+            </li>
+            <!--model-->
+            <li><input id="check4" type="checkbox" name="menu"/><label for="check4">Model <i id="fabicon" class="fas fa-angle-down"></i></label>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model">Introduction</a></li>
+                </ul>
+            </li>
+            <!--HP-->
+            <li><input id="check5" type="checkbox" name="menu"/><label for="check5">Human Practices <i id="fabicon" class="fas fa-angle-down"></i></label>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">Integrated Human Practices</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement">Public Engagement & Education</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations">Collaborations</a></li>
+                </ul>
+            </li>
+           <li><input id="check6" type="checkbox" name="menu"/><label for="check6">Team <i id="fabicon" class="fas fa-angle-down"></i></label>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Members</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions">Attributions</a></li>
+                    <li><a href="">Sponsors</a></li>
+                </ul>
+            </li>
+           <li id="mainmenu"><a href="#">Awards</a></li>
+       </ul>
+    </div>
+
+
+<!--------------------------------------------------------CONTENT----------------------------------------------------------------->
+
+
+<div class="text">
+    <div class="semicont">
+        <h1 style="color: black;">BioBrick Tutorial 12th - 14th of April</h1>
+        <!--<img src="pd/bigpic.png" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">-->
+        <p class="maintext" style="color: black;">
+            In the early stages of our project, two of our team members attended the Nordic BioBrick Tutorial organized by DTU Biobuilders in Copenhagen. We were the first Aalto-Helsinki team to attend this annually arranged event, but we will definitely be the first and last as this event gave us lots of good information about iGEM and many good tools to get us started with our project. <br><br> 
+                
+            When we arrived to the DTU campus in Copenhagen, we were warmly greeted. The event started with a lecture about iGEM in general, after which we got to hear the schedule for the weekend, meet our lab group members, and attend a lecture about Human Practices in iGEM. In the evening we got the chance to discuss with the other teams about their cool projects over a pizza dinner. <br><br>
+
+            The second day of the Nordic BioBrick Tutorial was all about the BioBrick Tutorial, which we got to do in mixed groups formed of students from different Universities from the Nordic countries. In the lab, we made a basic assembly with BioBricks, and completed a transformation into E. coli DH5α cells. This was a very useful experience as we got a good introduction to BioBricks while doing it. Between the lab sessions at DTU, we had lunch, took a group photo, and attended a workshop about pitching. Before plating the transformants in the evening, we attended lectures about different cloning strategies, and iGEM Wiki page. After a successful day of lab work, we went to have dinner in the DTU building 101 cafeteria. Here we again got the chance to socialize with the other teams and ask them about their work and plans for the summer. <br><br>
+
+            On the final day of the Nordic BioBrick Tutorial we got to listen to an iGEM alumni panel at DTU, and see the results of our hard labwork, which turned out great! After the final wrap-up session, we then headed to the city center to have dinner with the iGEM team from Oslo, after which we returned home to Finland to tell about our great trip to the rest of the team. <br><br>
+
+        </p>
+
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbers">1 / 3</div>
+                <img src="photos/bbt/001.jpg" style="width: 100%;">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbers">2 / 3</div>
+                <img src="photos/bbt/002.jpg" style="width: 100%;">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbers">3 / 3</div>
+                <img src="photos/bbt/003.jpg" style="width: 100%;">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)"><i class="fas fa-caret-left"></i></a>
+            <a class="next" onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
+
+        </div>
+        <br>
+        <div style="text-align: center;">
+        
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        
+        </div>
+        <!--<script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+            }
+        </script>-->
+        <br>
+
+        <h1 style="color: black;">Nordic iGEM Conference 17th - 19th of May</h1>
+
+        <p class="maintext" style="color: black;">
+        
+                Only one month later, team Aalto-Helsinki returned to Copenhagen, now for the Nordic iGEM Conference, also known as NiC. Luckily, this time almost the whole team was able to attend. This enabled us to get to know the other teams – four teams from Sweden and three teams from Denmark – and them to really get to know us! As a cherry on the top, the intense weekend acted as a team bonding experience.<br><br>
+                Friday started out with a science communication workshop and continued with a dinner and getting to know the other igemers at a scavenger hunt at the beautiful University of Copenhagen Frederiksberg Campus, organized by iGEM Team Copenhagen 2018.<br><br>
+                Differing from the Biobrick Tutorial, NiC is a conference, and therefore the main events of the weekend were the Mini-Jamboree and the poster sessions on Saturday. The pressure was on: Our team had to present our project by pitching in front of the audience and the judges and present our poster at the poster session. Being the second to last team to present, we were nervous after hearing impressive and well developed presentations and project plans one after the other. Despite all this, our team delivered our pitch and the poster presentation well and we got some good feedback from other teams!<br><br>
+                Let’s be frank, our team members were drained and sleep deprived of traveling and putting an insane effort on developing our first ever poster in a very short period of time before the weekend. On top of this, we were perfecting our pitch the night before, based on the feedback we got from the science communication workshop on Friday. Our teamwork skills were put under pressure due to these stressful times, but we overcame all the obstacles and at the end of the day, the end results of both the presentation and the poster surpassed our own expectations.<br><br>
+                The Saturday continued with a poster session, workshops and even a Hackathon. Afterwards we enjoyed a dinner and continued the night together with the other iGEM teams in Copenhagen. <br><br>
+                On Sunday, after the official program and a very useful modeling workshop, our team ended the weekend with a team meeting, reflected back on what we learned (and we did learn a lot) and what could be improved next time. We even managed to fit in a short stroll around the city before catching our flight home.”<br><br>
+
+        
+        </p>
+        <br>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbers">1 / 2</div>
+                <img src="photos/nic/001.jpg" style="width: 100%;">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbers">2 / 2</div>
+                <img src="photos/nic/002.jpg" style="width: 100%;">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)"><i class="fas fa-caret-left"></i></a>
+            <a class="next" onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
+
+        </div>
+        <br>
+        <div style="text-align: center;">
+        
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+        
+        </div>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+
+    </div>
+</div>
+
+
+<!--------------------------------------------------------PARTNERS----------------------------------------------------------------->
+
+    <div id="partners">
+        <div class="row">
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_BIZ_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_CHE_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ELEC_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ENG_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_SCI_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/df_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Helsinki.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/supported-by-hilife.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Kemianteollisuus_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/LOIMU.jpg">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/ThermoFisher_black.jpg">
+            </div>
+
+    
+        </div>
+    </div>
+
+<!--------------------------------------------------------FOOTER----------------------------------------------------------------->
+    <div class="footer">
+        <a class="icon" id="fb" href="https://www.facebook.com/AaltoHelsinki"><i class="fab fa-facebook-square"></i></a>
+        <a class="icon" id="twi" href="https://twitter.com/AaltoHelsinki"><i class="fab fa-twitter"></i></a>
+        <a class="icon" id="ig" href="https://instagram.com/aaltohelsinki_igem"><i class="fab fa-instagram"></i></a>
+        <a class="icon" id="blog" href="http://blog.aaltohelsinki.com"><i class="fab fa-tumblr-square"></i></a><br>
+        Kemistintie 1, Espoo, Finland<br>
+        team@aaltohelsinki.com
+    </div>
+
+</body>
+</html>

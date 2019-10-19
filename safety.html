@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--erase this-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--css, erase this-->
+    <link href="styletest.css" rel="stylesheet">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <title>Safety</title>
+
+
+
+</head>
+<body>
+
+<!--------------------------------------------------------TOP LOGO----------------------------------------------------------------->
+    <div class="header">
+        
+        <img src="underconstruction.jpg" style="width: 100%; margin-top: 0%; background-position: center; left: 0; right: 0;">
+    </div>
+<!--------------------------------------------------------SCROLL UP BUTTON----------------------------------------------------------------->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button> 
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            document.getElementById("myBtn").style.display = "block";
+            } else {
+            document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<script>
+    // When the user scrolls the page, execute myFunction 
+    document.onscroll = function() {myProgress()};
+    
+    function myProgress() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+
+<!--------------------------------------------------------TOP MENU----------------------------------------------------------------->
+
+    <div class="topnav">
+       <ul id="menu">
+           <!--home-->
+           <li id="mainmenu"><a href="https://2019.igem.org/Team:Aalto-Helsinki">Home</a></li>
+           <!--project-->
+           <li><input id="check1" type="checkbox" name="menu"/><label for="check1">Project <i id="fabicon" class="fas fa-angle-down"></i></label>
+            <ul class="submenu">
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">Description</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Design</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook">Notebook</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety">Safety</a></li>
+            </ul>
+            </li>
+            <!--lab-->
+            <li><input id="check2" type="checkbox" name="menu"/><label for="check2">Lab <i id="fabicon" class="fas fa-angle-down"></i></label>
+            <ul class="submenu">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments">Experiments</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Results">Results</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate">Demonstrate</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Labbook">Lab book</a></li>
+            </ul>
+            </li>
+            <!--parts-->
+            <li><input id="check3" type="checkbox" name="menu"/><label for="check3">Parts <i id="fabicon" class="fas fa-angle-down"></i></label>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Overview</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part">Basic Parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve">Improved parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Composite_Part">Composite parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection">Parts collection</a></li>
+                </ul>
+            </li>
+            <!--model-->
+            <li><input id="check4" type="checkbox" name="menu"/><label for="check4">Model <i id="fabicon" class="fas fa-angle-down"></i></label>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model">Introduction</a></li>
+                </ul>
+            </li>
+            <!--HP-->
+            <li><input id="check5" type="checkbox" name="menu"/><label for="check5">Human Practices <i id="fabicon" class="fas fa-angle-down"></i></label>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">Integrated Human Practices</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement">Public Engagement & Education</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations">Collaborations</a></li>
+                </ul>
+            </li>
+           <li><input id="check6" type="checkbox" name="menu"/><label for="check6">Team <i id="fabicon" class="fas fa-angle-down"></i></label>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Members</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions">Attributions</a></li>
+                    <li><a href="">Sponsors</a></li>
+                </ul>
+            </li>
+           <li id="mainmenu"><a href="#">Awards</a></li>
+       </ul>
+    </div>
+
+
+<!--------------------------------------------------------CONTENT----------------------------------------------------------------->
+
+<div class="text">
+    <div class="semicont">
+        <h2 style="color: black;">Introduction</h2>
+        <p class="maintext" style="color: black;">
+            Any properly conducted iGEM project requires responsibly and safely performed laboratory work. Like in any project, the main priority when working in the lab is not the results, but to ensure the safety of the people and the faculties when working in the lab. On our part, our team is devoted to working responsibly and outrightly in the laboratory, so that we can advance safer laboratory work for other iGEMers and scientists.<br> 
+            In addition, we hope that by sharing our results, protocols and procedures we can make working with <i>Vibrio natriegens</i> safer for the upcoming <i>V. natriegens</i> enthusiasts. Overall, our team strives to work responsibly and take safety and ethics carefully into account in our project design and laboratory work. We conduct research that is safe for us and for the environment.<br><br>
+        </p>
+        <h2 style="color: black;">Lab safety</h2>
+        <p class="maintext" style="color: black;">
+            Our team is committed fully to follow iGEMs official <a href="https://2019.igem.org/Safety/Rules">safety and security policies</a> and as a consequence of that, our whole team has received extensive laboratory safety training required by the (law?/institution?) for working in the university’s laboratory faculties. In addition to the formal safety training, we have also received additional safety trainings to deepen our knowledge and know-how on responsible and secure laboratory working, including several introductions to different laboratory equipment for their safe use (See attributions page for these persons). Our team has worked exclusively only in biosafety level one laboratory. Below you’ll see our general rules for safe working in the laboratory (1). Complete safety protocols for our faculties you can find here: <a href="https://www.aalto.fi/en/services/occupational-safety-school-of-chemical-engineering">https://www.aalto.fi/en/services/occupational-safety-school-of-chemical-engineering</a>.<br><br>
+        </p>
+
+
+
+        <div class="safetylisting">
+            <button id="safetybtn" onclick="toggle_visibility('safetylist');">Lab rules <i class="fas fa-angle-down"></i></button>
+            <ul class="maintext" id="safetylist" style="color: black; display: none;">
+                <li>Tie your hair</li>
+                <li>No eating and drinking in the lab</li>
+                <li>Do not work alone in the lab, especially late at night</li>
+                <li>No mouth-pipetting or sniffing of the cultures!</li>
+                <li>When dealing with hazardous chemicals, use fume hood and gear up accordingly.</li>
+                <li>Wash your hands always before and after the lab</li>
+                <li>Mark containers, flasks and bottles properly, take detailed notes of your work!</li>
+                <li>Always read the safety data sheets before using the particular chemical</li>
+                <li>Leave your lab coat to the lab to avoid contamination</li>
+                <li>Clean the spots where you have been working</li>
+                <li>Mark GMO containing containers properly and handle GMO waste by the rules of the laboratory</li>
+                <li>Make sure you know where emergency showers, fire blankets, eyewash bottles, and first aid kits are placed in the lab before you start working</li>
+                <li>ALWAYS wear protective clothing in the laboratory. (lab coat, safety goggles, disposable gloves)</li>
+            </ul>
+        </div>
+        <br><br>
+        <p class="maintext" style="color: black;">
+            Our work focuses on two different safety level 1 organisms, bacterium <i>Vibrio natriegens</i>, and bacterium <i>Escherichia coli</i>. They both are non-pathogenic, safe to work with and do not possess harm to human beings, although <i>V. natriegens</i> is naturally harmful to a handful of marine crustaceans. We used the following strains. <i>V.natriegens</i>: ATCC 14048 and Vmax. <i>E. coli</i>: DH5alpha and BL21. The used <i>E. coli</i> strains are laboratory strains with no natural environment. No humans or animals were tested nor harmed in our laboratory experiments.<br><br>
+        </p>
+    
+    </div>
+
+
+<script type="text/javascript">
+    function toggle_visibility(safetylist) {
+       var e = document.getElementById(safetylist);
+       if(e.style.display == 'none')
+          e.style.display = 'block';
+       else
+          e.style.display = 'none';
+    }
+</script>
+
+
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <div class="numbers">1 / 11</div>
+        <img src="photos/lab/safety/001.jpg" style="width: 100%;">
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbers">2 / 11</div>
+        <img src="photos/lab/safety/002.jpg" style="width: 100%;">
+    </div>
+    <div class="mySlides fade">
+        <div class="numbers">3 / 11</div>
+        <img src="photos/lab/safety/003.jpg" style="width: 100%;">
+    </div>
+    <div class="mySlides fade">
+        <div class="numbers">4 / 11</div>
+        <img src="photos/lab/safety/004.jpg" style="width: 100%;">
+    </div>
+    <div class="mySlides fade">
+        <div class="numbers">5 / 11</div>
+        <img src="photos/lab/safety/005.jpg" style="width: 100%;">
+    </div>
+    <div class="mySlides fade">
+        <div class="numbers">6 / 11</div>
+        <img src="photos/lab/safety/006.jpg" style="width: 100%;">
+    </div>
+    <div class="mySlides fade">
+        <div class="numbers">7 / 11</div>
+        <img src="photos/lab/safety/007.jpg" style="width: 100%;">
+    </div>
+    <div class="mySlides fade">
+        <div class="numbers">8 / 11</div>
+        <img src="photos/lab/safety/008.jpg" style="width: 100%;">
+    </div>
+    <div class="mySlides fade">
+        <div class="numbers">9 / 11</div>
+        <img src="photos/lab/safety/009.jpg" style="width: 100%;">
+    </div>
+    <div class="mySlides fade">
+        <div class="numbers">10 / 11</div>
+        <img src="photos/lab/safety/010.jpg" style="width: 100%;">
+    </div>
+    <div class="mySlides fade">
+        <div class="numbers">11 / 11</div>
+        <img src="photos/lab/safety/011.jpg" style="width: 100%;">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)"><i class="fas fa-caret-left"></i></a>
+    <a class="next" onclick="plusSlides(1)"><i class="fas fa-caret-right"></i></a>
+
+</div>
+<br>
+<div style="text-align: center;">
+
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+    <span class="dot" onclick="currentSlide(6)"></span> 
+    <span class="dot" onclick="currentSlide(7)"></span> 
+    <span class="dot" onclick="currentSlide(8)"></span> 
+    <span class="dot" onclick="currentSlide(9)"></span> 
+    <span class="dot" onclick="currentSlide(10)"></span> 
+    <span class="dot" onclick="currentSlide(11)"></span> 
+
+</div>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
+<br><br>
+
+<div class="semicont">
+    <h2 style="color: black;">GMO safety</h2>
+    <p class="maintext" style="color: black;">
+        Our project does not aim for release of our genetically modified organisms and following the iGEMs official <a href="https://2019.igem.org/Safety/Do_not_Release">‘Do not release’ -policy</a> concerning GMOs, all of our laboratory work will remain at an experimental stage.<br>
+        Our team did not take lightly the hazard and possibility of our genetically modified bacteria getting out of our laboratory, so preventive action played a key part. This was mostly achieved by following our laboratory rules obediently and making sure no GMO material was transported outside of the laboratory faculties. All GMO containing waste was handled properly with cautiousness during the laboratory work of our project. In the media and the general public genetically modified organisms are seen still sometimes rather as a threat than an opportunity, and we want to do our part in showing that this is not the case. The best way to show this is working responsibly and transparently in the lab.<br><br>
+    </p>
+
+    <h2 style="color: black;">Biopharmaceuticals safety </h2>
+    <p class="maintext" style="color: black;">
+        Biopharmaceuticals are defined as a medical drugs produced using biotechnology. Biopharmaceutical compounds are produced in an engineered organism that naturally does not produce the biopharmaceutical compound. This technology enables large quantity production of such pharmaceuticals that have been previously unavailable or difficult to produce.(2)<br><br>
+        Biopharmaceuticals are somewhat safe. Before the first developed therapeutic recombinant protein recombinant human insulin was developed, protein drugs were produced by purifying biological material, such as donated blood. This led to serious safety issues, because it increased the risk of medicines being produced in virally infected material. Therefore shifting to recombinant proteins has increased the safety of therapeutic proteins. In addition, recombinant proteins are known for their tendency of being safe from off-target side effects.(3)<br><br>
+    </p>
+
+    <h2 style="color: black;">References</h2>
+    <p class="maintext" style="color: black;">
+        <a href="https://www.aalto.fi/en/services/occupational-safety-school-of-chemical-engineering">Occupational safety - School of Chemical Engineering, Aalto Unviersity</a><br>
+        <a href="https://www.who.int/biologicals/biotherapeutics/rDNA_DB_final_19_Nov_2013.pdf">https://www.who.int/biologicals/biotherapeutics/rDNA_DB_final_19_Nov_2013.pdf</a><br>
+        <a href="https://www.sciencedirect.com/science/article/pii/B9780124071803000027 ">https://www.sciencedirect.com/science/article/pii/B9780124071803000027 </a><br>
+    </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+<!--------------------------------------------------------PARTNERS----------------------------------------------------------------->
+
+    <div id="partners">
+        <div class="row">
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_BIZ_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_CHE_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ELEC_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ENG_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_SCI_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/df_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Helsinki.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/supported-by-hilife.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Kemianteollisuus_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/LOIMU.jpg">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/ThermoFisher_black.jpg">
+            </div>
+
+    
+        </div>
+    </div>
+
+<!--------------------------------------------------------FOOTER----------------------------------------------------------------->
+    <div class="footer">
+        <a class="icon" id="fb" href="https://www.facebook.com/AaltoHelsinki"><i class="fab fa-facebook-square"></i></a>
+        <a class="icon" id="twi" href="https://twitter.com/AaltoHelsinki"><i class="fab fa-twitter"></i></a>
+        <a class="icon" id="ig" href="https://instagram.com/aaltohelsinki_igem"><i class="fab fa-instagram"></i></a>
+        <a class="icon" id="blog" href="http://blog.aaltohelsinki.com"><i class="fab fa-tumblr-square"></i></a><br>
+        Kemistintie 1, Espoo, Finland<br>
+        team@aaltohelsinki.com
+    </div>
+
+</body>
+</html>

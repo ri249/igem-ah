@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--erase this-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--css, erase this-->
+    <link href="styletest.css" rel="stylesheet">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <title>Notebook</title>
+
+
+
+</head>
+<body>
+
+<!--------------------------------------------------------TOP LOGO----------------------------------------------------------------->
+    <div class="header">
+        
+        <img src="table.jpg" style="width: 50%; margin-top: 0%; background-position: center; left: 0; right: 0;">
+    </div>
+<!--------------------------------------------------------SCROLL UP BUTTON----------------------------------------------------------------->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button> 
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            document.getElementById("myBtn").style.display = "block";
+            } else {
+            document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+<div class="progress-container">
+    <div class="progress-bar" id="myBar" style="background: rgb(32, 148, 102);"></div>
+</div>
+
+<script>
+    // When the user scrolls the page, execute myFunction 
+    document.onscroll = function() {myProgress()};
+    
+    function myProgress() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+
+<!--------------------------------------------------------TOP MENU----------------------------------------------------------------->
+
+    <div class="topnav">
+       <ul id="menu">
+           <!--home-->
+           <li id="mainmenu"><a href="https://2019.igem.org/Team:Aalto-Helsinki">Home</a></li>
+           <!--project-->
+           <li><input id="check1" type="checkbox" name="menu"/><label for="check1">Project <i id="fabicon" class="fas fa-angle-down"></i></label>
+            <ul class="submenu">
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">Description</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Design</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook">Notebook</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety">Safety</a></li>
+            </ul>
+            </li>
+            <!--lab-->
+            <li><input id="check2" type="checkbox" name="menu"/><label for="check2">Lab <i id="fabicon" class="fas fa-angle-down"></i></label>
+            <ul class="submenu">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments">Experiments</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Results">Results</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate">Demonstrate</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Labbook">Lab book</a></li>
+            </ul>
+            </li>
+            <!--parts-->
+            <li><input id="check3" type="checkbox" name="menu"/><label for="check3">Parts <i id="fabicon" class="fas fa-angle-down"></i></label>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Overview</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part">Basic Parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve">Improved parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Composite_Part">Composite parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection">Parts collection</a></li>
+                </ul>
+            </li>
+            <!--model-->
+            <li><input id="check4" type="checkbox" name="menu"/><label for="check4">Model <i id="fabicon" class="fas fa-angle-down"></i></label>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model">Introduction</a></li>
+                </ul>
+            </li>
+            <!--HP-->
+            <li><input id="check5" type="checkbox" name="menu"/><label for="check5">Human Practices <i id="fabicon" class="fas fa-angle-down"></i></label>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">Integrated Human Practices</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement">Public Engagement & Education</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations">Collaborations</a></li>
+                </ul>
+            </li>
+           <li><input id="check6" type="checkbox" name="menu"/><label for="check6">Team <i id="fabicon" class="fas fa-angle-down"></i></label>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Members</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions">Attributions</a></li>
+                    <li><a href="">Sponsors</a></li>
+                </ul>
+            </li>
+           <li id="mainmenu"><a href="#">Awards</a></li>
+       </ul>
+    </div>
+
+
+<!--------------------------------------------------------CONTENT----------------------------------------------------------------->
+
+
+
+<div class="text">
+    <div class="semicont">
+        <h1 style="color: black;">Notebook</h1>
+
+        <div class="notegrid-container">
+            
+                <div style="background-color: rgb(100, 181, 149);"></div>
+                <div style="background-color: rgb(100, 181, 149);"><h2 class="noteheader">Team</h2></div>
+                <div style="background-color: rgb(100, 181, 149);"><h2 class="noteheader">Outreach</h2></div>
+                <div style="background-color: rgb(100, 181, 149);"><h2 class="noteheader">Lab</h2></div>
+            
+            
+                <div style="background-color: rgb(100, 181, 149);"><h2 class="noteheader">January</h2></div>
+                <div style="background-color: rgb(208, 235, 225);">
+                    <p class="nbtext"><span style="color:rgb(4, 88, 55);">28.1.2019 - 1.2.2019</span><br> The previous team interviewed the possible candidates for this year’s iGEM project</p>
+                </div>
+                <div style="background-color: rgb(208, 235, 225);"><p class="nbtext"></p></div>
+                <div style="background-color: rgb(208, 235, 225);"><p class="nbtext"></p></div>
+                
+                <div style="background-color: rgb(100, 181, 149);"><h2 class="noteheader">February</h2></div>
+                <div style="background-color: rgb(208, 235, 225);">
+                    <p class="nbtext"><span style="color:rgb(4, 88, 55);">8.2.2019</span><br> Team selection is made<br><br><span style="color:rgb(4, 88, 55);">24.2.2019</span><br> Our very first meeting!<br><br>The 2018 team prepared us for the upcoming project</p>
+                </div>
+                <div style="background-color: rgb(208, 235, 225);"><p class="nbtext"></p></div>
+                <div style="background-color: rgb(208, 235, 225);"><p class="nbtext"></p></div>
+            
+                <div style="background-color: rgb(100, 181, 149);"><h2 class="noteheader">March</h2></div>
+                <div style="background-color: rgb(208, 235, 225);">
+                    <p class="nbtext">
+                        <span style="color:rgb(4, 88, 55);">3.3.2019</span><br> Brainstorming and general planning of the project<br><br>
+                        <span style="color:rgb(4, 88, 55);">8.3.2019</span><br> We met Heli Viskari and Markus Linder; our advisors from Aalto University<br><br>
+                        <span style="color:rgb(4, 88, 55);">14.3.2019</span><br> We met Minna Poranen from HiLIFE (Helsinki Institute of Life Science) and she became our advisor from the University of Helsinki<br><br>
+                        <span style="color:rgb(4, 88, 55);">30.3.2019</span><br> We met with the other Finnish iGEM team from Turku and invited some iGEM alumni to join. We presented our initial project ideas and  had dinner together!
+                    </p>
+                </div>
+                <div style="background-color: rgb(208, 235, 225);"><p class="nbtext"></p></div>
+                <div style="background-color: rgb(208, 235, 225);"><p class="nbtext"></p></div>
+                
+                <div style="background-color: rgb(100, 181, 149);"><h2 class="noteheader">April</h2></div>
+                <div style="background-color: rgb(208, 235, 225);">
+                    <p class="nbtext">
+                        <span style="color:rgb(4, 88, 55);">5.4.2019 - 28.4.2019</span><br> Several meetings with the team, advisors and sponsors: We found out about Vibrio natriegens and its possible applications<br><br>
+                        <span style="color:rgb(4, 88, 55);">6.4.2019</span><br> We held our first fun day and played board games together<br><br>
+                    </p>
+                </div>
+                <div style="background-color: rgb(208, 235, 225);">
+                    <p class="nbtext">
+                        We raised money to make our project possible<br><br>
+                        We started collaborations with Aalto Design Factory<br><br>
+                        <span style="color:rgb(4, 88, 55);">12.4.2019 - 14.4.2019</span><br> Some of our team members attended the Biobrick tutorial weekend in Copenhagen<br><br>
+                        <span style="color:rgb(4, 88, 55);">25.4.2019</span><br> We attended the biotech theme week planning meeting since we will take part in it in September
+                    </p>
+                </div>
+                <div style="background-color: rgb(208, 235, 225);"><p class="nbtext"></p></div>
+
+                <div style="background-color: rgb(100, 181, 149);"><h2 class="noteheader">May</h2></div>
+                <div style="background-color: rgb(208, 235, 225);">
+                    <p class="nbtext">
+                        <span style="color:rgb(4, 88, 55);">2.5.2019 - 26.5.2019</span><br> We researched Vibrio natriegens more and decided on the method that we will use to enhance its protein production<br><br>
+                        <span style="color:rgb(4, 88, 55);">11.5.2019</span><br> We had an association meeting with the previous team and made agreements on organizational things<br><br>
+                        <span style="color:rgb(4, 88, 55);">24.5.2019</span><br> We had a relaxed get-together with previous Aalto-Helsinki iGEM alumni<br><br>
+
+                    </p>
+                </div>
+                <div style="background-color: rgb(208, 235, 225);">
+                    <p class="nbtext">
+                        We continued fundraising and raised money for the project<br><br>
+                        <span style="color:rgb(4, 88, 55);">13.5.2019</span><br> We had a team coaching session with Caleidocons Oy to make our teamwork smooth during this project<br><br>
+                        <span style="color:rgb(4, 88, 55);">17.5.2019</span><br> HiLIFE (Helsinki Institute of Life Science) kindly decided to support our project<br><br>
+                        <span style="color:rgb(4, 88, 55);">17.5.2019 - 19.5.2019</span><br> We attended the Nordic iGEM Conference in Copenhagen<br><br>
+                        <span style="color:rgb(4, 88, 55);">24.5.2019</span><br> Meeting with Heureka Science Park to plan the event that we will organize for kids in September<br><br>
+                        <span style="color:rgb(4, 88, 55);">27.5.2019</span><br> We visited Thermo Fisher Scientific Ltd, our long-term partner, and they kindly decided to support our project<br><br>
+                        <span style="color:rgb(4, 88, 55);">28.5.2019</span><br> Loimu ry, the Union of Professionals in Natural, Environmental and Forestry Sciences, kindly decided to support our project <br><br>
+                    </p>
+                </div>
+                <div style="background-color: rgb(208, 235, 225);"><p class="nbtext"></p></div>
+
+                <div style="background-color: rgb(100, 181, 149);"><h2 class="noteheader">June</h2></div>
+                <div style="background-color: rgb(208, 235, 225);">
+                    <p class="nbtext">
+                    </p>
+                </div>
+                <div style="background-color: rgb(208, 235, 225);">
+                    <p class="nbtext">
+                        <span style="color:rgb(4, 88, 55);">5.6.2019</span><br> Presentation coaching for our team organized by Aalto University School of Business<br><br>
+                        <span style="color:rgb(4, 88, 55);">7.6.2019</span><br> We attended Terkko Healthcare Accelerator’s showcase where we got to see different pitches from life science -startups<br><br>
+                        <span style="color:rgb(4, 88, 55);">11.6.2019</span><br>Planning meeting with Heureka Science Park<br><br>
+                        <span style="color:rgb(4, 88, 55);">12.6.2019</span><br> Meeting with Kemianteollisuus ry and they kindly decided to support our project<br><br>
+                        <span style="color:rgb(4, 88, 55);">13.6.2019</span><br> Second biotech theme week planning meeting<br><br>
+                        <span style="color:rgb(4, 88, 55);">13.6.2019</span><br> Bio Business Angel and Investor event where we pitched our project<br><br>
+                        <span style="color:rgb(4, 88, 55);">17.6.2019</span><br> We presented iGEM and our project to French pharma/business students <br><br>
+                        <span style="color:rgb(4, 88, 55);">19.6.2019</span><br> We discussed about pharmaceutical industry with Lääketeollisuus ry<br><br>
+                    </p>
+                </div>
+                <div style="background-color: rgb(208, 235, 225);">
+                    <p class="nbtext">
+                        <span style="color:rgb(4, 88, 55);">18.6.2019</span><br> We conducted our first trials of Biobricks and everyone in our team got experience in the lab<br><br>
+
+                    </p>
+                </div>
+        </div>
+
+
+        <script>
+        
+        var buttons = document.getElementsByClassName("button");
+        for (let i = 0, 1 = buttons.length; i < 1; i++) {
+            buttons[i].addEventListener('click', function() {
+                buttons[i].classList.toggle('active1');
+            })
+        }
+        
+        </script>
+
+
+
+
+        <!--<script>
+
+            function openNBText(){
+                document.getElementById('popup').style.display = "block";
+                document.getElementById('myNoteBtnOpen').style.visibility = "hidden";
+                document.getElementById('myNoteBtnClose').style.visibility = "visible";
+            }
+            function closeNBText(){
+                document.getElementById('popup').style.display = "none";
+                document.getElementById('myNoteBtnOpen').style.visibility = "visible";
+                document.getElementById('myNoteBtnClose').style.visibility = "hidden";
+            } 
+
+        </script>-->
+
+
+
+
+
+
+
+
+
+
+        <p class="maintext" style="color: black;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br> 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br><br>
+        </p>
+    </div>
+</div>
+
+
+<!--------------------------------------------------------PARTNERS----------------------------------------------------------------->
+
+    <div id="partners">
+        <div class="row">
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_BIZ_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_CHE_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ELEC_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ENG_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_SCI_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/df_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Helsinki.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/supported-by-hilife.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Kemianteollisuus_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/LOIMU.jpg">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/ThermoFisher_black.jpg">
+            </div>
+
+    
+        </div>
+    </div>
+
+<!--------------------------------------------------------FOOTER----------------------------------------------------------------->
+    <div class="footer">
+        <a class="icon" id="fb" href="https://www.facebook.com/AaltoHelsinki"><i class="fab fa-facebook-square"></i></a>
+        <a class="icon" id="twi" href="https://twitter.com/AaltoHelsinki"><i class="fab fa-twitter"></i></a>
+        <a class="icon" id="ig" href="https://instagram.com/aaltohelsinki_igem"><i class="fab fa-instagram"></i></a>
+        <a class="icon" id="blog" href="http://blog.aaltohelsinki.com"><i class="fab fa-tumblr-square"></i></a><br>
+        Kemistintie 1, Espoo, Finland<br>
+        team@aaltohelsinki.com
+    </div>
+
+</body>
+</html>
