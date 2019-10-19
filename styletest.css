@@ -328,7 +328,7 @@ nav li > a:only-child:after { content: ''; }
      font-size: 20px;
      font-family: 'Oswald', sans-serif;
      font-stretch: condensed;
-     border: solid 2px;
+     border: solid 1px;
      padding: 10px;
      cursor: pointer;
      border-color: rgb(0, 0, 0);
