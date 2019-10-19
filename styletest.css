@@ -732,15 +732,14 @@ h2 {
 }
 
 .notegrid-container > div {
-    background-color: white;
     padding: 10px 10px 10px 10px;
+	background-color: white;
 }
 
 .att-grid1 {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
-    background-color: white;
     
 }
 
@@ -748,13 +747,11 @@ h2 {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
-    background-color: white;
     grid-gap: 10px;
     
 }
 
 .att-grid-item {
-    background-color: white;
     padding-top: 3px;
     padding-left: 5px;
     padding-bottom: 3px;
