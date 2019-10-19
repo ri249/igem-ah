@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--css-->
+    <link href="styletest.css" rel="stylesheet">
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+    <!--jquery-->
+
+    
+    <title>Integrated Human Practices</title>
+
+    <style>
+        
+        .card .card-header {
+            padding: 0;
+
+        }
+
+
+
+        .card .card-header .btn {
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+        }
+
+        .card .card-header h2 {
+            padding: 20px;
+        }
+
+
+        .card h4 {
+            color: black;
+        }
+        .row {
+            margin-top: auto;
+        }
+
+
+        h1,h2,h3,h4 {
+            font-family: 'Oswald', sans-serif;
+            text-align: left;
+        }
+
+        p.larger {
+            font-size: 140%;
+        }
+
+        .text-highlight-box {
+            background: white;
+            padding: 20px;
+            font-size: 80%;
+            border: 1px solid #ccc;
+        }
+
+    </style>
+
+</head>
+<body>
+<!--TOP LOGO-->
+    <div class="header">
+        <img src="logos/vibx/vibx_tp1.png" style="width: 100%; margin-top: 0%; background-position: center; left: 0; right: 0;">
+    </div>
+            
+<!--SCROLL UP BUTTON-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button> 
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            document.getElementById("myBtn").style.display = "block";
+            } else {
+            document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<script>
+    // When the user scrolls the page, execute myFunction 
+    document.onscroll = function() {myProgress()};
+    
+    function myProgress() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+
+
+<!--TOP MENU-->
+
+    <div id="topnav">
+    <nav>
+       <ul id="menu">
+           <li><a href="#">Home</a></li>
+
+           <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Project</a>
+
+            <ul class="submenu">
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Description</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Design</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate">Demonstrate</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook">Notebook</a></li>
+                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution">Contribution</a></li>
+            </ul>
+            </li>
+
+            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">Lab</a>
+                <ul class="submenu">
+                    <li style="font-size: 20px; padding: 5px 10px 0px 10px;">Wet Lab
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety">Safety</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments">Experiments</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Results">Results</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/LabBook">Lab book</a></li>
+                        </ul>
+                    </li>
+                    <li style="font-size: 20px; padding: 5px 10px 0px 10px;">Dry Lab
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model">Model overview</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Growth_rate">Growth rate</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Simulations">Simulations</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Parts</a>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part">Basic Parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve">Improved parts</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection">Collection</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">Human Practices</a>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement">Education & Public Engagement</a>
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Events">Events</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Podcast">Podcast</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations">Collaborations</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Conferences">Conferences</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/IHP">Integrated Human Practices</a>
+                        <ul class="submenu">
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/Design_Thinking">Design Thinking</a></li>
+                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Entrepreneurship">Entrepreneurship</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+           <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Team</a>
+                <ul class="submenu">
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution">Contribution</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions">Attributions</a></li>
+                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Sponsors">Sponsors</a></li>
+                </ul>
+            </li>
+
+           <li id="mainmenu"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Awards">Awards</a></li>
+
+       </ul>
+    </nav>
+    </div>
+
+
+<!--CONTENT-->
+
+<div class="content hometext">
+    <div class="container-fluid mb-5">
+        <div class="hometext">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                <h1>INTEGRATED HUMAN PRACTICES</h1>
+                <p>Our project provides a solution to address the inequality in accessing therapeutic proteins. We have created a novel recombinant protein production system. This solution has the potential to further expedite and serve the rapidly increasing production of new biopharmaceuticals and has planted a seed for revolutionizing biopharmaceutical cost and pricing structures.</p>
+                
+                <p>
+                A design thinking approach was used to guide our project design. For this, we conducted interviews with key stakeholders to identify the pain points in biopharmaceutical development, user experience, production, and sales today. Our findings have guided the scope of our project. And the final outcome, the service and business model along side of our product, was strongly influenced by the input from stakeholders. Thus ensuring that there is a real need for our solution.
+                </p>
+                    </div>
+                    <div class="col-md-6">
+                <div class="text-highlight-box">
+                    <h3>What is design thinking?</h3>
+                    <p>Design thinking is a process, that gives structure for creating innovations with user-driven focus. It helps in defining the experienced problems in existing solutions or habits by involving key stakeholders. The process thwart jumping into conclusions and assumptions while emphasizing dialogue and learning.(1)
+
+                    A key idea in design thinking is to discard the previously common habit of design being a downstream step of a developing process, including it in the development right from the beginning. (2)
+
+                    We wanted to include design thinking process into our project to make sure that our solution would have the best possible impact to our society by solving the most abundant issues.
+                    </p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="accordion" id="accordionExample">
+                  <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Collecting Insights
+                        </button>
+                      </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="row mb-1">
+                            <div class="col">
+                                <h3>2.1 Background</h3>
+                                <p>The sky rocket high prices of insulin in the United States has raised to the head lines during the past few years. Millions of people suffer due to not being able to pay for their medication. At the same time, insulin is only one of the numerous therapeutic proteins, all sold with relatively high prices compared to traditional synthesized pharmaceuticals. The production of therapeutic proteins, which are recombinant proteins, is a complex process. The amount of therapeutic protein pharmaceuticals is estimated to grow substantially in the future. Finding a suitable production platform can be challenging, and we wanted to investigate the possibilities a new platform could offer to find a deliberate solution.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-1">
+                            <div class="col">
+                                <h3>2.1 Stakeholder Analysis</h3>
+                                <p>To identify the key stakeholders, all actors that could be affected or might have an effect on our project were mapped out. This was done based on the stakeholders’ interest towards recombinant proteins and their power on the production of these proteins (figure 1).</p>
+                                <img src="" alt="Figure 1 here">
+                            </div>
+                            <div class="col-12">
+                                <p>
+                                    After conducting the stakeholder analysis, we chose to select the stakeholders with most interest towards our initial idea. These were pharmaceutical companies and other biomanufacturing companies, medical doctors and individuals who depend on therapeutic proteins as a treatment method. We acknowledged that large corporations, such as pharmaceutical companies, would have a very different viewpoint about therapeutic proteins than a patient who depends on the medicine. This is why the four stakeholders were bundled into two groups based on their relationship towards recombinant proteins: the patient perspective and the industrial perspective (figure 2).
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <img src="" alt="Figure 2 here">
+                            </div>
+                        </div>
+                        <div class="row mb-1">
+                            <div class="col-12">
+                                <h3>2.2 Interviews</h3>
+                                <p>Interviews were conducted to empathize with the identified stakeholders and to understand them better. This gave us insights about how the recombinant protein production industry operates, as well as learn what living with therapeutic protein treatment is like. Interviewing the stakeholders was essential to confirm that the assumptions that we had about the biopharmaceutical production and therapeutic usage were either correct or incorrect.
+
+                                The goal of the interviews was to determine challenges related to therapeutic protein treatment and production that the stakeholders are facing.
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <h4 class="mb-4">2.2.1 The Patient Perspective</h4>
+                                <div class="person mb-5">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img src="" alt="Illustartio of personn">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <p><b>Physician 1:</b><br>
+                                            <i>"Daily injected doses and long treatment periods are the most unpleasant parts of hGH treatment from the patient's point of view"</i>
+                                             </p>
+                                        </div>
+                                    </div>
+                                    <p>
+                                    We started with looking into how human growth hormone (hGH) is used in the clinics. We interviewed an experienced physician who works at Helsinki University Hospital’s Children’s Hospital and treats patients with growth deficiencies. She provided us with insights about how the treatment process with hGH works, what are the biggest issues related to the medication and on how the  treatment decisions are made. 
+                                    </p>
+
+                                    <b>Key insights from the interview:</b>
+
+                                    <ul>
+                                        <li> Therapeutic proteins need to be administered intramuscularly or subcutaneously.</li>
+                                        <li> Having to inject the drug is often the most unpleasant in the user experience of hGH treatment, and other therapeutic protein treatments. </li>
+                                        <li>Selection of prescribed hGH product is based on the convenience of the product, such as hidden needle, or the possibility to store the product in room temperature. </li>
+                                        <li>The prices of hGH are high, but in Finland, most of the cost is reimbursed by the government. If possible, the least expensive product is prescribed.</li>
+              
+                                    </ul>
+                                </div>
+                                <div class="person mb-5">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img src="" alt="Illustartio of personn">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <p><b>Physician 2:</b><br>
+                                            <i>"Pharmaceutical companies need to make a profit and they make decisions accordingly. This is one of the factors that affect the prices of medication."</i>
+                                             </p>
+                                        </div>
+                                    </div>
+                                    <p>
+                                    We continued with interviewing another physician working at Helsinki University Hospital’s Children’s Hospital. He specializes in rare metabolism diseases which are often treated with enzyme replacement therapy. He provided us with insights about the need for new biopharmaceuticals and the pricing of the biopharmaceuticals. 
+                                    </p>
+
+                                    <b>Key insights from the interview:</b>
+
+                                    <ul>
+                                        <li>Many biopharmaceuticals are very expensive. One example is proteins used for rare metabolic disorders, which can cost 100 000 € / patient / year.</li>
+                                        <li>None or little competition and patents make it possible to set high prices for the medication. High margins in prices are due to high costs and risks of research & development of biopharmaceuticals.</li>
+                                        <li>Societal pressure can affect the prices of medication, but EU laws prohibit European countries to form “alliances” to push the companies to lower their prices.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="person mb-5">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img src="" alt="Illustartio of personn">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <p><b>Patient 1:</b><br>
+                                            We talked to a young woman in her 20’s with type 1 diabetes. Like almost all diabetic patients, she depends on insulin to treat her condition. We conducted this interview to learn more about living with type 1 diabetes treatment and to find out if the high prices of insulin affect her life.
+                                             </p>
+                                        </div>
+                                    </div>
+                                    <b>Key insights from the interview:</b>
+
+                                    <ul>
+                                        <li>Close to all costs related to type 1 diabetes are paid by the finnish government. Treatment of type 1 diabetes costs less than 200€/year for the patient, even to the patients with the most difficult complications. The purchase price of insulin from the pharmacy is only 2.50€, because the government pays most of the expenses.</li>
+                                    </ul>
+                                </div>
+                                <div class="person mb-5">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img src="" alt="Illustartio of personn">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <p><b>Patient 2:</b><br>
+                                            <i>"“The only downside to treatment is that the medicine must be stored in the refrigerator, making it difficult to travel or to attend school trips”."</i>
+                                             </p>
+                                        </div>
+                                    </div>
+                                    <p>
+                                    We talked to a parent of a 13 year-old child with a growth deficiency. The child is treated with daily injections of hGH. 
+                                    </p>
+
+                                    <b>Key insights from the interview:</b>
+
+                                    <ul>
+                                        <li>Human growth hormone prices are high, approximately 1000 € per month, and 12000 € per year. Fortunately, all the medications and visits to the doctor’s office are fully funded by health insurance (in Slovenia). Therefore, the price does not present an obstacle for the patients.</li>
+                                        <li>An orally administered drug would be more convenient.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <h4 class="mb-4">2.2.2 Industrial Perspective</h4>
+                                <div class="person mb-5">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img src="" alt="Pharma illustration">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <p><b>Pharma Industry Finland</b><br>
+                                            <i>“An effective production platform has potential to increase the value of a small biopharmaceutical company when sold forward to complete clinical trials.”</i>
+                                             </p>
+                                        </div>
+                                    </div>
+                                    <p>
+                                   We talked with Pharma Industry Finland PIF, a finnish organization. The goal of the interview was to understand how the biopharmaceutical production works and to explore if there was a way to make sure the prices of medicine could be affected with our platform – in a way to lower the costs for the end user. 
+                                    </p>
+
+                                    <b>Key insights from the interview:</b>
+
+                                    <ul>
+                                        <li>A vast amount of the expenses of biopharmaceuticals are due to the time and resource consuming research and development.</li>
+                                        <li>Pharmaceutical companies cannot change their production methods on an existing and patented drug because all the research is made based on the existing production method.</li>
+                                        <li>The price difference between drug and biosimilar should be at least 10% for the biosimilar to get the market.</li>
+                                    </ul>
+                                </div>
+                                <div class="person mb-5">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img src="" alt="Pharma illustration">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <p><b>Roche</b><br>
+                                            <i>“Biopharmaceuticals have the potential to provide best possible treatment for many patients today.”</i>
+                                             </p>
+                                        </div>
+                                    </div>
+                                    <p>
+                                   We talked to experts from Roche Finland. Roche has a great amount of different biopharmaceuticals in their portfolio. We asked them about the process of developing new biopharmaceuticals, the future and current trends, as well as the operational models of the pharmaceutical industry.
+                                    </p>
+
+                                    <b>Key insights from the interview:</b>
+
+                                    <ul>
+                                        <li>Substantially larger amount of biopharmaceuticals will be developed and used in the future.</li>
+                                        <li>Pharmaceutical companies would benefit, if they would be able to get their product on the market in a shorter time. Faster development phase would significantly reduce the company’s expenses.</li>
+                                        <li>The pharmaceutical industry is constantly looking into ways to utilize the opportunities of  digitalization and the subsequent data.</li>
+                                        <li>Both the company and the patient would benefit from less expensive pharmaceuticals.</li>
+                                    </ul>
+                                </div>
+                                <div class="person mb-5">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img src="" alt="Pharma illustration">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <p><b>Novo Nordisk</b><br>
+                                            <i>"The prices of therapeutic proteins can only be as high as the payers are ready to pay for them"</i>
+                                             </p>
+                                        </div>
+                                    </div>
+                                    <p>
+                                   Novo Nordisk is a Danish pharmaceutical company that has its focus on therapeutic proteins. The company produces half of the insulin in the world and is the first company to develop and sell human growth hormone. We asked Novo Nordisk about the causes of the high prices of biopharmaceuticals, and how it would be possible to affect the costs. 
+                                    </p>
+
+                                    <b>Key insights from the interview:</b>
+
+                                    <ul>
+                                        <li>Producing therapeutic proteins is very expensive and difficult due to the complex genetic editing techniques that are used. Therapeutic proteins are typically not produced in low labour cost countries for this reason.</li>
+                                        <li>The costs of producing the therapeutic proteins are greater than the R&D costs of one drug compound in the long run.</li>
+                                        <li>Society has the power to push down the high prices of therapeutics. i.e. insulin prices has reduced due to the pressure of society.</li>
+                                        <li>Competition plays a key role in the pricing of pharmaceuticals. If one company would have significantly more economical manufacturing methods in use (and if this would affect the selling prices), this would force the competitors to follow. This is due to the reimbursement mechanisms, which favor cheaper opinions.</li>
+                                    </ul>
+                                </div>
+                                <div class="person mb-5">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img src="" alt="Pharma illustration">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <p><b>Roal enzymes</b><br>
+                                            <i>“The most important feature in an expression organism is that the yield of expressed protein is high”</i>
+                                             </p>
+                                        </div>
+                                    </div>
+                                    <p>
+                                  We talked to Roal enzymes, a finnish enzyme production company to get a better idea about which industry our solutions suits the best.
+                                    </p>
+
+                                    <b>Key insights from the interview:</b>
+
+                                    <ul>
+                                        <li>Speed is important and therefore it is an advantage. Capacity = volume x time required for output.</li>
+                                        <li>Yield and titer play a significant role in the speed of manufacturing enzymes.</li>
+                                    </ul>
+                                </div>
+                                <div class="person mb-5">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img src="" alt="Pharma illustration">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <p><b>Biomanufacturing & Biophorum</b><br>
+                                            We talked to experienced consultants in biomanufacturing. They have made a long careers in the field of life sciences and biomanufacturing and gave us an idea about how biopharmaceutical companies’ business strategies work and how it will evolve in the future. 
+                                             </p>
+                                        </div>
+                                    </div>
+
+                                    <b>Key insights from the interview:</b>
+
+                                    <ul>
+                                        <li>If a platform would allow faster development of the active pharmaceutical compound that would lead to less costs and the growing pharmaceutical company would get faster access to revenue.</li>
+                                        <li>Saving in costs has a potential to decrease the prices.</li>
+                                        <li>Automation of manufacturing is an important feature to consider in the future.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Key Insights
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="row mb-5">
+                            <div class="col">
+                                <p class="larger mb-4"><i>Based on the insights we collected, the pharmaceutical industry is seeking a way to speed up the drug development and discovery processes and to decrease the costs related to both the development of new pharmaceuticals and the production of recombinant protein compounds.
+
+                                At the same time, patients are unhappy with the administration methods of therapeutic protein products. Many patients in countries lacking a public health care system struggle economically to pay for their treatment.
+                                </i>
+                                </p>
+
+                                <img src="" alt="Figure.3">
+                                <small>Figure 3. Identified pain points</small>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col">
+                                <h3>3.1 Patient perspective</h3>
+                                <p>To get a better idea of what we have learned, we mapped out the insights and what we had learned based on literature in a user journey. We created a user journey for the end users of therapeutic proteins.</p>
+                                <img src="" alt="Figure 4. User journey from patient perspective">
+                                <small>Figure 4. User journey from patient perspective</small>
+                                <br>
+                                <p>The main pain points for therapeutic protein use are related to getting the suitable treatment. This can be further categorized in three different types of cases.</p>
+                                <ol>
+                                    <li>The patient/the payer cannot afford medication and therefore can’t get the most suitable treatment. </li>
+                                    <li>The patent is forced to quit the treatment due to severe side effects or high costs of the medication. </li>
+                                    <li>There is no suitable product available to treat the disease. </li>
+                                </ol>
+                                <p>
+                                Another issue in user experience that stands out is the usability of therapeutic protein products: therapeutic proteins are injected, often daily or many times a day, and might need to be stored in the fridge. Needles and injections were seen as the most unpleasant part of the treatment for patients who don’t have financial issues with their therapeutic protein treatment.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col">
+                                <h3>3.2 Industrial perspective</h3>
+                                <h4>Drug Discovery & Development</h4>
+                                <img src="" alt="Figure 5. Challenges in the drug discovery and development process.">
+                                <small>Figure 5. Challenges in the drug discovery and development process.</small>
+                                <p class="mb-5"><b>Research and development</b> of biopharmaceuticals is slow and costly. The process requires massive capital investment, research and development of a successful drug costs on average up to 1 billion USD. It includes high risks for failure, only 1 out of 10 000 compounds developed end up in the market. Finally, it is time consuming, development of a new drug takes approximately 10-15 years. <b>The clinical trials</b> are highly regulated and require a lot of resources: manpower and time, and therefore of course also money. This is one key reason for the expensive selling prices of therapeutic proteins, in comparison to for instance industrial recombinant proteins. Due to their expensiveness, only a few companies have the resources to go through the clinical trials process. Smaller companies aim at selling their business before entering the clinical trials. <b>Market access</b> includes process for accepted  reimbursement from government or insurance companies. It is a critical point in order to successfully deliver a therapeutic to be used in patient care.</p>
+
+                                <h4>The Manufacturing Process</h4>
+                                <img src="" alt="Figure 6. Challenges in production of therapeutic proteins">
+                                <small>Figure 6. Challenges in production of therapeutic proteins</small>
+
+                                <h4 class="mt-5">Pricing of Therapeutic Protein Products</h4>
+                                <p>The pricing of a therapeutic proteins is complex and the selling price is affected by many factors. These include research and development costs, marketing costs, costs of goods, market prices of other pharmaceuticals and competition.</p>
+                                <p><b>Production</b> of therapeutic proteins is slow and requires advanced technologies compared to small molecule pharmaceuticals. Outsourcing manufacturing to low labour cost countries is not possible due to quality control reasons. All of these factors contribute to the high selling prices. Therefore, the production costs of biopharmaceuticals can be even greater than the research and development costs. </p>
+                                <p><b>Competition</b> can have a heavy effect on the pricing. If one manufacturer lowers the price, others are often forced to follow. The pricing for a product entering the market depends on the prices of other similar products on the market. On the other hand, competition is often minimal and in these situations, the price of the product can be set high. However, the market’s willingness to pay also plays a large role in the pricing.</p>
+                                <p>In Finland, and other countries with a government supported healthcare systems, patients easily think that the price of medication is not a big problem because of strong healthcare system support. However, it is important to note that if the medication was cheaper, the money could be allocated to other areas of the healthcare system.</p>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Ideation & testing
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="row mb-4">
+                            <div class="col">
+                                <h3>Ideation</h3>
+                                <p>After identifying the pain points, we started our ideation process for final product development. We focused on the following questions and sought for ideas to solve them.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col">
+                                <div class="qa_item">
+                                <p class="larger"><i>How might we reduce the costs of developing drugs and producing biopharmaceuticals?</i></p>
+                                <p>Research has shown, that increasing the titer and yield of protein produced can have a significant effect on the total production costs of recombinant proteins. According to previous calculations, simultaneously increasing the yield with 30% with a 10x greater titer, the number of bioreactors required could be decreased from 31 to 2 and thus the facility costs would decrease from 1067 M€ to 67 M€. At the same time the annual operating cost would decreased from 250 M€ to 43 M€ (Werner, 2014). Since
+                                VibXPresso has 4x increased yield and
+                                and production costs play a large role in the costing structure of therapeutic proteins, we assume that VibXPresso would have and reductive effect on the total costs of therapeutic proteins.</p>
+                                </div>
+                                <div class="qa_item">
+                                <p class="larger"><i>How might we affect the selling prices of therapeutic proteins?</i></p>
+                                <p>A production platform optimized for fast and high quality production of recombinant proteins has potential to reduce the costs of long term production of a therapeutic proteins. However, since selling biopharmaceuticals is a business, the decision of the retail prices are up to the pharmaceutical companies to decide. We came to the conclusion that lowering the costs of manufacturing wouldn’t alone guarantee any price reductions of the therapeutic proteins to the actual buyers of the drugs. To solve this problem, we wish to introduce VibXPresso in a form a non-profit organization. The NPO provides protein production platforms to pharma companies for a minimal fee. In return, the company</p>
+                                </div>
+                                <div class="qa_item">
+                                <p class="larger"><i>How might we shorten the time spent on developing new biopharmaceuticals?</i></p>
+                                <p>As described above, development process of pharmaceuticals is extremely slow. Mostly due to the safety regulations, that contribute to making the clinical trials a time consuming process. Since the process is highly regulated we concluded that shortening the time spent on clinical trials was not something we could solve. However, a rapid production organisms would speed up the early research of a new pharmaceutical compound. Saving time in research would allow faster development and production of active pharmaceutical compounds (API).</p>
+                                </div>
+                                <div class="qa_item">
+                                <p class="larger"><i>How might we avoid having to inject therapeutic protein products?</i></p>
+                                <p>Therapeutic proteins have low oral bioavailability due to their tendency for pre-systematic degradation and poor gastrointestinal absorption (Philippart et al., 2015). The amount of active therapeutic protein ingredient absorbed orally is at least 100x less efficient compared to injectable medicines. At the moment, therapeutic protein production is not effective enough to allow the design of oral medication. Although oral medication would be more convenient for many patients, the cost of producing oral medicine is too high (as the medicines are already pricy in the quantities they are needed for the i.v or s.c. administration).</p>
+                                </div>
+                                <img src="" alt="Ilse ad Neja post its">
+                                <small>Some caption</small>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <h3>Testing</h3>
+                                <p>We tested our solution by sending a written suggestion of our idea to the same stakeholders who we had interviewed before.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <h4>Feedback</h4>
+                                <p><i>“Adapting new manufacturing organisms would require adjustments in the existing production protocols and even establishment of a new facility. Therefore, it is not likely that a well established company would promptly change their already established processes.”</i></p>
+                                <p>An effective way to introduce our platform to the pharmaceutical industry would be to first present it for small drug developing companies. If the small company is successful and bought by a large pharma company –because a small R&D company seldom has the money for other than preclinical phases - the large company will then have to use the same methods when continuing the manufacturing, because all the research has been conducted with the method.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <h4>Feedback</h4>
+                                <p><i>“Two important issues to take into consideration when using V. natriegens in protein production are the salty conditions (1,5 % NaCl) that vibrio requires for growth and the excess heat, that will be produced as a consequence of the rapid division rate of the bacteria.“</i></p>
+                                <p>In addition to its rapid growth rate, Vibrio natriegens has additional unique features that need to be taken into consideration when utilizing the bacteria in industrial production. This is also one reason why we want to provide our product combined to a service, that includes consultation on how a production process needs to be engineered and developed to fit our chosen production organism V. natriegens. Our next step would be to create a feasible solution for managing the salt and heat conditions. To solve this, we would aim at engineering a mechanisms that allows to collect the excess heat and to reuse it as an additional energy source for the production plant.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <h4>Feedback</h4>
+                                <p><i>“The future of biomanufacturing includes automation and might lean towards flexible facilities and for example continuous manufacturing instead of batch manufacturing.“</i></p>
+                                <p>We wish to make the production processes more flexible. This could be achieved by using for example single use surge vessels instead of large stainless-steel tanks. This would lower the capital invested in the facility and could allow production of therapeutic proteins by a larger amount of different organization. This could have an effect of disrupting the monopoly-like position of certain therapeutic protein producers.</p>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <h4>Feedback</h4>
+                                <p><i>“Cost-effectiveness of downstream processing is important to take into consideration.”</i></p>
+                                <p>To minimize the number of downstream processing steps, we have looked into mechanisms that would allow secretion of proteins from periplasm to the growth media. </p>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingFour">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Solution
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="row mb-4">
+                            <div class="col">
+                                <h3>Non-profit organisation</h3>
+                                <p>
+                                We have created a business plan for a non-profit organization with the help of the business model scaffold that was created in collaboration with the iGEM UNSW, iGEM KU-Leuven and UBS iGEM. The full business plan can be found from the Entrepreneurship section in our wiki.
+                                </p>
+                                
+                                <p>
+                                Our vision is to provide everyone the chance for affordable therapeutic protein
+                                treatment by hindering the unbearable increase of biopharmaceutical selling
+                                prices. Our product, VibXPresso, together with our consultation services will be
+                                pioneering in applying a V. natriegens based protein expression system in the recombinant protein and pharmaceutical industries.
+                                </p>
+                                <p>
+                                VibXpresso - a Vibrio natriegens strain would enable secretion of larger amounts of proteins in a shorter period of time. This allows a reduction in the costs of therapeutic protein production compared to the currently available options. The organization will provide VibXPresso as a customized service for pharmaceutical companies. This includes development of the Vibrio natriegens strain according to the customer’s needs, as well as consultation with developing the production process with Vibrio natriegens.
+                                </p>
+                                <img src="" alt="Figure 7. Benefits of our solution">
+                                <small>Figure 7. Benefits of our solution</small>
+                                <p>We will provide our services for a very minimal cost, guaranteeing its attractiveness to the pharmaceutical companies. The company using our products and services will agree on terms obliging them to adjusting the selling price of the therapeutic protein product in return for the saved resources in production. By providing our services to the therapeutic protein producing pharmaceutical companies, we aim at having an impact on the high prices of biopharmaceuticals. We plan to take care of daily tasks of the business by recruiting volunteers and creating a competitive internship program to attract university students. This way we can ensure stability and continuity, as well as maintain enough human resources while being a non-profit organization. </p>
+                                <img src="" alt="Figure 8. Operations of the non-profit organization">
+                                <small>Figure 8. Operations of the non-profit organization</small>
+
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <h3>Value Chain and Sustainable Development</h3>
+                                <img src="" alt="Figure 9">
+                                <small>Figure 9. Non-profit organization’s value chain and values highlighted with the United Nations Sustainable Development Goals.</small>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <h3>Impact</h3>
+                                <p>A reduction in the selling prices of therapeutic proteins can save lives. This would provide people depending on therapeutic proteins with better access to biological medications. This will result in significant increase in quality of life among the large amount of people struggling with paying for their medication. However, the impact of our solution has even broader significance. Noteworthy impact points are highlighted in the figures below.</p>
+                                <img src="" alt="Figure 10">
+                                <small>Figure 10</small>
+                                <p>The effects of our solution for the end user is visualized in the updated user journey (figure 11). After successful implementation of VibXPresso in biopharmaceutical production and the subsequent effects on the selling prices achieved with the platform, the impact on the patients’ lives can be significant. We estimate that the solution we are proposing, will lead to a situation where a patient less likely has to suffer from financial issues or, in the worst case, quit their treatment due to financial reasons. 
+                                </p>
+                                <p>
+                                The long term goal would be to solve the unpleasant administration of therapeutic proteins with an orally administered option. This could be achieved by developing a strain that guarantees high protein yield and thus contributing to the research of producing orally administrative therapeutic protein medication.
+                                </p>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingFour">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Next steps
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <div class="row mb-4">
+                            <div class="col">
+                                <p>After creating our business plan we realised that we had underestimated the importance of certain stakeholders. This includes the government and other legal entities. Our next steps would be talking to them about their willingness to collaborate to support our non-profit organization. As well as campaigning for general awareness of the current pricing structure and our solution, collaboration with other similar non profit-organization and lobbying so that government prefers purchasing drugs developed with VibXPresso strain.</p>
+                                <p>After proving our solution to be successful in the pharmaceutical industry, our platform could be utilized in many other industries. Next, we would expand to less regulated industries such as enzyme production, where manufacturing costs have a big effect on the selling prices since these industries spend less money on R&D and marketing than the pharmaceutical industry (Puetz & Wurm, 2019).
+                                </p>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-10 mt-5">
+                <b>References:</b>
+                <br>
+                <p>Philippart, M., Schmidt, J., & Bittner, B. (2015). Oral Delivery of Therapeutic Proteins and Peptides: An Overview of Current Technologies and Recommendations for Bridging from Approved Intravenous or Subcutaneous Administration to Novel Oral Regimens. Drug Research, 66(03), 113-120.
+                </p> 
+                <br>
+                <p>
+                Puetz, J., & Wurm, F. (2019). Recombinant Proteins for Industrial versus Pharmaceutical Purposes: A Review of Process and Pricing. Processes, 7(8), 476. 
+                </p>
+                <br>
+                <p>
+                 Werner, R. (2004). Economic aspects of commercial manufacture of biopharmaceuticals. Journal Of Biotechnology, 113(1-3), 171-182. 
+                </p>
+            </div>
+        </div>s
+    </div>
+</div>
+
+
+
+<!--button grid-->
+
+
+<div class="homegrid">
+    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/022.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">PROJECT</a></div>
+    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/011.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">LAB</a></div>
+    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/033.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">HUMAN<br>OUTREACH</a></div>
+</div>
+
+
+
+<!--PARTNERS-->
+
+    <div id="partners">
+        <div class="row">
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_BIZ_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_CHE_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ELEC_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_ENG_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Aalto_SCI_EN_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/df_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Helsinki.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/supported-by-hilife.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/Kemianteollisuus_black.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/LOIMU.jpg">
+            </div>
+            <div class="column1">
+                <img class="photo" src="logos/dark/ThermoFisher_black.jpg">
+            </div>
+
+    
+        </div>
+    </div>
+
+<!--FOOTER-->
+    <div class="footer">
+        <a class="icon" id="fb" href="https://www.facebook.com/AaltoHelsinki"><i class="fab fa-facebook-square"></i></a>
+        <a class="icon" id="twi" href="https://twitter.com/AaltoHelsinki"><i class="fab fa-twitter"></i></a>
+        <a class="icon" id="ig" href="https://instagram.com/aaltohelsinki_igem"><i class="fab fa-instagram"></i></a>
+        <a class="icon" id="blog" href="http://blog.aaltohelsinki.com"><i class="fab fa-tumblr-square"></i></a><br>
+        Kemistintie 1, Espoo, Finland<br>
+        team@aaltohelsinki.com
+    </div>
+
+</body>
+</html>
