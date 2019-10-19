@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <!-- css -->
+    <link href="styletest.css" rel="stylesheet" />
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Oswald"
+      rel="stylesheet"
+    />
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <title>Sponsors</title>
+  </head>
+  <body>
+    <!-- TOP LOGO -->
+    <div class="header">
+      <img
+        src="logos/vibx/vibx_tp1.png"
+        style="width: 100%; margin-top: 0%; background-position: center; left: 0; right: 0;"
+      />
+    </div>
+
+    <!-- SCROLL UP BOTTOM -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fas fa-arrow-circle-up"></i>
+    </button>
+
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <script>
+      // When the user scrolls the page, execute myFunction
+      document.onscroll = function() {
+        myProgress();
+      };
+      function myProgress() {
+        var winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        var height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+    </script>
+
+    <!-- TOP MENU -->
+    <div id="topnav">
+      <nav>
+        <ul id="menu">
+          <li><a href="#">Home</a></li>
+
+          <li>
+            <a href="https://2019.igem.org/Team:Aalto-Helsinki/Design"
+              >Project</a
+            >
+
+            <ul class="submenu">
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Design"
+                  >Description</a
+                >
+              </li>
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Design"
+                  >Design</a
+                >
+              </li>
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate"
+                  >Demonstrate</a
+                >
+              </li>
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook"
+                  >Notebook</a
+                >
+              </li>
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution"
+                  >Contribution</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">Lab</a>
+            <ul class="submenu">
+              <li style="font-size: 20px; padding: 5px 10px 0px 10px;">
+                Wet Lab
+                <ul class="submenu">
+                  <li>
+                    <a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety"
+                      >Safety</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments"
+                      >Experiments</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://2019.igem.org/Team:Aalto-Helsinki/Results"
+                      >Results</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://2019.igem.org/Team:Aalto-Helsinki/LabBook"
+                      >Lab book</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li style="font-size: 20px; padding: 5px 10px 0px 10px;">
+                Dry Lab
+                <ul class="submenu">
+                  <li>
+                    <a href="https://2019.igem.org/Team:Aalto-Helsinki/Model"
+                      >Model overview</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Growth_rate"
+                      >Growth rate</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Simulations"
+                      >Simulations</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Parts</a>
+            <ul class="submenu">
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part"
+                  >Basic Parts</a
+                >
+              </li>
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve"
+                  >Improved parts</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection"
+                  >Collection</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices"
+              >Human Practices</a
+            >
+            <ul class="submenu">
+              <li>
+                <a
+                  href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement"
+                  >Education & Public Engagement</a
+                >
+                <ul class="submenu">
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Events"
+                      >Events</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Podcast"
+                      >Podcast</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations"
+                      >Collaborations</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Conferences"
+                      >Conferences</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/IHP"
+                  >Integrated Human Practices</a
+                >
+                <ul class="submenu">
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/Design_Thinking"
+                      >Design Thinking</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Entrepreneurship"
+                      >Entrepreneurship</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Team</a>
+            <ul class="submenu">
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution"
+                  >Contribution</a
+                >
+              </li>
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions"
+                  >Attributions</a
+                >
+              </li>
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Sponsors"
+                  >Sponsors</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li id="mainmenu">
+            <a href="https://2019.igem.org/Team:Aalto-Helsinki/Awards"
+              >Awards</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- CONTENT -->
+    <!-- CONTENT STYLES -->
+    <style>
+      .t3 {
+        font-size: 3rem;
+      }
+      .fs12 {
+        font-size: 12px;
+      }
+      .space-evenly {
+        justify-content: space-evenly;
+      }
+      .mb1r {
+        margin-bottom: 1rem;
+      }
+      .taj {
+        text-align: justify;
+      }
+      .bg-white {
+        background: #fff;
+        color: #000;
+      }
+      .round {
+        border-radius: 5px;
+      }
+      .shadow {
+        box-shadow: 9px 9px 24px 0px rgba(50, 50, 50, 0.39);
+      }
+      .w300 {
+        width: 300px;
+      }
+      .p15 {
+        padding: 15px;
+      }
+      .p5r {
+        padding: 5rem;
+      }
+      .flex {
+        display: flex;
+      }
+      .wrap {
+        flex-wrap: wrap;
+      }
+      .montserrat {
+        font-family: "Montserrat", sans-serif;
+      }
+      .oswald {
+        font-family: "Oswald", sans-serif;
+      }
+    </style>
+    <div class="hometext p5r">
+      <h1 class="t3 montserrat">Sponsors</h1>
+      <div class="flex wrap space-evenly">
+        <div class="round shadow p15 w300 bg-white mb1r">
+          <h2 class="montserrat">HiLIFE, Helsinki Institute of Life Sciences</h2>
+          <p class="taj fs12">
+            HiLIFE is a institute in University of Helsinki that supports high
+            quality life science research. HiLIFE provided us financial support
+            which enabled our attendance in the different conferences and the
+            Giant Jamboree.
+          </p>
+        </div>
+
+        <div class="round shadow p15 w300 bg-white mb1r">
+          <h2 class="montserrat">HiLIFE, Helsinki Institute of Life Sciences</h2>
+          <p class="taj fs12">
+            HiLIFE is a institute in University of Helsinki that supports high
+            quality life science research. HiLIFE provided us financial support
+            which enabled our attendance in the different conferences and the
+            Giant Jamboree.
+          </p>
+        </div>
+
+        <div class="round shadow p15 w300 bg-white mb1r">
+          <h2 class="montserrat">Aalto University, School of Business</h2>
+          <p class="taj fs12">
+            provided two contracts of employment for our team members and also a
+            presentation coaching sessions for our team.
+          </p>
+        </div>
+
+        <div class="round shadow p15 w300 bg-white mb1r">
+          <h2 class="montserrat">Aalto University, School of Chemical Engineering</h2>
+          <p class="taj fs12">
+            provided us laboratory faculties, basic laboratory equipment,
+            reagents and also contract of employment for two members of the
+            team.
+          </p>
+        </div>
+
+        <div class="round shadow p15 w300 bg-white mb1r">
+          <h2 class="montserrat">Aalto University, School of Engineering</h2>
+          <p class="taj fs12">
+            provided two contracts of employment for our team members.
+          </p>
+        </div>
+
+        <div class="round shadow p15 w300 bg-white mb1r">
+          <h2 class="montserrat">Aalto University, School of Electrical Engineering</h2>
+          <p class="taj fs12">
+            provided two contracts of employment for our team members.
+          </p>
+        </div>
+
+        <div class="round shadow p15 w300 bg-white mb1r">
+          <h2 class="montserrat">Aalto University, School of Science</h2>
+          <p class="taj fs12">
+            provided two contracts of employment for our team members.
+          </p>
+        </div>
+
+        <div class="round shadow p15 w300 bg-white mb1r">
+          <h2 class="montserrat">Thermo Fisher Scientific</h2>
+
+          <p class="taj fs12">
+            Thermo Fisher is a lab equipment supplier and life science solution
+            provider. Thermo Fisher Scientific supported us financially and gave
+            us laboratory equipment, reagents, enzymes and other laboratory work
+            related things which were very crucial for our project.
+          </p>
+        </div>
+
+        <div class="round shadow p15 w300 bg-white mb1r">
+          <h2 class="montserrat">Kemianteollisuus ry</h2>
+          <p class="taj fs12">
+            Kemianteollisuus ry is the Chemical industry federation of Finland.
+            They supported us financially and published an article about us in
+            their magazine.
+          </p>
+        </div>
+
+        <div class="round shadow p15 w300 bg-white mb1r">
+          <h2 class="montserrat">Loimu ry</h2>
+          <p class="taj fs12">
+            Loimu ry is the Union of Professionals in Natural, Environmental and
+            Forestry Sciences. Loimu ry supported us financially and published
+            an article about us in their magazine.
+          </p>
+        </div>
+
+        <div class="round shadow p15 w300 bg-white mb1r">
+          <h2 class="montserrat">Aalto Design Factory</h2>
+          <p class="taj fs12">
+            Aalto Design Factory is an interdisciplinary product design and
+            learning hub. Aalto Design Factory gave us unlimited access to the
+            faculties of Design Factory and the possibility to print posters for
+            free of charge.
+          </p>
+        </div>
+
+        <div class="round shadow p15 w300 bg-white mb1r">
+          <h2 class="montserrat">Heureka Science Center</h2>
+          <p class="taj fs12">
+            Heureka is a Finnish Science Center where people can familiarize
+            themselves to science and technology in a fun way. We collaborated
+            with Heureka by create a one-day science workshop for kids at
+            Heureka.
+          </p>
+        </div>
+      </div>
+      <h4 class="montserrat" style="color: #000;">
+        We would like to thank the official partners of iGEM – Integrated DNA
+        Technologies (IDT) and Twist Biosciences for the free DNA that they
+        provide for the iGEM teams
+      </h4>
+    </div>
+  </body>
+</html>
