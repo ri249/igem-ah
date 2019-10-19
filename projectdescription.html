@@ -306,22 +306,40 @@
       </nav>
     </div>
 
+    <!-- CONTENT STYLES -->
+    <style>
+      .flex {
+        display: flex;
+      }
+      .dir-column {
+        flex-direction: column;
+      }
+      .tright {
+        text-align: right;
+      }
+      .tcenter {
+        text-align: center;
+      }
+      .bg-cover {
+        background-size: cover;
+      }
+      .white {
+        color: white;
+      }
+      .p25 {
+        padding: 25px;
+      }
+    </style>
     <!-- CONTENT -->
-    <div class="hometext">
-      <div class="pdsection0">
-        <h1
-          style="text-align: left; padding-top: 3%; padding-bottom: 2%; padding-left: 5%;"
-        >
+    <div class="hometext flex dir-column">
+        <h1 >
           PROJECT DESCRIPTION
         </h1>
-      </div>
-      <div class="pdsection1">
-        <h1
-          style="text-align: right; padding-right: 10%; color: white; padding-left: 5%"
-        >
+      <div class="bg-cover p25" style="background-image: url('https://2019.igem.org/wiki/images/f/ff/T--Aalto-Helsinki--desc_med.jpg');">
+        <h1 class="tright white">
           INTRODUCTION
         </h1>
-        <p class="maintext" id="pd-introduction">
+        <p class="maintext white tright" >
           Recombinant proteins are widely used in biomedical research and as
           biopharmaceutical compounds. Several methods for protein production
           have been established during the past decades providing aid for
@@ -332,7 +350,7 @@
           recombinant proteins (Jozala et al., 2016).
         </p>
       </div>
-      <div class="pdsection2">
+      <div class="p25">
         <p
           class="maintext"
           id="pd-introduction"
@@ -348,8 +366,8 @@
           recombinant protein production (Merlin et al., 2014).
         </p>
       </div>
-      <div class="pdsection3">
-        <p class="maintext" id="pd-introduction">
+      <div class="p25 bg-cover" style="background-image: linear-gradient(to bottom right, rgba(45, 45, 45, 0.73), rgba(78, 77, 79, 0.25) ), url('https://2019.igem.org/wiki/images/6/69/T--Aalto-Helsinki--desc_waves.jpg');">
+        <p class="maintext white" id="pd-introduction">
           Vibrio natriegens is challenging Escherichia coli as the organism of
           choice for research and biotechnology applications. With a generation
           time of under 10 minutes, this Gram-negative marine bacterium is the
@@ -359,22 +377,20 @@
           make Vibrio natriegens an ideal chassis organism.
         </p>
       </div>
-      <div class="pdsection4">
-        <h1 style="text-align: center; padding-top: 3%; padding-bottom: 2%;">
+      <div class="p25">
+        <h1 class="tcenter">
           Aalto-Helsinki would like to introduce you to
         </h1>
         <img
           src="finalpics/home/blueblack.png"
           style="width: 25%; padding-left: 38%;"
         />
-        <h1
-          style="font-size: 20px; text-align: center; padding-top: 3%; padding-bottom: 2%;"
-        >
+        <h1 class="tcenter" >
           Vibrio natriegens with Xtreme Protein Expression and Secretion System
           Optimization
         </h1>
       </div>
-      <div class="pdsection5">
+      <div class="p25 tcenter">
         <p class="maintext" id="pd-introduction">
           Our iGEM project introduces VibXPresso - Vibrio natriegens with Xtreme
           PRotein Expression and Secretion Optimization. We harness the
@@ -487,11 +503,12 @@
         </div>
       </div>
 
-      <div class="pdsection6">
+      <div class="bg-cover p25"
+        style="background-image: linear-gradient(to bottom right, rgba(0,0,0,0.5), rgba(0,0,0,0.25)),url('https://2019.igem.org/wiki/images/2/25/T--Aalto-Helsinki--desc_city.jpg');">
         <h1 style="padding-left: 10%; padding-right: 5%; color: white;">
           INVESTIGATION OF IMPLEMENTING OUR SOLUTION
         </h1>
-        <p class="maintext" id="pd-introduction" style="text-align: justify;">
+        <p class="maintext white" id="pd-introduction" style="text-align: justify;">
           As many as one out of four diabetic patients cannot afford their
           medication (Herkert et al., 2019). The high prices remain an issue for
           also patients depending on other biopharmaceuticals. As part of our
