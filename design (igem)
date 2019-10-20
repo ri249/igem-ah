@@ -1,0 +1,637 @@
+{{Aalto-Helsinki}}
+{{Aalto-Helsinki/css}}
+
+<html lang="en">
+<head>
+    
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <title>Aalto-Helsinki</title>
+
+
+
+</head>
+<body>
+
+<!--------------------------------------------------------TOP LOGO----------------------------------------------------------------->
+    <div class="header">
+        <img src="https://2019.igem.org/wiki/images/8/81/T--Aalto-Helsinki--vibxpresso_logo.png" style="width: 100%; margin-top: 0%; background-position: center; left: 0; right: 0;">
+    </div>
+            
+<!--------------------------------------------------------SCROLL UP BUTTON----------------------------------------------------------------->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button> 
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            document.getElementById("myBtn").style.display = "block";
+            } else {
+            document.getElementById("myBtn").style.display = "none";
+            }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<script>
+    // When the user scrolls the page, execute myFunction 
+    document.onscroll = function() {myProgress()};
+    
+    function myProgress() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+</script>
+
+
+<!--------------------------------------------------------TOP MENU----------------------------------------------------------------->
+
+    <div id="topnav">
+    <nav>
+       <ul id="menu">
+           <li><a href="https://2019.igem.org/Team:Aalto-Helsinki">Home</a></li>
+
+           <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">Project</a>
+
+            <ul class="submenu" style="margin: 0 0 0 0;">
+                <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">Description</a></li>
+                <li style="margin-bottom: 0;"><a href="#">Design</a></li>
+                <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook">Notebook</a></li>
+            </ul>
+            </li>
+
+            <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">Lab</a>
+                <ul class="submenu" style="margin: 0 0 0 0;">
+                    <li style="font-size: 20px; padding: 5px 10px 0px 10px; margin-bottom: 0;">Wet Lab
+                        <ul class="submenu" style="margin: 0 0 0 0;">
+                            <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety">Safety</a></li>
+                            <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments">Experiments</a></li>
+                            <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate">Results</a></li>
+                        </ul>
+                    </li>
+                    <li style="font-size: 20px; padding: 5px 10px 0px 10px; margin-bottom: 0;">Dry Lab
+                        <ul class="submenu" style="margin: 0 0 0 0;">
+                            <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model">Model overview</a></li>
+                            <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Simulations">Simulations</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Parts</a>
+                <ul class="submenu" style="margin: 0 0 0 0;">
+                    <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part">Basic Parts</a></li>
+                    <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Composite_Part">Composite Parts</a></li>
+                    <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve">Improved parts</a></li>
+                    <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection">Collection</a></li>
+                </ul>
+            </li>
+
+            <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/Overview">Human Practices</a>
+                <ul class="submenu" style="margin: 0 0 0 0;">
+                    <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement">Education & Public Engagement</a></li>
+                    <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations">Collaborations</a></li>
+                    <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">Integrated Human Practices</a>
+                        <ul class="submenu" style="margin: 0 0 0 0;">
+                            <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Entrepreneurship">Entrepreneurship</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+           <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Team</a>
+                <ul class="submenu" style="margin: 0 0 0 0;">
+                    <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions">Attributions</a></li>
+                    <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Sponsors">Sponsors</a></li>
+                </ul>
+            </li>
+
+           <li id="mainmenu"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Awards">Awards</a></li>
+
+       </ul>
+    </nav>
+    </div>
+
+
+<!--------------------------------------------------------CONTENT----------------------------------------------------------------->
+
+         <style>
+      /*
+       * backgrounds
+       */
+      .bg-dark {
+        background: #39393e;
+        color: #c3c3c5;
+      }
+      .bg-light {
+        background: #fff;
+        color: #000;
+      }
+      .bg-teal {
+        background: #49c5c0;
+        color: #fff;
+      }
+      /*
+       * padding
+       */
+      .p15 {
+        padding: 15px;
+      }
+      .p5r {
+        padding: 5rem;
+      }
+      .p20 {
+        padding: 20px;
+      }
+      .p8 {
+        padding: 8px;
+      }
+      /*
+       * random crap
+       */
+      .clickable {
+        cursor: pointer;
+      }
+      .hidden {
+        visibility: hidden;
+      }
+      /*
+       * Flexbox
+       */
+      .flex {
+        display: flex;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .fb60p {
+        flex-basis: 60%;
+      }
+      .fb40 {
+        flex-basis: 40px;
+      }
+      /*
+       * Height and width
+       */
+      .h500 {
+        height: 500px;
+      }
+      .h80 {
+        height: 80px;
+      }
+      .w80 {
+        width: 80px;
+      }
+      /*
+       * Border styles
+       */
+      .b-right {
+        border-right: solid 5px #c3c3c5;
+      }
+      .round {
+        border-radius: 8px;
+      }
+      .no-border {
+        border: none;
+      }
+      /*
+       * Text styles
+       */
+      .teal {
+        color: #49c5c0;
+      }
+      .t3 {
+        font-size: 3rem;
+        padding-bottom: 2%;
+      }
+      .t1 {
+        font-size: 1rem;
+      }
+      .tright {
+        text-align: right;
+      }
+      .uppercase {
+        text-transform: uppercase;
+      }
+      .montserrat {
+        font-family: "Montserrat", sans-serif;
+      }
+      .oswald {
+        font-family: "Oswald", sans-serif;
+      }
+      /*
+       * id selectors
+       */
+      #read-more {
+        opacity: 0;
+        height: 15px;
+        overflow: hidden;
+        transition-property: opacity, height;
+        transition-duration: 0.1s, 0.5s;
+        transition-timing-function: linear, cubic-bezier(0.81, 0.09, 0.52, 0.96);
+      }
+
+      #read-more-second {
+        opacity: 0;
+        height: 15px;
+        overflow: hidden;
+        transition-property: opacity, height;
+        transition-duration: 0.1s, 0.5s;
+        transition-timing-function: linear, cubic-bezier(0.81, 0.09, 0.52, 0.96);
+      }
+    </style>
+    <div class="bg-light montserrat">
+      <div class="flex bg-dark p15 h500" style="padding-bottom: 0px;">
+        <div class="p15 fb60p">
+          <h1 class="teal t3 oswald" style="border: none;">PROJECT DESIGN</h1>
+          <p style="font-size:1.5rem;">
+            The main objective of our iGEM project was to investigate if <i>Vibrio
+            natriegens</i> could be a capable chassis for therapeutic protein
+            production. But what exactly does capable mean?
+          </p>
+        </div>
+        <svg height="500" width="30">
+          <line
+            x1="10"
+            y1="15"
+            x2="10"
+            y2="500"
+            stroke-width="5"
+            stroke="#c3c3c5"
+          ></line>
+          <circle cx="10" cy="22" fill="#49c5c0" r="10"></circle>
+          <circle cx="10" cy="450" fill="#49c5c0" r="10"></circle>
+        </svg>
+        <div style="flex: 1 4 auto;">
+          <!-- ADD PHOTO -->
+          <img
+            src="https://2019.igem.org/wiki/images/6/60/T--Aalto-Helsinki--vibrio_d.png"
+            style="width: 70%; display: block; margin-left: auto; margin-right: auto;"
+          />
+        </div>
+      </div>
+      <div class="p5r">
+        <h1 class="teal t3 tright oswald" style="border: none;">THE IDEA</h1>
+        <p style="font-size: 15px;">
+          Speed, titer and yield are three competitive features for an
+          industrial protein expression system. Research has shown that <i>Vibrio
+            natriegens</i> can produce large amounts of protein quickly, thanks to its
+          high rates of substrate uptake and growth.
+        </p>
+
+        <p style="font-size: 15px;">
+          However, the rate of protein production is only half the story. In
+          large scale industrial applications efficiency is essential. One major
+          hurdle in protein production is the downstream processing of the
+          product. The proteins need to be extracted from the culture and
+          purified. The number of downstream processing steps should be kept to
+          the minimum to maximise production efficiency. So, we decided that a
+          capable protein expression chassis should be capable of secreting the
+          protein it produces to eliminate the need to lyse the cells before
+          extracting the product. This minimizes cytoplasmic protein and DNA
+          contamination.
+        </p>
+        <img src="https://2019.igem.org/wiki/images/2/2c/T--Aalto-Helsinki--development_d.png" style="max-width: 100%;" />
+      </div>
+      <div class="flex bg-dark p15">
+        <div class="flex column p15 fb60p">
+          <h1 class="teal t3 oswald" style="border: none;">VIBXPRESSO STRAIN</h1>
+          <p style="font-size: 15px;">
+            To meet the objective of competent solution, our aim was to create a
+            modified <i>Vibrio natriegens</i> strain with an inducible Tat-pathway
+            system in the spirit of previously described <i>E. coli</i> “TatExpress”
+            strains (Browning <i>et al.</i>, 2017). This allows rapid and agile
+            production of different recombinant proteins in increased secretion
+            titer.
+          </p>
+
+          <!-- ADD PHOTO -->
+          <img src="https://2019.igem.org/wiki/images/6/60/T--Aalto-Helsinki--vibrio_d.png" style="width: 40%;" />
+          <h1 class="teal t3 oswald" style="line-height: 1.5; border: none;">
+            TWIN ARGININE TRANSLOCATION<br> (TAT) PATHWAY
+          </h1>
+          <p style="font-size: 15px;">
+            The twin-arginine translocation (Tat) pathway is a multimeric
+            transmembrane protein export system responsible for translocating
+            proteins up to 150 kDa in size through the inner lipid membrane in
+            several bacteria, archaea and plants (reviewed by Lee <i>et al</i>, 2006).
+            The Tat -pathway is capable of secreting a large number of different
+            types of proteins into the bacterial periplasm. Therefore various
+            different therapeutic protein compounds could be expressed via our
+            VibXPresso strain. This is a desired feature in an industrial
+            organism, since production workflows and equipment often vary from
+            organism to organism.
+          </p>
+          <p id="read-more" aria-hidden="true" style="font-size: 15px;">
+            We seek to utilize tunable promoters to achieve dose-dependent
+            induction on a single-cell level (Marschall <i>et al.</i>, 2017). This
+            allows us to optimize the ratio of product to transporter, improving
+            the yield by decreasing cytoplasmic degradation and inclusion body
+            formation. Our aim was to overexpress Tat pathway components by
+            adding a Ptac promoter upstream of the chromosomal TatAB operon, and
+            a weaker Plac promoter upstream of the <i>tatC</i> gene. In addition, the
+            integration of the <i>lacI</i> gene into the chromosome would be necessary
+            to repress the new promoters. As an expression plasmid for the
+            product, we used a rhamnose-inducible PC203 based on the P15A ori
+            and pRhaB promoter.
+          </p>
+          <button
+            aria-expanded="false"
+            aria-controls="read-more"
+            class="round bg-teal clickable p8 no-border uppercase"
+            id="show-more"
+            style="max-width: 120px;"
+            onclick="showMore()"
+          >
+            read more
+          </button>
+          <script>
+            let hidden = true;
+            function showMore(e) {
+              const readMore = document.getElementById("read-more");
+              const showMore = document.getElementById("show-more");
+              if (hidden) {
+                readMore.style.opacity = "1";
+                readMore.style.height = "auto";
+                readMore.style.overflow = "auto";
+              } else {
+                readMore.style.opacity = "0";
+                readMore.style.height = "15px";
+                readMore.style.overflow = "hidden";
+              }
+              readMore.setAttribute("aria-hidden", !hidden);
+              hidden = !hidden;
+              if (!hidden) {
+                showMore.innerText = "read less";
+              } else {
+                showMore.innerText = "read more";
+              }
+            }
+          </script>
+
+        <img src="https://2019.igem.org/wiki/images/4/43/T--Aalto-Helsinki--sequences_d.png" style="height: 300px; padding-top:5%;" />
+
+        <img src="https://2019.igem.org/wiki/images/d/d1/T--Aalto-Helsinki--secretion1.png" style="width:50%; padding-top:15%;" />
+        </div>
+        <svg height="2000" width="30" class="fb40">
+          <line
+            x1="10"
+            y1="15"
+            x2="10"
+            y2="2000"
+            stroke-width="5"
+            stroke="#c3c3c5"
+          ></line>
+          <circle cx="10" cy="42" fill="#49c5c0" r="10"></circle>
+          <circle cx="10" cy="242" fill="#49c5c0" r="10"></circle>
+          <circle cx="10" cy="450" fill="#49c5c0" r="10"></circle>
+          <circle cx="10" cy="750" fill="#49c5c0" r="10"></circle>
+          <circle cx="10" cy="1150" fill="#49c5c0" r="10"></circle>
+        </svg>
+        <div class="flex column p15" style="width: 50%;">
+          <!-- ADD PHOTO -->
+          <img src="https://2019.igem.org/wiki/images/1/17/T--Aalto-Helsinki--dna_d.png" style="width: 50%;" /><br><br>
+          <p style="padding-left: 10%;">+</p>
+          <!-- ADD PHOTO -->
+          <img src="https://2019.igem.org/wiki/images/d/dd/T--Aalto-Helsinki--bacteria_d.png" style="width: 50%;" /><br><br>=
+          <!-- ADD PHOTO -->
+          <img src="https://2019.igem.org/wiki/images/8/81/T--Aalto-Helsinki--med_d.png" style="width: 50%;" />
+          <h1 class="teal t3 oswald" style="border: none;">Vibxpresso strain</h1>
+          <p style="font-size: 15px;">
+            We sought to utilize tunable promoters to achieve dose-dependent induction on a single-cell level (Marschall <i>et al.</i>, 2017). This would allow optimizing the ratio of product to transporter, improving the yield by decreasing cytoplasmic degradation and inclusion body formation. Our plan was to overexpress the Tat pathway components by adding a Ptac promoter upstream of the chromosomal TatAB operon, and a weaker Plac promoter upstream of the <i>tatC</i> gene. In addition, the integration of the <i>lacI</i> gene into the chromosome would be necessary to repress the new promoters. As an expression plasmid for the product, we used a rhamnose-inducible PC203 based on the P15A ori and pRhaB promoter.<br>
+
+            Tunable induction requires that the uptake of an inducer is not positively regulated by said inducer, i. e. there must be no positive feedback loop (Afroz <i>et al.</i>, 2014). Due to lack of lactose transporters, IPTG-induction should be tunable by default in <i>V. natriegens</i>. <br>
+
+            We also attempted deleting an extracellular nuclease, <i>Dns</i>, to improve the transformability of our strain (Blokesch & Schoolnik, 2004).<br>
+
+          </p>
+          <h1 class="teal t3 oswald" style="line-height: 1.5; border: none;">Protein expression &<br> secretion</h1>
+          <p style="font-size: 15px;">
+            Our aim was to produce <span style="font-weight: bold;">human growth hormone (hGH)</span>, a recombinant
+            protein used as a treatment for growth deficiencies, in <i>Vibrio
+            natriegens</i> and translocating it to the periplasm via the Tat
+            pathway. Naturally Tat complexes are present in low numbers so
+            overexpression of the system components may lead to increased
+            protein yield – one of the most important features of a protein
+            expression system (Browning <i>et al.</i>, 2017). In our final design, the
+            <i>tatABC</i> genes would be overexpressed from the bacterium’s chromosome
+            by inducible promoters, whilst the protein of interest fused with a
+            Tat signal peptide is expressed from an expression plasmid.
+          </p>
+          <p style="font-size: 15px;">
+            The Tat system exports fully folded proteins, and has the potential
+            to export complex molecules while retaining their activity. The
+            system also has a “quality control” mechanism, which rejects
+            incorrectly folded proteins. Incorrectly folded proteins stay in the
+            cytoplasm where they are degraded or incorporated into inclusion
+            bodies. This eases the purification process of the expression
+            product while assuring secretion of only high quality proteins.
+            Protein purification from the periplasm is more efficient compared
+            to purification from the cytoplasm. Thus lowering downstream
+            processing costs, which centrally contributes to the total
+            production costs of therapeutic proteins.
+          </p>
+          <!-- ADD PHOTO -->
+        </div>
+      </div>
+      <div class="p5r">
+        <h1 class="teal t3 tright" style="border: none;">Strain Engineering</h1>
+        <p style="font-size: 15px;">
+          Unlike in <i>E. coli</i>, where the TatABC-proteins are expressed from a
+          single operon, <i>V. natriegens’</i> Tat-complex is encoded by two operons.
+          One contains TatA and TatB, while the other contains only TatC. To
+          induce the overexpression of the Tat-complex, we would have to insert
+          two additional inducible promoters into the genome of our <i>V.
+          natriegens</i> strain, one upstream of both operons. We decided to use
+          sugar-inducible promoters because of their familiarity to most people
+          in the field.
+        </p>
+        <p style="font-size: 15px;">
+          However, these sugar-inducible promoters have a major undesirable
+          feature for our application: an all-or-nothing pattern of induction at
+          low inducer concentrations (Afroz <i>et al.</i>, 2014). This often ignored
+          phenomenon is caused by the upregulation of sugar transporters,
+          induced by the uptake of said sugar. Thus, a positive feedback loop is
+          created, leading to a heterogenous induction profile in the cell
+          culture. This makes the expression levels of genes under these
+          promoters dose-dependent only on a whole-culture level, which is not
+          desirable for our application of aiming to optimize the
+          Tat-complex-to-product -ratio on a single-cell level.
+        </p>
+        <p style="font-size: 15px;">
+          To combat this phenomenon, a common approach is to decouple the sugar
+          transporter from the positive feedback loop by moving it under a
+          different promoter (Marschall <i>et al.</i>, 2017). However, due to time
+          constraints, we came up with a different approach. <i>V. natriegens</i> is
+          known not to metabolize lactose (Hoffart <i>et al.</i>, 2017), and a quick
+          BLAST -search did not identify any lactose transporters in its genome.
+          Lactose analog IPTG can however enter the cell through other means.
+          Thus, we hypothesize that <i>V. natriegens</i> has no positive feedback loop
+          for the uptake of IPTG, meaning that promoters induced by it should be
+          tunable on a single-cell level.
+        </p>
+        <p id="read-more-second" aria-hidden="true" style="font-size: 15px;">
+        Data from <i>E. coli</i> shows that the relative expression levels of <i>TatA:TatB:TatC</i> are approximately 50:25:1 (Jack <i>et al.</i>, 2001).
+        We didn’t have time to verify this in <i>V. natriegens</i>, but we assumed the levels to be approximately the same.
+        Thus, we wanted the induction level of <i>tatC</i> to be significantly lower than that of <i>tatAB</i>. For this, we would have to insert a ptac promoter upstream of tatAB and the weaker plac promoter upstream of <i>tatC</i>.
+        Both promoters are IPTG-inducible but ptac is roughly 10 times stronger than plac (De Boer <i>et al.</i>, 1983).
+        These promoters are controlled by the <i>lacI</i> repressor, which is also missing from the <i>V. natriegens’</i> genome.<br><br>
+
+        To solve this, it could be possible to use the BioBrick BBa_K180000 which contains the <i>lacIq</i> CDS followed by the ptac promoter.
+        Preceding the CDS, a constitutive promoter BBa_J23106 and a ribosomal binding site BBa_K2680531 could be included.
+        For the plac insertion, BBa_R0010 could be suitable. As a result, two IPTG-inducible promoters and their repressor would be placed into the genome of our strain.<br><br>
+
+        We are aware that the system would be far from perfect. Major problems include possible readthrough from the <i>lacIq</i> to the <i>TatAB</i> as the operons are not separated by a transcriptional terminator.
+        Another possible problem is the leakiness of the ptac and plac promoters. A common tactic to combat this is to upregulate the expression of <i>lacI</i>.
+        We would change the start codon of the <i>lacI</i>-gene to ATG from GTG, which we hypothesized to be a repressive translational signal in <i>V. natriegens</i> based on the fact that <i>tatB</i>’s starting codon is GTG and its expression level is known to be lower than that of <i>tatA</i> (in <i>E. coli</i>).<br><br>
+        
+        We tested induction of TorA-YGFP with a range of different rhamnose concentrations.
+        We created a model for protein expression and secretion utilizing growth rate obtained from our experiments, to compare the idea against wild type <i>Vibrio natriegens</i>.
+        We also tested the viability of our Tat pathway signal peptide, and started creating the VibXPresso strain in our lab.<br><br>
+        </p>
+          <button
+            aria-expanded="false"
+            aria-controls="read-more-second"
+            class="round bg-teal clickable p8 no-border uppercase"
+            id="show-more-second"
+            style="max-width: 120px;"
+            onclick="showMoreSecond()"
+          >
+            read more
+          </button>
+          <script>
+            let hidden2 = true;
+            function showMoreSecond(e) {
+              const readMoreSecond = document.getElementById("read-more-second");
+              const showMoreSecond = document.getElementById("show-more-second");
+              if (hidden2) {
+                readMoreSecond.style.opacity = "1";
+                readMoreSecond.style.height = "auto";
+                readMoreSecond.style.overflow = "auto";
+              } else {
+                readMoreSecond.style.opacity = "0";
+                readMoreSecond.style.height = "15px";
+                readMoreSecond.style.overflow = "hidden";
+              }
+              readMoreSecond.setAttribute("aria-hidden", !hidden2);
+              hidden2 = !hidden2;
+              if (!hidden) {
+                showMoreSecond.innerText = "read less";
+              } else {
+                showMoreSecond.innerText = "read more";
+              }
+            }
+          </script>
+          <h1 class="teal t3 tright" style="border: none;">Chromosomal Editing</h1>
+          <p style="font-size: 15px;">
+            Chromosomal edits were started using homologous recombination with linear vectors.
+            This was supported by expressing <i>V. natriegens</i> native TfoX from an inducible plasmid during the editing phase.
+            TfoX is a regulator of natural competence in <i>V. natriegens</i> (Dalia <i>et al</i>, 2017). This increases the efficiency of homologous recombination, making the editing easier.
+            The vectors were constructed with overlap extension PCR (OE-PCR).<br><br>
+          </p>
+
+          <h1 class="teal t3 tright" style="border: none;">Reference</h1>
+          <p style="font-size: 15px;">
+            Afroz, T., Biliouris, K., Kaznessis, Y., & Beisel, C. L. (2014). Bacterial sugar utilization gives rise to distinct single‐cell behaviours. <i>Molecular microbiology, 93</i>(6), 1093-1103.<br><br>
+            Alanen, H. I., Walker, K. L., Suberbie, M. L. V., Matos, C. F., Bönisch, S., Freedman, R. B., ... & Robinson, C. (2015). Efficient export of human growth hormone, interferon α2b and antibody fragments to the periplasm by the Escherichia coli Tat pathway in the absence of prior disulfide bond formation. <i>Biochimica et Biophysica Acta (BBA)-Molecular Cell Research, 1853</i>(3), 756-763.<br><br>
+            Blokesch, M., & Schoolnik, G. K. (2008). The extracellular nuclease Dns and its role in natural transformation of Vibrio cholerae. <i>Journal of bacteriology, 190</i>(21), 7232-7240.<br><br>
+            Browning, D. F., Richards, K. L., Peswani, A. R., Roobol, J., Busby, S. J., & Robinson, C. (2017). Escherichia coli “TatExpress” strains super‐secrete human growth hormone into the bacterial periplasm by the Tat pathway. <i>Biotechnology and bioengineering, 114</i>(12), 2828-2836.<br><br>
+            Burdette, L.A., Leach S.A., Wong H.T. & Tullman-Ercek D. (2018). Developing Gram-negative bacteria for the secretion of heterologous proteins. <i>Microbial Cell Factories</i> 17:196.<br><br>
+            Dalia, T. N., Hayes, C. A., Stolyar, S., Marx, C. J., McKinlay, J. B., & Dalia, A. B. (2017). Multiplex genome editing by natural transformation (MuGENT) for synthetic biology in Vibrio natriegens. <i>ACS synthetic biology, 6</i>(9), 1650-1655.<br><br>
+            De Boer, H. A., Comstock, L. J., & Vasser, M. (1983). The tac promoter: a functional hybrid derived from the trp and lac promoters. <i>Proceedings of the National Academy of Sciences, 80</i>(1), 21-25.<br><br>
+            Hoffart, E., Grenz, S., Lange, J., Nitschel, R., Müller, F., Schwentner, A., ... & Blombach, B. (2017). High substrate uptake rates empower Vibrio natriegens as production host for industrial biotechnology. <i>Appl. Environ. Microbiol., 83</i>(22), e01614-17.<br><br>
+            Jack, R. L., Sargent, F., Berks, B. C., Sawers, G., & Palmer, T. (2001). Constitutive expression of Escherichia coli tat genes indicates an important role for the twin-arginine translocase during aerobic and anaerobic growth. <i>Journal of bacteriology, 183</i>(5), 1801-1804.<br><br>
+            Lee, P. A., Tullman-Ercek, D., & Georgiou, G. (2006). The bacterial twin-arginine translocation pathway. <i>Annu. Rev. Microbiol., 60</i>, 373-395.<br><br>
+            Marschall, L., Sagmeister, P., & Herwig, C. (2017). Tunable recombinant protein expression in E. coli: promoter systems and genetic constraints. <i>Applied microbiology and biotechnology, 101</i>(2), 501-512.<br><br>
+
+
+        </p>
+
+      </div>
+    </div>
+
+
+<!---------------------------------button grid------------------------------------------->
+
+
+<div class="homegrid">
+    <div class="homegrid-item" id="homegrid-text" style="background-image: url(https://2019.igem.org/wiki/images/1/13/T--Aalto-Helsinki--grid_medication.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">PROJECT</a></div>
+    <div class="homegrid-item" id="homegrid-text" style="background-image: url(https://2019.igem.org/wiki/images/5/51/T--Aalto-Helsinki--grid_plates.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">LAB</a></div>
+    <div class="homegrid-item" id="homegrid-text" style="background-image: url(https://2019.igem.org/wiki/images/a/a6/T--Aalto-Helsinki--grid_teampic.jpg); background-size: cover; line-height: 1.5;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">HUMAN<br>OUTREACH</a></div>
+</div>
+
+
+
+<!--------------------------------------------------------PARTNERS----------------------------------------------------------------->
+
+    <div id="partners">
+        <div class="row">
+            <div class="column1">
+                <img class="photo" src="https://2019.igem.org/wiki/images/2/2d/T--Aalto-Helsinki--aaltobiz.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="https://2019.igem.org/wiki/images/b/b4/T--Aalto-Helsinki--aaltochem.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="https://2019.igem.org/wiki/images/3/37/T--Aalto-Helsinki--aaltoelec.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="https://2019.igem.org/wiki/images/d/d6/T--Aalto-Helsinki--aaltoeng.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="https://2019.igem.org/wiki/images/e/e3/T--Aalto-Helsinki--aaltosci.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="https://2019.igem.org/wiki/images/4/48/T--Aalto-Helsinki--aaltodf.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="https://2019.igem.org/wiki/images/0/0a/T--Aalto-Helsinki--helsinki.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="https://2019.igem.org/wiki/images/f/ff/T--Aalto-Helsinki--hilife.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="https://2019.igem.org/wiki/images/0/07/T--Aalto-Helsinki--kemianteollisuus.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="https://2019.igem.org/wiki/images/a/aa/T--Aalto-Helsinki--loimu.png">
+            </div>
+            <div class="column1">
+                <img class="photo" src="https://2019.igem.org/wiki/images/b/b0/T--Aalto-Helsinki--thermofisher.jpg">
+            </div>
+
+    
+        </div>
+    </div>
+
+<!--------------------------------------------------------FOOTER----------------------------------------------------------------->
+    <div class="footer">
+        <a class="icon" id="fb" href="https://www.facebook.com/AaltoHelsinki"><i class="fab fa-facebook-square"></i></a>
+        <a class="icon" id="twi" href="https://twitter.com/AaltoHelsinki"><i class="fab fa-twitter"></i></a>
+        <a class="icon" id="ig" href="https://instagram.com/aaltohelsinki_igem"><i class="fab fa-instagram"></i></a>
+        <a class="icon" id="blog" href="http://blog.aaltohelsinki.com"><i class="fab fa-tumblr-square"></i></a><br>
+        Kemistintie 1, Espoo, Finland<br>
+        team@aaltohelsinki.com
+    </div>
+
+</body>
+</html>
