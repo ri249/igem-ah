@@ -201,23 +201,8 @@ function myProgress() {
             <div class="col-md-10">
               <div class="row align-items-center">
                 <div class="col-md-6">
-                  <h1>INTEGRATED HUMAN PRACTICES</h1>
-                  <p>Our project provides a solution to address the inequality in accessing therapeutic proteins. We have created a novel recombinant protein production system. This solution has the potential to further expedite and serve the rapidly increasing production of new biopharmaceuticals and has planted a seed for revolutionizing biopharmaceutical cost and pricing structures.</p>
-
-                  <p>
-                  A design thinking approach was used to guide our project design. For this, we conducted interviews with key stakeholders to identify the pain points in biopharmaceutical development, user experience, production, and sales today. Our findings have guided the scope of our project. And the final outcome, the service and business model along side of our product, was strongly influenced by the input from stakeholders. Thus ensuring that there is a real need for our solution.
-                  </p>
-                </div>
-                <div class="col-md-6">
-                  <div class="text-highlight-box">
-                    <h3>What is design thinking?</h3>
-                    <p>Design thinking is a process, that gives structure for creating innovations with user-driven focus. It helps in defining the experienced problems in existing solutions or habits by involving key stakeholders. The process thwart jumping into conclusions and assumptions while emphasizing dialogue and learning.(1)
-
-                    A key idea in design thinking is to discard the previously common habit of design being a downstream step of a developing process, including it in the development right from the beginning. (2)
-
-                    We wanted to include design thinking process into our project to make sure that our solution would have the best possible impact to our society by solving the most abundant issues.
-                    </p>
-                  </div>
+                  <h1>EXPERIMENTS</h1>
+                  <p>Intro text</p>
                 </div>
               </div>
             </div>
@@ -382,10 +367,10 @@ function myProgress() {
 
 
             <div class="card">
-              <div class="card-header" id="headingFour">
+              <div class="card-header" id="headingFive">
                 <h2 class="mb-0">
                   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    Next steps
+                    qPCR FOR PLASMID COPY NUMBER QUANTIFICATION
                   </button>
                 </h2>
               </div>
@@ -393,8 +378,112 @@ function myProgress() {
                 <div class="card-body">
                   <div class="row mb-4">
                     <div class="col">
-                      <p>After creating our business plan we realised that we had underestimated the importance of certain stakeholders. This includes the government and other legal entities. Our next steps would be talking to them about their willingness to collaborate to support our non-profit organization. As well as campaigning for general awareness of the current pricing structure and our solution, collaboration with other similar non profit-organization and lobbying so that government prefers purchasing drugs developed with VibXPresso strain.</p>
-                      <p>After proving our solution to be successful in the pharmaceutical industry, our platform could be utilized in many other industries. Next, we would expand to less regulated industries such as enzyme production, where manufacturing costs have a big effect on the selling prices since these industries spend less money on R&D and marketing than the pharmaceutical industry (Puetz & Wurm, 2019).
+                      <p>
+                      Quantitative PCR (qPCR) was carried out to determine copy numbers of plasmids/cell in Vibrio natriegens according to a method described by Lee at al. (2006). Absolute quantification method was used. Briefly, the method involves isolating total DNA from the bacterium carrying the plasmid of interest. With two sets of primers, total DNA (genomic and plasmid) from the same sample was used as a template for qPCR. Amplification was targeted at the bla gene (encoding for beta-lactamase) and a housekeeping gene from the chromosome. Here we targeted the housekeeping gene dxs, encoding for 1-deoxy-D-xylulose-5-phosphate synthase, which was also used by Lee et al. (2006). The gene is typically present as one copy in the genome, and thus the amount of dxs gene copies in the sample is equal to the amount of cells. In Vibrio, dxs is present in only one of the two chromosomes, and the same principle can be applied. By dividing the number of plasmid copies by the number of copies of the dxs gene, plasmid copy number/cell (or per gDNA) was calculated.
+                      </p>
+                      <strong>Plasmids</strong>
+                      <p>
+                      Quantification was carried out for empty plasmid backbones of pUC18, pQE30 and pC203 plasmids, with pMB1 (derivative), p15A and ColE1 origins of replication respectively. pC203 plasmid was used as an expression vector in our experiments. The copy number retrieved from the experiment was utilized in modeling.
+                      </p>
+                      <strong>Preparation of the templates</strong>
+                      <p>
+                      Plasmids were transformed into Vibrio natriegens (Vmax) with electroporation as described under “protocols”. Glyserol stocks were prepared from colonies grown from the transformation plate according to Vmax protocol and stored at - 80 C.
+                      (https://www.biocat.com/bc/pdf/Vmax_Express_40026_100517-Rev1.6.pdf). To isolate total DNA templates, cells were regrown on LB+amp (25 ug/ml) plates, and then individual colonies were used for starter cultures of each strain (Vibrio natriegens + pUC18, pQE30 or pC203). Starter cultures were prepared in 5 ml of LB+amp (25 ug/ml) medium, and grown at + 37 C, 220 rpm for 45 min. About 300 ul of each starter culture was then used to inoculate 5 ml of fresh LB+amp (25 ug/ml). Each strain was grown in triplicates. Total DNA was harvested at OD600 = 0.5 (exponential growth phase) for pUC18 and pQE30 harboring strains as suggested in the  protocol by Lee et al. (2006). Vibrio natriegens harboring pC203 was isolated at OD600 = 1, as was done by Tschirhart et al. (2019). Total DNA was extracted with innuPREP Bacteria DNA Kit (Analytik Jena) according to protocol. DNA concentrations were in the range of 1635-2893,6 ng/ul, and were diluted 1:100 and stored at -20 C. 1:100 diluted samples were used as templates.
+                      </p>
+                      <strong>Preparation of standards</strong>
+                      <p>
+                      As a standard, a dilution series of TOPO TA vector (Invitrogen) containing dxs gene cloned from Vibrio natriegens genome was used. Plasmid copy numbers were in the range of 6,057x10^9 - 6,057x10^3copies/ul. Preparation of standards is presented under Protocols. Successful cloning of dxs into TOPO TA vector was verified by PCR and sequencing using the same set of primers. TOPO TA vector also contains the bla encoding gene, which was used as a target for amplification from pUC18, pQE30 and pC203 plasmids. The same standard was used as a template for quantifying both dxs and bla.
+                      </p>
+                      <strong>qPCR assay</strong>
+                      <p>
+                      qPCR was carried of with SensiFAST™ SYBR® No-ROX Kit (Bioline) according to protocol in 20 ul reactions. Total DNA templates were examined as biological triplicates and two technical replicates. Standards were examined in three technical replicates of each copy number (6,057x10^9 - 6,057x10^3copies/ul). No template controls were included. Bla and dxs targeting primers were used in separate wells, and therefore two master mixes were prepared (containing either bla or dxs targeting primers). Standards and templates were amplified using both sets of primers. The experiment was done using white 96-well Multiplate PCR Plates (Bio-Rad) and CFC Connect Real-Time System (Bio-Rad) machine.
+                      </p>
+                      <p>
+                      Bla primers (from article by Lee et al., 2006)
+                      <pre>
+                          bla_E.coli_F: 5’-CTA CGA TAC GGG AGG GCT TA-3’
+                      </pre>
+                      <pre>
+                          bla_E.coli_R: 5’-ATA AAT CTG GAG CCG GTG AG-3’
+                      </pre>
+                      </p>
+                      <ol>
+                      qPCR program:
+                        <li>95 C, 3:00 min (1 cycle)</li>
+                        <li>95 C, 0:10 s</li>
+                        <li>60 C, 0:35 s</li>
+                        <li>72 C, 0:30 s (+ plate read)        GOTO 2, repeat 39 x</li>
+                        <li>Melt curve from 65 to 95 C, increment 0.5 C, for 0:05s (+plate read)</li>
+                        <li>End</li>
+                      </ol>
+                      <p>
+                      Cq values, melt curves and amplification curves were retrieved from the accompanied program. Melting curves were examined to check specificity of primers. Standard curves were plotted for dxs and bla from Cq values and known copy numbers of each gene. Unknown copy numbers of bla and dxs from total DNA templates were calculated from the equation retrieved from standard curves. Plasmid copy numbers were calculated by dividing the number of bla copies/ul with the number of dxs copies/ul.
+                      </p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingSix">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    CHROMOSONAL EDITING
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                <div class="card-body">
+                  <div class="row mb-4">
+                    <div class="col">
+                      <p>
+                      To obtain our desired VibXPresso strain, we wanted to introduce chromosomal modifications into <i>Vibrio natriegens</i>. We planned to achieve this via homologous recombination, which in bacteria is a major DNA repair process. It also enables genetic diversity in bacteria. For this, we constructed a pC203-tfoX plasmid where we introduced <i>tfoX</i> gene. <i>tfoX</i> is a regulator of natural competence in <i>V. natriegens</i> (Dalia et al., 2017). This increases the efficiency of homologous recombination, making the editing easier.
+                      </p>
+                      <p>
+                      After the construction of pC203-tfoX, we purified the plasmid and continued with  chromosomal modifications. Our planned modifications included dns and tat deletions for <i>V. natriegens</i>. The <i>dns</i> deletion would increase the transformation efficiency of our strain and a tat deletion strain would be created to act as a control for our translocation studies.
+                      </p>
+                      <p>
+                      For the planned dns deletion, we performed PCR to amplify the upstream region for homologous recombination vector using our designed primers Dns 2.6k upstream fwd & Dns OE cfwd-rev (anneal T= 62.7C), and the downstream region for homologous recombination vector using primers Dns 2.5k downstream rev & Dns OE crev-fwd (anneal T= 62.0C).
+                      </p>
+                      <p>
+                      For the planned tat deletion, we also performed PCR to amplify the upstream region for homologous recombination vector using our designed primers TatO 2.54k upstream fwd & TatO OE cfwd-rev (anneal = 61.3), and the downstream region for homologous recombination vector using primers TatO 2.5k downstream rev & TatO OE crev-fwd (anneal T= 61.4C).
+                      </p>
+                      <p>
+                      Due to time constraints, we decided to continue only with the dns deletion into the next step. In the next step, we combine pieces of upstream and downstream regions by overlap extension PCR (OE-PCR) to form a complete vector (anneal T = 72C). Overlap extension PCR (OE-PCR) is a method to scarlessly join together PCR fragments by utilizing primers containing a 5’-end overlap. This makes the fragments act as primers for each other, combining them in PCR. Normal primer design rules should be followed when designing the 5’-overlaps.
+                      </p>
+                      <!-- ADD PHOTO -->
+                      <small>Overlap extension PCR to delete a DNA sequence from the strand.</small>
+                      <p>
+                      Next, we performed PCR with our designed primers Dns 2.6k upstream fwd & Dns 2.5k downstream rev to amplify complete vector (anneal T= 62.3C). After, we run an electrophoresis gel of PCR products from and extracted the band at 5000bp. We then transformed the complete vector into (naturally competent, induced Tfox expression plasmid containing) V. natriegens and plated transformed cells on ampicillin + V2 + LB containing plate. Next, we picked colonies and attempted to verify deletion by PCR using primers Dns 3.1k upstream fwd & Dns 3k downstream rev (anneal T = 63). Finally, we analyzed the  product in electrophoresis gel (deletion-positive = 6000bp). The confirmation process was still happening at the time of the wiki freeze, so we don’t have a gel image of the confirmation.
+                      </p>
+                      <!-- ADD PHOTO -->
+                      <!-- https://docs.google.com/document/d/1PE7Vwj8-BITGEf8MFZ2ZMl3NyiGmF-l8hJs-eNR-A2M/edit -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card">
+              <div class="card-header" id="headingSeven">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    CELL FRACTIONING
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                <div class="card-body">
+                  <div class="row mb-4">
+                    <div class="col">
+                      <p>
+                      To test the expression and translocation of ssTorA-hGH, we decided to perform a cell fractionation experiment that would allow us to determine the localisation of leader signal including hGH in <i>V. natriegens</i>, while hGH without the signal peptide would serve as a control. Fractionation divides the cells into periplasmic, cytoplasmic and insoluble (membrane) fractions, that can then be analysed separately.
+                      </p>
+                      <p>
+                      After researching for various fractionation methods, we decided on PureFrac that had been developed and used in fractionation of <i>E. coli</i> cells without detectable contamination between the fractions (Malherbe <i>et al.</i>, 2019). PureFrac uses osmotic shock with MgCl2 for the extraction of periplasmic fraction, and sonication for cell disruption. The fractionation was applied successfully to our cells with few modifications to the original protocol (see Protocols).
                       </p>
                     </div>
                   </div>
@@ -402,8 +491,29 @@ function myProgress() {
               </div>
             </div>
 
+            <div class="card">
+              <div class="card-header" id="headingEight">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    WESTERN BLOT
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                <div class="card-body">
+                  <div class="row mb-4">
+                    <div class="col">
+                      <p>
+                      For the detection of His tagged hGH, we blotted the different fractions to a nitrocellulose membrane using BioRad Trans-Blot Turbo (see Protocols). Chemiluminescent imaging was performed in BioRad ChemiDoc MP imaging system.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
           </div>
-        </div>
       </div>
 
     </div>
@@ -411,20 +521,29 @@ function myProgress() {
       <div class="row justify-content-center">
         <div class="col-10 mt-5">
           <b>References:</b>
-          <p> Brown, T. (2019). Retrieved 19 October 2019, from https://fusesocial.ca/wp-content/uploads/sites/2/2018/06/Design-Thinking.pdf</p>
-          <p>Philippart, M., Schmidt, J., & Bittner, B. (2015). Oral Delivery of Therapeutic Proteins and Peptides: An Overview of Current Technologies and Recommendations for Bridging from Approved Intravenous or Subcutaneous Administration to Novel Oral Regimens. Drug Research, 66(03), 113-120.
+          <p>
+          Alanen, H. I., Walker, K. L., Lourdes Velez Suberbie, M., Matos, C. F., Bonisch, S., Freedman, R. B., . . . Robinson, C. (2015). Efficient export of human growth hormone, interferon alpha2b and antibody fragments to the periplasm by the Escherichia coli Tat pathway in the absence of prior disulfide bond formation. Biochim Biophys Acta, 1853(3), 756-763. doi:10.1016/j.bbamcr.2014.12.027
           </p>
           <p>
-          Puetz, J., & Wurm, F. (2019). Recombinant Proteins for Industrial versus Pharmaceutical Purposes: A Review of Process and Pricing. Processes, 7(8), 476.
+          Blaudeck, N., Sprenger, G. A., Freudl, R., & Wiegert, T. (2001). Specificity of signal peptide recognition in tat-dependent bacterial protein translocation. Journal of bacteriology, 183(2), 604–610. doi:10.1128/JB.183.2.604-610.2001
           </p>
           <p>
-          Liedtka, J. (2019). Why Design Thinking Works. Retrieved 19 October 2019, from https://hbr.org/2018/09/why-design-thinking-works
+          Dalia, T. N., Hayes, C. A., Stolyar, S., Marx, C. J., McKinlay, J. B., & Dalia, A. B. (2017). Multiplex genome editing by natural transformation (MuGENT) for synthetic biology in Vibrio natriegens. ACS synthetic biology, 6(9), 1650-1655.
           </p>
           <p>
-          Werner, R. (2004). Economic aspects of commercial manufacture of biopharmaceuticals. Journal Of Biotechnology, 113(1-3), 171-182.
+          Jong, W. S., Vikstrom, D., Houben, D., van den Berg van Saparoea, H. B., de Gier, J. W., & Luirink, J. (2017). Application of an E. coli signal sequence as a versatile inclusion body tag. Microb Cell Fact, 16(1), 50. doi:10.1186/s12934-017-0662-4
+          </p>
+          <p>
+          Lee, P. A., Tullman-Ercek, D., & Georgiou, G. (2006). The bacterial twin-arginine translocation pathway. Annual review of microbiology, 60, 373–395. doi:10.1146/annurev.micro.60.080805.142212
+          </p>
+          <p>
+          Synthetic Genomics, Inc. (2017). VmaxTM Express Electrocompetent Cells User Guide. La Jolla, CA: Synthetic Genomics.
+          </p>
+          <p>
+          Malherbe, G., Humphreys, D. P., & Davé, E. (2019). A robust fractionation method for protein subcellular localization studies in Escherichia coli. BioTechniques, 66(4), 171-178. doi:10.2144/btn-2018-0135
           </p>
         </div>
-      </div>s
+      </div>
     </div>
     </div>
 
