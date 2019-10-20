@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--css-->
+    <link href="styletest.css" rel="stylesheet">
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+    <!--jquery-->
+
+
+    <title>Experiments</title>
+
+    <style>
+
+      .card .card-header {
+        padding: 0;
+
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+
+
+      .card .card-header .btn {
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+      }
+
+      .card .card-header h2 {
+        padding: 20px;
+      }
+
+
+      .card h4 {
+        color: black;
+      }
+      .row {
+        margin-top: auto;
+      }
+
+
+      h1,h2,h3,h4 {
+        font-family: 'Oswald', sans-serif;
+        text-align: left;
+      }
+
+      p.larger {
+        font-size: 140%;
+      }
+
+      .text-highlight-box {
+        background: white;
+        padding: 20px;
+        font-size: 80%;
+        border: 1px solid #ccc;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <!--TOP LOGO-->
+    <div class="header">
+      <img src="logos/vibx/vibx_tp1.png" style="width: 100%; margin-top: 0%; background-position: center; left: 0; right: 0;">
+    </div>
+
+    <!--SCROLL UP BUTTON-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button>
+
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+    </script>
+
+
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <script>
+      // When the user scrolls the page, execute myFunction
+      document.onscroll = function() {myProgress()};
+
+function myProgress() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+    </script>
+
+
+    <!--------------------------------------------------------TOP MENU----------------------------------------------------------------->
+
+
+    <div id="topnav">
+      <nav>
+        <ul id="menu">
+          <li><a href="#">Home</a></li>
+
+          <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">Project</a>
+
+            <ul class="submenu" style="margin: 0 0 0 0;">
+              <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">Description</a></li>
+              <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Design</a></li>
+              <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook">Notebook</a></li>
+            </ul>
+          </li>
+
+          <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">Lab</a>
+            <ul class="submenu" style="margin: 0 0 0 0;">
+              <li style="font-size: 20px; padding: 5px 10px 0px 10px; margin-bottom: 0;">Wet Lab
+                <ul class="submenu" style="margin: 0 0 0 0;">
+                  <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety">Safety</a></li>
+                  <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments">Experiments</a></li>
+                  <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate">Results</a></li>
+                </ul>
+              </li>
+              <li style="font-size: 20px; padding: 5px 10px 0px 10px; margin-bottom: 0;">Dry Lab
+                <ul class="submenu" style="margin: 0 0 0 0;">
+                  <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model">Model overview</a></li>
+                  <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Simulations">Simulations</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Parts</a>
+            <ul class="submenu" style="margin: 0 0 0 0;">
+              <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part">Basic Parts</a></li>
+              <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Composite_Part">Composite Parts</a></li>
+              <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve">Improved parts</a></li>
+              <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection">Collection</a></li>
+            </ul>
+          </li>
+
+          <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/Overview">Human Practices</a>
+            <ul class="submenu" style="margin: 0 0 0 0;">
+              <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement">Education & Public Engagement</a></li>
+              <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations">Collaborations</a></li>
+              <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">Integrated Human Practices</a>
+                <ul class="submenu" style="margin: 0 0 0 0;">
+                  <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Entrepreneurship">Entrepreneurship</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Team</a>
+            <ul class="submenu" style="margin: 0 0 0 0;">
+              <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions">Attributions</a></li>
+              <li style="margin-bottom: 0;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Sponsors">Sponsors</a></li>
+            </ul>
+          </li>
+
+          <li id="mainmenu"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Awards">Awards</a></li>
+
+        </ul>
+      </nav>
+    </div>
+
+
+    <!--------------------------------------------------------CONTENT----------------------------------------------------------------->
+
+
+    <!--CONTENT-->
+
+    <div class="content hometext">
+      <div class="container-fluid mb-5">
+        <div class="hometext">
+          <div class="row justify-content-center">
+            <div class="col-md-10">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <h1>INTEGRATED HUMAN PRACTICES</h1>
+                  <p>Our project provides a solution to address the inequality in accessing therapeutic proteins. We have created a novel recombinant protein production system. This solution has the potential to further expedite and serve the rapidly increasing production of new biopharmaceuticals and has planted a seed for revolutionizing biopharmaceutical cost and pricing structures.</p>
+
+                  <p>
+                  A design thinking approach was used to guide our project design. For this, we conducted interviews with key stakeholders to identify the pain points in biopharmaceutical development, user experience, production, and sales today. Our findings have guided the scope of our project. And the final outcome, the service and business model along side of our product, was strongly influenced by the input from stakeholders. Thus ensuring that there is a real need for our solution.
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="text-highlight-box">
+                    <h3>What is design thinking?</h3>
+                    <p>Design thinking is a process, that gives structure for creating innovations with user-driven focus. It helps in defining the experienced problems in existing solutions or habits by involving key stakeholders. The process thwart jumping into conclusions and assumptions while emphasizing dialogue and learning.(1)
+
+                    A key idea in design thinking is to discard the previously common habit of design being a downstream step of a developing process, including it in the development right from the beginning. (2)
+
+                    We wanted to include design thinking process into our project to make sure that our solution would have the best possible impact to our society by solving the most abundant issues.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      VIBRIO NATRIEGENS ATCC 14048 / DSM 759 AND VMAX STRAINS
+                    </button>
+                  </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <div class="row mb-1">
+                      <div class="col">
+                        <p>
+                        We obtained our V. natriegens ATCC DSM 759 strain (WT) from DSMZ, but before work with it began, we established basic workflows, protocols (see Protocols), growth mediums, and other materials by working with Synthetic Genomic’s Vmax strain. Vmax is a commercial Vibrio natriegens strain, with an extracellular nuclease knockout and IPTG inducible T7 RNA Polymerase addition (Synthetic Genomics, 2017). After this, we released the WT strain and started to work with it, while maintaining the Vmax strain in parallel in some of the experiments.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    DNA SEQUENCES
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                  <div class="row mb-5">
+                    <div class="col">
+                      <p>
+                      To search for putative signal sequences from V. natriegens DSM 759 strain, we performed a BLAST search based on the S/T-R-R-x-F-L-K consensus sequence usually found in leader peptides of Tat pathway targeted proteins (Lee et al., 2006). The results were then analysed for signal peptides using Phobius (http://phobius.sbc.su.se), and the most promising signal sequence from trimethylamine N-oxide reductase (ssTorA), was chosen for experiments. A homologous version of ssTorA in E. coli is well known to function with the Tat pathway of the respective bacterium (Blaudeck <i>et al.</i>, 2001; Lee <i>et al.</i>, 2006; Alanen <i>et al.</i>, 2015).
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row mb-5">
+                    <div class="col">
+                      <p>
+                      Synthetic DNA fragments with <i>ssTorA</i> and other putative signal peptides attached to the YGFP and human growth hormone (hGH) were ordered from Twist DNA. All sequences ordered and received are listed below. Originally we designed the sequences with restriction enzyme cut sites that would enable us to clone them into pQE-30 vector. However, this was changed when plans improved, and we started using PCR to change the cut sites to suit our cloning needs for pC201 and pC201 backbones.
+                      </p>
+                      <!-- ADD PHOTO -->
+                      <!-- https://drive.google.com/drive/folders/1wQKSvtq1Ltss5Kuj7hCmnRBmbsEAi2YK -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    CLONING
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  <div class="row mb-4">
+                    <div class="col">
+                      <p>
+                      Plasmids pC203 and pC201 were chosen for expression tests because of their availability but also characteristics: they harbored the p15A ori which was known to work in <i>V. natriegens</i> with quite low copy number, had suitable antibiotic resistance for selection, and included inducible, tightly controlled promoters. We believed that these features would allow us to experiment with different genes and expression levels in a not so known host organism.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row mb-5">
+                    <div class="col">
+                      <p>
+                      The original pC203 we received from Christopher Jonkergouw contained a pluR insert without suitable restriction sites for removal. The pC203 backbone was PCR’d using a forward primer annealing to the MCS and a reverse primer containing a 5’-overhang with PstI and EcoRI restriction sites annealing before the pluR-gene. Thus we had created a easy-to-use expression backbone for our gene constructs.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col">
+                      <p>
+                      The PCR for pC203 was performed  with our designed primers PC20x_dPluR/dProm fwd & PC203_dPluR rev (anneal T= 62.3C) to remove the unnecessary CDS <i>PluR</i> , and confirmed with electrophoresis gel that we had successfully performed PCR (pC203 without PluR = 4880bp). We also designed and performed <i>PluR</i> removal for plasmid pC201. PCR was performed with Thermo Fisher Scientific’s Phusion polymerase.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <!-- ADD PHOTO -->
+                    <!-- https://drive.google.com/drive/folders/1-k1D_npStasS5QDc9LQx10_deuf1TSsI -->
+                    <!-- https://drive.google.com/drive/folders/1-k1D_npStasS5QDc9LQx10_deuf1TSsI -->
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col">
+                      <p>We successfully performed PCR and confirmed results with an electrophoresis gel showing a band at 690 bp for tfoX amplification</p>
+                      <small>Image: Insertion sequence confirmed pC203-ssTorA-YGFP plasmid chart (generated by Benchling).</small>
+                      <!-- ADD PHOTO -->
+                      <!-- https://drive.google.com/drive/folders/1K_q4cQBim00xcpp555bNoZrE7bX8KysI -->
+                      <small>Image: Insertion sequence confirmed pC203-ssTorA-hGH plasmid chart (generated by Benchling).</small>
+                      <!-- ADD PHOTO -->
+                      <!-- https://drive.google.com/drive/folders/1K_q4cQBim00xcpp555bNoZrE7bX8KysI -->
+                      <small>
+                        Image: pC203-TorA-hGH plasmid chart (generated by Benchling).
+                      </small>
+                      <!-- ADD PHOTO -->
+                      <!-- https://drive.google.com/drive/folders/1K_q4cQBim00xcpp555bNoZrE7bX8KysI -->
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col">
+                      <p>
+                      After, we constructed an expression vector by digesting pC203-dPlur and Tfox with EcoRI & XbaI in separate tubes. We Dephosphorylated the digested pC203 with Thermo Fisher Scientific’s FastAP alkaline phosphatase. Then, we denatured the restriction enzymes and alkaline phosphatase. Ligation of the digested pieces was performed using Thermo Fisher Scientific’s T4 DNA Ligase, and the constructs were transformed into <i>V. natriegens</i> and plated on ampicillin containing V2+LB plate. Following plating, we screened for successful inserts using primers Tfox fwd & PC203_insert_conf rev (product = 690bp, anneal T =59,9C)
+                      </p>
+                      <!-- ADD PHOTO -->
+                      <!-- https://drive.google.com/drive/folders/1-k1D_npStasS5QDc9LQx10_deuf1TSsI -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    TRANSFORMATIONS
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body">
+                  <div class="row mb-4">
+                    <div class="col">
+                      <p>
+                      Plasmids were transformed into either chemically competent or electrocompetent cells. We prepared both for <i>E. coli</i> DH5a cells, but only electrocompetent <i>V. natriegens</i> cells. Preparation and transformation protocols are listed in Protocols
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col">
+                      <p>
+                      Induction of pC203-TorA+YGFP was carried out in Vibrio natriegens (Vmax) and Escherichia coli (DH5a) in order to verify that the plasmid construct was working like expected and producing YGFP. Induced E. coli cells were used for microscopy after the experiment, and localisation of YGFP was observed in some of the cells.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col">
+                      <!-- ADD TEXT -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Next steps
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                <div class="card-body">
+                  <div class="row mb-4">
+                    <div class="col">
+                      <p>After creating our business plan we realised that we had underestimated the importance of certain stakeholders. This includes the government and other legal entities. Our next steps would be talking to them about their willingness to collaborate to support our non-profit organization. As well as campaigning for general awareness of the current pricing structure and our solution, collaboration with other similar non profit-organization and lobbying so that government prefers purchasing drugs developed with VibXPresso strain.</p>
+                      <p>After proving our solution to be successful in the pharmaceutical industry, our platform could be utilized in many other industries. Next, we would expand to less regulated industries such as enzyme production, where manufacturing costs have a big effect on the selling prices since these industries spend less money on R&D and marketing than the pharmaceutical industry (Puetz & Wurm, 2019).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-10 mt-5">
+          <b>References:</b>
+          <p> Brown, T. (2019). Retrieved 19 October 2019, from https://fusesocial.ca/wp-content/uploads/sites/2/2018/06/Design-Thinking.pdf</p>
+          <p>Philippart, M., Schmidt, J., & Bittner, B. (2015). Oral Delivery of Therapeutic Proteins and Peptides: An Overview of Current Technologies and Recommendations for Bridging from Approved Intravenous or Subcutaneous Administration to Novel Oral Regimens. Drug Research, 66(03), 113-120.
+          </p>
+          <p>
+          Puetz, J., & Wurm, F. (2019). Recombinant Proteins for Industrial versus Pharmaceutical Purposes: A Review of Process and Pricing. Processes, 7(8), 476.
+          </p>
+          <p>
+          Liedtka, J. (2019). Why Design Thinking Works. Retrieved 19 October 2019, from https://hbr.org/2018/09/why-design-thinking-works
+          </p>
+          <p>
+          Werner, R. (2004). Economic aspects of commercial manufacture of biopharmaceuticals. Journal Of Biotechnology, 113(1-3), 171-182.
+          </p>
+        </div>
+      </div>s
+    </div>
+    </div>
+
+
+
+    <!--button grid-->
+
+
+    <div class="homegrid">
+      <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/022.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">PROJECT</a></div>
+      <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/011.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">LAB</a></div>
+      <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/033.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">HUMAN<br>OUTREACH</a></div>
+    </div>
+
+
+
+    <!--PARTNERS-->
+
+    <div id="partners">
+      <div class="row">
+        <div class="column1">
+          <img class="photo" src="logos/dark/Aalto_BIZ_black.png">
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Aalto_CHE_EN_black.png">
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Aalto_ELEC_EN_black.png">
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Aalto_ENG_EN_black.png">
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Aalto_SCI_EN_black.png">
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/df_black.png">
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Helsinki.png">
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/supported-by-hilife.png">
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Kemianteollisuus_black.png">
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/LOIMU.jpg">
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/ThermoFisher_black.jpg">
+        </div>
+
+
+      </div>
+    </div>
+
+    <!--FOOTER-->
+    <div class="footer">
+      <a class="icon" id="fb" href="https://www.facebook.com/AaltoHelsinki"><i class="fab fa-facebook-square"></i></a>
+      <a class="icon" id="twi" href="https://twitter.com/AaltoHelsinki"><i class="fab fa-twitter"></i></a>
+      <a class="icon" id="ig" href="https://instagram.com/aaltohelsinki_igem"><i class="fab fa-instagram"></i></a>
+      <a class="icon" id="blog" href="http://blog.aaltohelsinki.com"><i class="fab fa-tumblr-square"></i></a><br>
+      Kemistintie 1, Espoo, Finland<br>
+      team@aaltohelsinki.com
+    </div>
+
+  </body>
+</html>
