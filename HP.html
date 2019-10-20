@@ -1,231 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Font Awesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!--css-->
-    <link href="styletest.css" rel="stylesheet">
-    <!--fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
-    <!--jquery-->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <!-- css -->
+    <link href="styletest.css" rel="stylesheet" />
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Oswald"
+      rel="stylesheet"
+    />
+    <!-- jquery -->
 
-    
     <title>Human Practices</title>
-
-
-
-</head>
-<body>
-
-<!--TOP LOGO-->
+  </head>
+  <body>
+    <!-- TOP LOGO -->
     <div class="header">
-        <img src="logos/vibx/vibx_tp1.png" style="width: 100%; margin-top: 0%; background-position: center; left: 0; right: 0;">
+      <img
+        src="logos/vibx/vibx_tp1.png"
+        style="width: 100%; margin-top: 0%; background-position: center; left: 0; right: 0;"
+      />
     </div>
-            
-<!--SCROLL UP BUTTON-->
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i></button> 
+
+    <!-- SCROLL UP BUTTON -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <i class="fas fa-arrow-circle-up"></i>
+    </button>
 
     <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
-        
-        function scrollFunction() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            document.getElementById("myBtn").style.display = "block";
-            } else {
-            document.getElementById("myBtn").style.display = "none";
-            }
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
         }
-        
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
     </script>
 
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
 
-<div class="progress-container">
-    <div class="progress-bar" id="myBar"></div>
-</div>
+    <script>
+      // When the user scrolls the page, execute myFunction
+      document.onscroll = function() {
+        myProgress();
+      };
 
-<script>
-    // When the user scrolls the page, execute myFunction 
-    document.onscroll = function() {myProgress()};
-    
-    function myProgress() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      function myProgress() {
+        var winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        var height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
         var scrolled = (winScroll / height) * 100;
         document.getElementById("myBar").style.width = scrolled + "%";
-    }
-</script>
+      }
+    </script>
 
+    <!-- TOP MENU -->
 
-<!--TOP MENU-->
+    <script>
+      let prev = null;
+      function hideUnhide(el, isDesktop = false) {
+        const labregex = /(wet|dry)lab/;
+        const isLabSub = labregex.test(el.id);
+        if (el.style.maxHeight !== "initial") {
+          el.style.maxHeight = "initial";
+          if (isLabSub) {
+            el.style.top = "0";
+          }
+        } else {
+          el.style.maxHeight = "0px";
+          if (isLabSub) {
+            el.style.top = "inherit";
+          }
+        }
+        if (!prev) {
+          prev = el;
+        }
+        if (prev.id !== el.id && !isLabSub) {
+          prev.style.maxHeight = "0px";
+          prev = el;
+        }
+      }
+      function handleMenu(el) {
+        if (window.innerWidth < 800) {
+          hideUnhide(el);
+        }
+      }
+      function hoverMenu(el) {
+        if (window.innerWidth > 800) {
+          hideUnhide(el, true);
+        }
+      }
+    </script>
 
     <div id="topnav">
-    <nav>
-       <ul id="menu">
-           <li><a href="#">Home</a></li>
-
-           <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Project</a>
-
-            <ul class="submenu">
-                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Description</a></li>
-                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Design">Design</a></li>
-                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate">Demonstrate</a></li>
-                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook">Notebook</a></li>
-                <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution">Contribution</a></li>
+      <nav>
+        <ul id="menu">
+          <li><a href="#">Home</a></li>
+          <li>
+            <div onmouseenter="hoverMenu(project)" class="mobileaction">
+              <a href="https://2019.igem.org/Team:Aalto-Helsinki/Design"
+                >Project</a
+              >
+              <i
+                onclick="handleMenu(project)"
+                class="fas fa-chevron-down fa-fw menuopen"
+                aria-hidden="false"
+              ></i>
+            </div>
+            <ul onmouseleave="hoverMenu(project)" id="project" class="submenu">
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Design"
+                  >Description</a
+                >
+              </li>
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Design"
+                  >Design</a
+                >
+              </li>
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Demonstrate"
+                  >Demonstrate</a
+                >
+              </li>
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Notebook"
+                  >Notebook</a
+                >
+              </li>
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution"
+                  >Contribution</a
+                >
+              </li>
             </ul>
-            </li>
+          </li>
 
-            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">Lab</a>
-                <ul class="submenu">
-                    <li style="font-size: 20px; padding: 5px 10px 0px 10px;">Wet Lab
-                        <ul class="submenu">
-                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety">Safety</a></li>
-                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments">Experiments</a></li>
-                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Results">Results</a></li>
-                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/LabBook">Lab book</a></li>
-                        </ul>
-                    </li>
-                    <li style="font-size: 20px; padding: 5px 10px 0px 10px;">Dry Lab
-                        <ul class="submenu">
-                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model">Model overview</a></li>
-                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Growth_rate">Growth rate</a></li>
-                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Simulations">Simulations</a></li>
-                        </ul>
-                    </li>
+          <li onmouseenter="hoverMenu(lab)">
+            <div class="mobileaction">
+              <a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">Lab</a>
+              <i
+                onclick="handleMenu(lab)"
+                class="fas fa-chevron-down fa-fw menuopen"
+                aria-hidden="false"
+              ></i>
+            </div>
+            <ul onmouseleave="hoverMenu(lab)" id="lab" class="submenu">
+              <li>
+                <span style="font-size: 1rem;margin: 0rem 1rem;">Wet Lab</span>
+                <i
+                  onclick="handleMenu(wetlab)"
+                  style="font-size: 1rem;"
+                  class="fas fa-chevron-down fa-fw menuopen"
+                  aria-hidden="false"
+                ></i>
+                <ul
+                  id="wetlab"
+                  class="doublesubmenu"
+                  style="margin: 0rem 1rem;"
+                >
+                  <li>
+                    <a href="https://2019.igem.org/Team:Aalto-Helsinki/Safety"
+                      >Safety</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Experiments"
+                      >Experiments</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://2019.igem.org/Team:Aalto-Helsinki/Results"
+                      >Results</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://2019.igem.org/Team:Aalto-Helsinki/LabBook"
+                      >Lab book</a
+                    >
+                  </li>
                 </ul>
-            </li>
-
-            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Parts</a>
-                <ul class="submenu">
-                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part">Basic Parts</a></li>
-                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve">Improved parts</a></li>
-                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection">Collection</a></li>
+              </li>
+              <li>
+                <span style="font-size: 1rem; margin: 0rem 1rem;">Dry Lab</span>
+                <i
+                  onclick="handleMenu(drylab)"
+                  style="font-size: 1rem;"
+                  class="fas fa-chevron-down fa-fw menuopen"
+                  aria-hidden="false"
+                ></i>
+                <ul
+                  id="drylab"
+                  class="doublesubmenu"
+                  style="margin: 0rem 1rem;"
+                >
+                  <li>
+                    <a href="https://2019.igem.org/Team:Aalto-Helsinki/Model"
+                      >Model overview</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Growth_rate"
+                      >Growth rate</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Model/Simulations"
+                      >Simulations</a
+                    >
+                  </li>
                 </ul>
-            </li>
+              </li>
+            </ul>
+          </li>
 
-            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">Human Practices</a>
+          <li onmouseenter="hoverMenu(parts)">
+            <div class="mobileaction">
+              <a href="https://2019.igem.org/Team:Aalto-Helsinki/Parts">Parts</a
+              ><i
+                onclick="handleMenu(parts)"
+                class="fas fa-chevron-down fa-fw menuopen"
+                aria-hidden="false"
+              ></i>
+            </div>
+            <ul onmouseleave="hoverMenu(parts)" id="parts" class="submenu">
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Basic_Part"
+                  >Basic Parts</a
+                >
+              </li>
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Improve"
+                  >Improved parts</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://2019.igem.org/Team:Aalto-Helsinki/Part_Collection"
+                  >Collection</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li onmouseenter="hoverMenu(humanpractice)">
+            <div class="mobileaction">
+              <a
+                href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices"
+                >Human Practices</a
+              >
+              <i
+                onclick="handleMenu(humanpractice)"
+                class="fas fa-chevron-down fa-fw menuopen"
+                aria-hidden="false"
+              ></i>
+            </div>
+            <ul
+              onmouseleave="hoverMenu(humanpractice)"
+              id="humanpractice"
+              class="submenu"
+            >
+              <li>
+                <a
+                  href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement"
+                  >Education & Public Engagement</a
+                >
                 <ul class="submenu">
-                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement">Education & Public Engagement</a>
-                        <ul class="submenu">
-                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Events">Events</a></li>
-                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Podcast">Podcast</a></li>
-                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations">Collaborations</a></li>
-                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Conferences">Conferences</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/IHP">Integrated Human Practices</a>
-                        <ul class="submenu">
-                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/Design_Thinking">Design Thinking</a></li>
-                            <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Entrepreneurship">Entrepreneurship</a></li>
-                        </ul>
-                    </li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Events"
+                      >Events</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Podcast"
+                      >Podcast</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Collaborations"
+                      >Collaborations</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Public_Engagement/Conferences"
+                      >Conferences</a
+                    >
+                  </li>
                 </ul>
-            </li>
-
-           <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Team</a>
+              </li>
+              <li>
+                <a
+                  href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/IHP"
+                  >Integrated Human Practices</a
+                >
                 <ul class="submenu">
-                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution">Contribution</a></li>
-                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions">Attributions</a></li>
-                    <li><a href="https://2019.igem.org/Team:Aalto-Helsinki/Sponsors">Sponsors</a></li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices/Design_Thinking"
+                      >Design Thinking</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://2019.igem.org/Team:Aalto-Helsinki/Entrepreneurship"
+                      >Entrepreneurship</a
+                    >
+                  </li>
                 </ul>
-            </li>
+              </li>
+            </ul>
+          </li>
 
-           <li id="mainmenu"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Awards">Awards</a></li>
+          <li onmouseenter="hoverMenu(team)">
+            <div class="mobileaction">
+              <a href="https://2019.igem.org/Team:Aalto-Helsinki/Team">Team</a>
+              <i
+                onclick="handleMenu(team)"
+                class="fas fa-chevron-down fa-fw menuopen"
+                aria-hidden="false"
+              ></i>
+            </div>
+            <ul onmouseleave="hoverMenu(team)" id="team" class="submenu">
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Contribution"
+                  >Contribution</a
+                >
+              </li>
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Attributions"
+                  >Attributions</a
+                >
+              </li>
+              <li>
+                <a href="https://2019.igem.org/Team:Aalto-Helsinki/Sponsors"
+                  >Sponsors</a
+                >
+              </li>
+            </ul>
+          </li>
 
-       </ul>
-    </nav>
+          <li onmouseenter="hoverMenu(awards)" id="mainmenu">
+            <a
+              id="awards"
+              href="https://2019.igem.org/Team:Aalto-Helsinki/Awards"
+              >Awards</a
+            >
+          </li>
+        </ul>
+      </nav>
     </div>
 
+    <!-- CONTENT -->
 
-<!--CONTENT-->
+    <div class="hometext">
+      <h2>HUMAN PRACTICES</h2>
+      <p class="maintext">
+        The two aims of our human practices were integrating stakeholder input
+        to our project design and raising awareness about synthetic biology
+        through educational and engaging activities.
+      </p>
+      <p class="maintext">
+        With our integrated human practices, we used a stakeholder-based
+        approach to guide us on developing the goals of our project. This was
+        done to find out how our solution would fit into the real world an
+        toverify, that there is a relevant need for our solution.
+        <a href="#">Find out more.</a>
+      </p>
+      <p class="maintext">
+        With our education and public engagement activities, we aimed at
+        including a variety of target groups as possible – from academic
+        professionals to young children – to learn and hear all about science
+        and synthetic biology in fun and engaging ways. As well as grow the
+        synthetic biology community in Finland. Find out more.
+      </p>
+    </div>
 
-<div class="hometext">
+    <!-- button grid -->
 
-    <h2>HUMAN PRACTICES</h2>
-    <p class="maintext">
-        The two aims of our human practices were integrating stakeholder input to our project design and raising awareness about synthetic biology through educational and engaging activities. 
-        </p>
-        <p class="maintext">
-        With our integrated human practices, we used a stakeholder-based approach to guide us on developing the goals of our project. This was done to find out how our solution would fit into the real world an toverify, that there is a relevant need for our solution. <a href="#">Find out more.</a>
-        </p>
-        <p class="maintext">
-        With our education and public engagement activities, we aimed at including a variety of target groups as possible – from academic professionals to young children – to learn and hear all about science and synthetic biology in fun and engaging ways. As well as grow the synthetic biology community in Finland. Find out more.
-    </p>
+    <div class="homegrid">
+      <div
+        class="homegrid-item"
+        id="homegrid-text"
+        style="background-image: url(bgpics/022.jpg); background-size: cover;"
+      >
+        <a href="https://2019.igem.org/Team:Aalto-Helsinki/Description"
+          >PROJECT</a
+        >
+      </div>
+      <div
+        class="homegrid-item"
+        id="homegrid-text"
+        style="background-image: url(bgpics/011.jpg); background-size: cover;"
+      >
+        <a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">LAB</a>
+      </div>
+      <div
+        class="homegrid-item"
+        id="homegrid-text"
+        style="background-image: url(bgpics/033.jpg); background-size: cover;"
+      >
+        <a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices"
+          >HUMAN<br />OUTREACH</a
+        >
+      </div>
+    </div>
 
-</div>
-
-
-<!--button grid-->
-
-
-<div class="homegrid">
-    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/022.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Description">PROJECT</a></div>
-    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/011.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Lab">LAB</a></div>
-    <div class="homegrid-item" id="homegrid-text" style="background-image: url(bgpics/033.jpg); background-size: cover;"><a href="https://2019.igem.org/Team:Aalto-Helsinki/Human_Practices">HUMAN<br>OUTREACH</a></div>
-</div>
-
-
-
-<!--PARTNERS-->
+    <!-- PARTNERS -->
 
     <div id="partners">
-        <div class="row">
-            <div class="column1">
-                <img class="photo" src="logos/dark/Aalto_BIZ_black.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/Aalto_CHE_EN_black.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/Aalto_ELEC_EN_black.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/Aalto_ENG_EN_black.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/Aalto_SCI_EN_black.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/df_black.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/Helsinki.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/supported-by-hilife.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/Kemianteollisuus_black.png">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/LOIMU.jpg">
-            </div>
-            <div class="column1">
-                <img class="photo" src="logos/dark/ThermoFisher_black.jpg">
-            </div>
-
-    
+      <div class="row">
+        <div class="column1">
+          <img class="photo" src="logos/dark/Aalto_BIZ_black.png" />
         </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Aalto_CHE_EN_black.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Aalto_ELEC_EN_black.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Aalto_ENG_EN_black.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Aalto_SCI_EN_black.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/df_black.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Helsinki.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/supported-by-hilife.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/Kemianteollisuus_black.png" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/LOIMU.jpg" />
+        </div>
+        <div class="column1">
+          <img class="photo" src="logos/dark/ThermoFisher_black.jpg" />
+        </div>
+      </div>
     </div>
 
-<!--FOOTER-->
+    <!-- FOOTER -->
     <div class="footer">
-        <a class="icon" id="fb" href="https://www.facebook.com/AaltoHelsinki"><i class="fab fa-facebook-square"></i></a>
-        <a class="icon" id="twi" href="https://twitter.com/AaltoHelsinki"><i class="fab fa-twitter"></i></a>
-        <a class="icon" id="ig" href="https://instagram.com/aaltohelsinki_igem"><i class="fab fa-instagram"></i></a>
-        <a class="icon" id="blog" href="http://blog.aaltohelsinki.com"><i class="fab fa-tumblr-square"></i></a><br>
-        Kemistintie 1, Espoo, Finland<br>
-        team@aaltohelsinki.com
+      <a class="icon" id="fb" href="https://www.facebook.com/AaltoHelsinki"
+        ><i class="fab fa-facebook-square"></i
+      ></a>
+      <a class="icon" id="twi" href="https://twitter.com/AaltoHelsinki"
+        ><i class="fab fa-twitter"></i
+      ></a>
+      <a class="icon" id="ig" href="https://instagram.com/aaltohelsinki_igem"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a class="icon" id="blog" href="http://blog.aaltohelsinki.com"
+        ><i class="fab fa-tumblr-square"></i></a
+      ><br />
+      Kemistintie 1, Espoo, Finland<br />
+      team@aaltohelsinki.com
     </div>
-
-</body>
+  </body>
 </html>
